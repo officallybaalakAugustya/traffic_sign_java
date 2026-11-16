@@ -1,0 +1,84 @@
+ClassId,ClassName,Precision,Recall,F1Score,Support
+0,All Motor Vehicles Prohibited,0.1500,0.6000,0.2400,5
+1,Axle Load Limit,0.5000,0.4000,0.4444,5
+2,Barrier Ahead,0.0000,0.0000,0.0000,2
+3,Bullock Carts Prohibited,0.0000,0.0000,0.0000,5
+4,Cattle Crossing,0.3000,0.2727,0.2857,11
+5,Compulsory Ahead Only,0.8000,0.8889,0.8421,9
+6,Compulsory Ahead or Turn Right,1.0000,0.4545,0.6250,11
+7,Compulsory Cycle Track,1.0000,0.7500,0.8571,4
+8,Compulsory Keep Left,1.0000,0.0625,0.1176,16
+9,Compulsory Keep Right,0.5000,1.0000,0.6667,4
+10,Compulsory Minimum Speed,1.0000,1.0000,1.0000,8
+11,Compulsory Sound Horn,0.2000,1.0000,0.3333,1
+12,Compulsory Turn Left,0.0000,0.0000,0.0000,1
+13,Compulsory Turn Right Ahead,0.2500,0.5000,0.3333,4
+14,Cross Road,0.3182,0.2188,0.2593,32
+15,Cycles Prohibited,1.0000,0.6250,0.7692,8
+16,Dangerous Dip,0.6000,0.7500,0.6667,4
+17,Direction / Side Indicator,1.0000,1.0000,1.0000,1
+18,Falling Rocks,0.2500,0.1250,0.1667,8
+19,Gap in Median,0.3913,0.3750,0.3830,24
+20,Give Way,0.9412,1.0000,0.9697,16
+21,Guarded Level Crossing,1.0000,0.2500,0.4000,4
+22,Handcarts Prohibited,0.0000,0.0000,0.0000,2
+23,Height Limit,1.0000,0.2500,0.4000,8
+24,Horn Prohibited,0.8571,0.6667,0.7500,9
+25,Hump or Rough Road (Speed Breaker),0.0000,0.0000,0.0000,5
+26,Left Reverse Bend,0.4000,0.2857,0.3333,7
+28,Loose Gravel,0.6000,0.3750,0.4615,8
+29,Men at Work,0.0000,0.0000,0.0000,2
+30,Narrow Road Ahead,1.0000,0.5000,0.6667,8
+31,No Entry,1.0000,1.0000,1.0000,25
+32,No Parking,0.6923,0.6429,0.6667,14
+33,No Stopping or Standing,1.0000,1.0000,1.0000,48
+34,Overtaking Prohibited,0.4545,0.5556,0.5000,9
+35,Pass Either Side,1.0000,0.7500,0.8571,8
+36,Pedestrian Crossing,0.5652,0.6842,0.6190,19
+37,Pedestrians Prohibited,0.5000,0.7273,0.5926,11
+38,Priority for Oncoming Vehicles,1.0000,0.6000,0.7500,5
+39,Quay Side or River Bank,0.7000,0.4667,0.5600,15
+40,Restriction Ends,1.0000,1.0000,1.0000,3
+41,Right Hairpin Bend,0.1000,0.2000,0.1333,5
+42,Right Hand Curve,0.4286,0.5000,0.4615,6
+43,Roundabout,0.7143,0.4545,0.5556,11
+44,School Ahead,0.5000,0.5000,0.5000,14
+45,Side Road Left,0.4286,0.5455,0.4800,11
+46,Side Road Right,0.1333,0.5000,0.2105,4
+47,Slippery Road,0.5000,0.5000,0.5000,12
+48,Speed Limit (5 km/h),1.0000,0.8333,0.9091,12
+49,Speed Limit (15 km/h),0.8571,1.0000,0.9231,6
+50,Speed Limit (30 km/h),0.7143,0.5556,0.6250,18
+51,Speed Limit (40 km/h),0.8000,0.8182,0.8090,44
+52,Speed Limit (50 km/h),0.5714,0.2222,0.3200,18
+53,Speed Limit (60 km/h),0.6585,0.7105,0.6835,38
+54,Speed Limit (70 km/h),0.6250,0.7143,0.6667,7
+55,Speed Limit (80 km/h),0.5714,0.6667,0.6154,6
+56,Staggered Intersection,0.0000,0.0000,0.0000,6
+57,Steep Ascent,0.2727,0.6000,0.3750,5
+58,Steep Descent,1.0000,0.6667,0.8000,3
+59,Stop,1.0000,1.0000,1.0000,2
+61,T-Intersection,0.6667,0.5000,0.5714,4
+62,Trucks Prohibited,0.5714,0.6667,0.6154,6
+63,Turn Right Ahead,0.7059,1.0000,0.8276,12
+64,U-Turn Prohibited,1.0000,0.5000,0.6667,6
+65,Y-Intersection,0.7000,0.7778,0.7368,9
+66,Bullock and Handcart Prohibited,1.0000,0.5000,0.6667,2
+67,Compulsory Ahead or Turn Left,1.0000,0.7500,0.8571,4
+68,Compulsory Turn Left Ahead,0.5000,1.0000,0.6667,4
+69,Compulsory Turn Right,1.0000,0.5000,0.6667,2
+70,Cycle Crossing,0.0000,0.0000,0.0000,4
+71,Ferry,0.0000,0.0000,0.0000,1
+72,Left Hairpin Bend,0.0000,0.0000,0.0000,3
+73,Left Hand Curve,0.4167,0.8333,0.5556,6
+74,Length Limit,1.0000,1.0000,1.0000,4
+75,Load Limit,0.2000,0.3333,0.2500,3
+76,Narrow Bridge,0.5000,0.5000,0.5000,4
+77,Right Reverse Bend,1.0000,0.2500,0.4000,4
+78,Right Turn Prohibited,0.4000,1.0000,0.5714,2
+79,Road Widens Ahead,1.0000,0.3333,0.5000,3
+80,Speed Limit (20 km/h),0.0000,0.0000,0.0000,1
+81,Tonga Prohibited,0.2000,0.5000,0.2857,2
+82,Traffic Signal,1.0000,0.5000,0.6667,4
+83,Unguarded Level Crossing,0.0000,0.0000,0.0000,1
+84,Width Limit,1.0000,0.6667,0.8000,6

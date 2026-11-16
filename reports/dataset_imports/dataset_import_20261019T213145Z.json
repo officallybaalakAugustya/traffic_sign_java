@@ -1,0 +1,22 @@
+{
+  "generatedAt" : "2026-10-19T21:31:45.710258100Z",
+  "workspace" : "S:\\TrafficSignRecognitionRoadSafetyMonitor",
+  "rawDirectory" : "S:\\TrafficSignRecognitionRoadSafetyMonitor\\data\\raw",
+  "archives" : [ {
+    "path" : "S:\\TrafficSignRecognitionRoadSafetyMonitor\\data\\raw\\GTSRB\\GTSRB_Final_Test_GT.zip",
+    "size" : 99620,
+    "modified" : "2026-10-19T16:53:35.9176286Z",
+    "sha256" : "f94e5a7614d75845c74c04ddb26b8796b9e483f43541dd95dd5b726504e16d6d",
+    "classification" : "REJECTED",
+    "readable" : false,
+    "reviewRequired" : false,
+    "reason" : "Invalid annotation row",
+    "entries" : 0,
+    "uncompressedBytes" : 0,
+    "files" : [ ]
+  } ],
+  "proposedImports" : 0,
+  "exactDuplicates" : 0,
+  "bytesProposed" : 0,
+  "markdown" : "# Dataset Import Dry-Run\n\nWorkspace: `S:\\TrafficSignRecognitionRoadSafetyMonitor`\n\nRaw directory: `S:\\TrafficSignRecognitionRoadSafetyMonitor\\data\\raw`\n\nProposed imports: 0\n\nExact duplicates skipped: 0\n\nBytes proposed: 0\n\n## S:\\TrafficSignRecognitionRoadSafetyMonitor\\data\\raw\\GTSRB\\GTSRB_Final_Test_GT.zip\n\nClassification: `REJECTED`\n\nInvalid annotation row\n\nEntries: 0; uncompressed bytes: 0\n\nNo training splits, held-out test data, manifests, checkpoints, or existing files are modified by audit/plan.\n"
+}

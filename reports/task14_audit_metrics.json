@@ -1,0 +1,2013 @@
+{
+  "timestamp" : "2026-10-20T09:57:19.238674100Z",
+  "valFramesCount" : 174,
+  "valGtCount" : 122,
+  "testFramesCount" : 200,
+  "testGtCount" : 195,
+  "legacyLossAudit" : {
+    "syntheticBatchPosGradSum" : 0.450166,
+    "syntheticBatchNegGradSum" : 0.274917,
+    "gradientRatio" : 836.7428,
+    "emptyBatchNegGradSum" : 0.0,
+    "theoreticalEquilibriumP" : 0.6666667,
+    "autogradVerified" : true
+  },
+  "task13LossAudit" : {
+    "syntheticBatchPosGradSum" : 0.450166,
+    "syntheticBatchNegGradSum" : 70.241295,
+    "gradientRatio" : 156.03421,
+    "emptyBatchNegGradSum" : 1126.06,
+    "theoreticalEquilibriumP" : 0.0077669905,
+    "autogradVerified" : true
+  },
+  "task14LossAudit" : {
+    "syntheticBatchPosGradSum" : 0.450166,
+    "syntheticBatchNegGradSum" : 6.598008,
+    "gradientRatio" : 14.656834,
+    "emptyBatchNegGradSum" : 6.598008,
+    "theoreticalEquilibriumP" : 0.016666666,
+    "autogradVerified" : true
+  },
+  "task11Baseline" : {
+    "modelId" : "Task 11 Baseline",
+    "name" : "Task 11 Champion (BalancedDetectionLoss wBg=0.5, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task11_champion\\sign_detector-0006.params",
+    "sha256" : "B983D59595233878101A4DC37A157F33F81045027A3600FCB46CFAF5081A5AD4",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 42489,
+        "fn" : 98,
+        "totalProposals" : 42513,
+        "posProposals" : 20991,
+        "bgProposals" : 21522,
+        "fpPos" : 20967,
+        "fpBg" : 21522,
+        "precision" : 5.645332016089196E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0011258355810953443
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 42436,
+        "fn" : 45,
+        "totalProposals" : 42513,
+        "posProposals" : 20991,
+        "bgProposals" : 21522,
+        "fpPos" : 20914,
+        "fpBg" : 21522,
+        "precision" : 0.0018112106884952837,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.0036120558226808955
+      },
+      "proposalsPerFrame" : 244.32758620689654,
+      "bgProposalsPerFrame" : 247.3793103448276
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 42115,
+        "fn" : 98,
+        "totalProposals" : 42139,
+        "posProposals" : 20879,
+        "bgProposals" : 21260,
+        "fpPos" : 20855,
+        "fpBg" : 21260,
+        "precision" : 5.695436531479152E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0011357989635834458
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 42062,
+        "fn" : 45,
+        "totalProposals" : 42139,
+        "posProposals" : 20879,
+        "bgProposals" : 21260,
+        "fpPos" : 20802,
+        "fpBg" : 21260,
+        "precision" : 0.0018272858871828947,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.003644021674830221
+      },
+      "proposalsPerFrame" : 242.17816091954023,
+      "bgProposalsPerFrame" : 244.367816091954
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 39889,
+        "fn" : 98,
+        "totalProposals" : 39913,
+        "posProposals" : 19710,
+        "bgProposals" : 20203,
+        "fpPos" : 19686,
+        "fpBg" : 20203,
+        "precision" : 6.013078445619222E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0011989509179467965
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 39836,
+        "fn" : 45,
+        "totalProposals" : 39913,
+        "posProposals" : 19710,
+        "bgProposals" : 20203,
+        "fpPos" : 19633,
+        "fpBg" : 20203,
+        "precision" : 0.0019291960013028337,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.003846634195079306
+      },
+      "proposalsPerFrame" : 229.38505747126436,
+      "bgProposalsPerFrame" : 232.2183908045977
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 37187,
+        "fn" : 98,
+        "totalProposals" : 37211,
+        "posProposals" : 18297,
+        "bgProposals" : 18914,
+        "fpPos" : 18273,
+        "fpBg" : 18914,
+        "precision" : 6.449705732175969E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0012857257654086194
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 37134,
+        "fn" : 45,
+        "totalProposals" : 37211,
+        "posProposals" : 18297,
+        "bgProposals" : 18914,
+        "fpPos" : 18220,
+        "fpBg" : 18914,
+        "precision" : 0.0020692805890731233,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.004125036830685988
+      },
+      "proposalsPerFrame" : 213.85632183908046,
+      "bgProposalsPerFrame" : 217.4022988505747
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 34783,
+        "fn" : 98,
+        "totalProposals" : 34807,
+        "posProposals" : 17207,
+        "bgProposals" : 17600,
+        "fpPos" : 17183,
+        "fpBg" : 17600,
+        "precision" : 6.895164765708047E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0013742162672850638
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 34730,
+        "fn" : 45,
+        "totalProposals" : 34807,
+        "posProposals" : 17207,
+        "bgProposals" : 17600,
+        "fpPos" : 17130,
+        "fpBg" : 17600,
+        "precision" : 0.002212198695664665,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.00440894385753958
+      },
+      "proposalsPerFrame" : 200.04022988505747,
+      "bgProposalsPerFrame" : 202.29885057471265
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 33057,
+        "fn" : 98,
+        "totalProposals" : 33081,
+        "posProposals" : 16440,
+        "bgProposals" : 16641,
+        "fpPos" : 16416,
+        "fpBg" : 16641,
+        "precision" : 7.254919742450349E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0014456525012800047
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 33004,
+        "fn" : 45,
+        "totalProposals" : 33081,
+        "posProposals" : 16440,
+        "bgProposals" : 16641,
+        "fpPos" : 16363,
+        "fpBg" : 16641,
+        "precision" : 0.0023276200840361538,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.0046381351082733484
+      },
+      "proposalsPerFrame" : 190.1206896551724,
+      "bgProposalsPerFrame" : 191.27586206896552
+    }, {
+      "threshold" : 0.25,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 31470,
+        "fn" : 98,
+        "totalProposals" : 31494,
+        "posProposals" : 15699,
+        "bgProposals" : 15795,
+        "fpPos" : 15675,
+        "fpBg" : 15795,
+        "precision" : 7.620499142693847E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0015182186234817814
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 31417,
+        "fn" : 45,
+        "totalProposals" : 31494,
+        "posProposals" : 15699,
+        "bgProposals" : 15795,
+        "fpPos" : 15622,
+        "fpBg" : 15795,
+        "precision" : 0.0024449101416142757,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.004870951417004049
+      },
+      "proposalsPerFrame" : 181.0,
+      "bgProposalsPerFrame" : 181.55172413793105
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 29749,
+        "fn" : 98,
+        "totalProposals" : 29773,
+        "posProposals" : 14744,
+        "bgProposals" : 15029,
+        "fpPos" : 14720,
+        "fpBg" : 15029,
+        "precision" : 8.060994861115776E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0016056196688409435
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 29696,
+        "fn" : 45,
+        "totalProposals" : 29773,
+        "posProposals" : 14744,
+        "bgProposals" : 15029,
+        "fpPos" : 14667,
+        "fpBg" : 15029,
+        "precision" : 0.0025862358512746446,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.005151363104198026
+      },
+      "proposalsPerFrame" : 171.10919540229884,
+      "bgProposalsPerFrame" : 172.7471264367816
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 26138,
+        "fn" : 98,
+        "totalProposals" : 26162,
+        "posProposals" : 12815,
+        "bgProposals" : 13347,
+        "fpPos" : 12791,
+        "fpBg" : 13347,
+        "precision" : 9.173610580230869E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0018262060569167553
+      },
+      "counts30" : {
+        "tp" : 74,
+        "fp" : 26088,
+        "fn" : 48,
+        "totalProposals" : 26162,
+        "posProposals" : 12815,
+        "bgProposals" : 13347,
+        "fpPos" : 12741,
+        "fpBg" : 13347,
+        "precision" : 0.002828529928904518,
+        "recall" : 0.6065573770491803,
+        "f1" : 0.005630802008826663
+      },
+      "proposalsPerFrame" : 150.35632183908046,
+      "bgProposalsPerFrame" : 153.41379310344828
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 23,
+        "fp" : 21254,
+        "fn" : 99,
+        "totalProposals" : 21277,
+        "posProposals" : 10420,
+        "bgProposals" : 10857,
+        "fpPos" : 10397,
+        "fpBg" : 10857,
+        "precision" : 0.0010809794613902337,
+        "recall" : 0.1885245901639344,
+        "f1" : 0.0021496331604280573
+      },
+      "counts30" : {
+        "tp" : 71,
+        "fp" : 21206,
+        "fn" : 51,
+        "totalProposals" : 21277,
+        "posProposals" : 10420,
+        "bgProposals" : 10857,
+        "fpPos" : 10349,
+        "fpBg" : 10857,
+        "precision" : 0.0033369365982046342,
+        "recall" : 0.5819672131147541,
+        "f1" : 0.0066358241039300905
+      },
+      "proposalsPerFrame" : 122.2816091954023,
+      "bgProposalsPerFrame" : 124.79310344827586
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 22,
+        "fp" : 18358,
+        "fn" : 100,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9114,
+        "fpBg" : 9244,
+        "precision" : 0.0011969532100108815,
+        "recall" : 0.18032786885245902,
+        "f1" : 0.0023781212841854937
+      },
+      "counts30" : {
+        "tp" : 67,
+        "fp" : 18313,
+        "fn" : 55,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9069,
+        "fpBg" : 9244,
+        "precision" : 0.003645266594124048,
+        "recall" : 0.5491803278688525,
+        "f1" : 0.007242460274564913
+      },
+      "proposalsPerFrame" : 105.63218390804597,
+      "bgProposalsPerFrame" : 106.25287356321839
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 21,
+        "fp" : 15046,
+        "fn" : 101,
+        "totalProposals" : 15067,
+        "posProposals" : 7805,
+        "bgProposals" : 7262,
+        "fpPos" : 7784,
+        "fpBg" : 7262,
+        "precision" : 0.0013937744740160616,
+        "recall" : 0.1721311475409836,
+        "f1" : 0.002765158996642307
+      },
+      "counts30" : {
+        "tp" : 63,
+        "fp" : 15004,
+        "fn" : 59,
+        "totalProposals" : 15067,
+        "posProposals" : 7805,
+        "bgProposals" : 7262,
+        "fpPos" : 7742,
+        "fpBg" : 7262,
+        "precision" : 0.004181323422048184,
+        "recall" : 0.5163934426229508,
+        "f1" : 0.008295476989926921
+      },
+      "proposalsPerFrame" : 86.5919540229885,
+      "bgProposalsPerFrame" : 83.47126436781609
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 16,
+        "fp" : 8156,
+        "fn" : 106,
+        "totalProposals" : 8172,
+        "posProposals" : 4850,
+        "bgProposals" : 3322,
+        "fpPos" : 4834,
+        "fpBg" : 3322,
+        "precision" : 0.0019579050416054823,
+        "recall" : 0.13114754098360656,
+        "f1" : 0.003858210754762479
+      },
+      "counts30" : {
+        "tp" : 43,
+        "fp" : 8129,
+        "fn" : 79,
+        "totalProposals" : 8172,
+        "posProposals" : 4850,
+        "bgProposals" : 3322,
+        "fpPos" : 4807,
+        "fpBg" : 3322,
+        "precision" : 0.005261869799314733,
+        "recall" : 0.3524590163934426,
+        "f1" : 0.010368941403424162
+      },
+      "proposalsPerFrame" : 46.96551724137931,
+      "bgProposalsPerFrame" : 38.18390804597701
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 7,
+        "fp" : 2966,
+        "fn" : 115,
+        "totalProposals" : 2973,
+        "posProposals" : 1821,
+        "bgProposals" : 1152,
+        "fpPos" : 1814,
+        "fpBg" : 1152,
+        "precision" : 0.0023545240497813654,
+        "recall" : 0.05737704918032787,
+        "f1" : 0.004523424878836834
+      },
+      "counts30" : {
+        "tp" : 15,
+        "fp" : 2958,
+        "fn" : 107,
+        "totalProposals" : 2973,
+        "posProposals" : 1821,
+        "bgProposals" : 1152,
+        "fpPos" : 1806,
+        "fpBg" : 1152,
+        "precision" : 0.005045408678102927,
+        "recall" : 0.12295081967213115,
+        "f1" : 0.009693053311793215
+      },
+      "proposalsPerFrame" : 17.086206896551722,
+      "bgProposalsPerFrame" : 13.241379310344827
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 22,
+        "fp" : 18358,
+        "fn" : 100,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9114,
+        "fpBg" : 9244,
+        "precision" : 0.0011969532100108815,
+        "recall" : 0.18032786885245902,
+        "f1" : 0.0023781212841854937
+      },
+      "counts30" : {
+        "tp" : 67,
+        "fp" : 18313,
+        "fn" : 55,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9069,
+        "fpBg" : 9244,
+        "precision" : 0.003645266594124048,
+        "recall" : 0.5491803278688525,
+        "f1" : 0.007242460274564913
+      },
+      "proposalsPerFrame" : 105.63218390804597,
+      "bgProposalsPerFrame" : 106.25287356321839
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "lowConfidenceCount" : 3,
+      "poorLocalizationCount" : 80,
+      "nmsSuppressedCount" : 0,
+      "gridMismatchCount" : 17,
+      "detectedCount50" : 22,
+      "detectedCount30" : 67
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 0,
+      "medRecall50" : 0.0,
+      "largeCount" : 103,
+      "largeDetected50" : 22,
+      "largeRecall50" : 0.21359223300970873
+    }
+  },
+  "task13Calibrated" : {
+    "modelId" : "Task 13 Calibrated",
+    "name" : "Task 13 Champion (CalibratedDetectionLoss Npos-normalized, wBg=0.25, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task13_calibrated_norm\\sign_detector-0005.params",
+    "sha256" : "C64C44F5CC08ACA21DA706427898D6F227C5BB95C4B47845A231E0E57B5D379D",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 5,
+        "fp" : 12497,
+        "fn" : 117,
+        "totalProposals" : 12502,
+        "posProposals" : 7662,
+        "bgProposals" : 4840,
+        "fpPos" : 7657,
+        "fpBg" : 4840,
+        "precision" : 3.9993601023836185E-4,
+        "recall" : 0.040983606557377046,
+        "f1" : 7.921419518377692E-4
+      },
+      "counts30" : {
+        "tp" : 63,
+        "fp" : 12439,
+        "fn" : 59,
+        "totalProposals" : 12502,
+        "posProposals" : 7662,
+        "bgProposals" : 4840,
+        "fpPos" : 7599,
+        "fpBg" : 4840,
+        "precision" : 0.005039193729003359,
+        "recall" : 0.5163934426229508,
+        "f1" : 0.009980988593155892
+      },
+      "proposalsPerFrame" : 71.85057471264368,
+      "bgProposalsPerFrame" : 55.632183908045974
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 3487,
+        "fn" : 119,
+        "totalProposals" : 3490,
+        "posProposals" : 2166,
+        "bgProposals" : 1324,
+        "fpPos" : 2163,
+        "fpBg" : 1324,
+        "precision" : 8.595988538681948E-4,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0016611295681063123
+      },
+      "counts30" : {
+        "tp" : 20,
+        "fp" : 3470,
+        "fn" : 102,
+        "totalProposals" : 3490,
+        "posProposals" : 2166,
+        "bgProposals" : 1324,
+        "fpPos" : 2146,
+        "fpBg" : 1324,
+        "precision" : 0.0057306590257879654,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.01107419712070875
+      },
+      "proposalsPerFrame" : 20.057471264367816,
+      "bgProposalsPerFrame" : 15.218390804597702
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 528,
+        "fn" : 121,
+        "totalProposals" : 529,
+        "posProposals" : 384,
+        "bgProposals" : 145,
+        "fpPos" : 383,
+        "fpBg" : 145,
+        "precision" : 0.001890359168241966,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.003072196620583717
+      },
+      "counts30" : {
+        "tp" : 7,
+        "fp" : 522,
+        "fn" : 115,
+        "totalProposals" : 529,
+        "posProposals" : 384,
+        "bgProposals" : 145,
+        "fpPos" : 377,
+        "fpBg" : 145,
+        "precision" : 0.013232514177693762,
+        "recall" : 0.05737704918032787,
+        "f1" : 0.021505376344086023
+      },
+      "proposalsPerFrame" : 3.0402298850574714,
+      "bgProposalsPerFrame" : 1.6666666666666667
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 84,
+        "fn" : 121,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 71,
+        "fpBg" : 13,
+        "precision" : 0.011764705882352941,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.00966183574879227
+      },
+      "counts30" : {
+        "tp" : 5,
+        "fp" : 80,
+        "fn" : 117,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 67,
+        "fpBg" : 13,
+        "precision" : 0.058823529411764705,
+        "recall" : 0.040983606557377046,
+        "f1" : 0.048309178743961345
+      },
+      "proposalsPerFrame" : 0.4885057471264368,
+      "bgProposalsPerFrame" : 0.14942528735632185
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 22,
+        "fn" : 122,
+        "totalProposals" : 22,
+        "posProposals" : 20,
+        "bgProposals" : 2,
+        "fpPos" : 20,
+        "fpBg" : 2,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 21,
+        "fn" : 121,
+        "totalProposals" : 22,
+        "posProposals" : 20,
+        "bgProposals" : 2,
+        "fpPos" : 19,
+        "fpBg" : 2,
+        "precision" : 0.045454545454545456,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01388888888888889
+      },
+      "proposalsPerFrame" : 0.12643678160919541,
+      "bgProposalsPerFrame" : 0.022988505747126436
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 12,
+        "fn" : 122,
+        "totalProposals" : 12,
+        "posProposals" : 12,
+        "bgProposals" : 0,
+        "fpPos" : 12,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 11,
+        "fn" : 121,
+        "totalProposals" : 12,
+        "posProposals" : 12,
+        "bgProposals" : 0,
+        "fpPos" : 11,
+        "fpBg" : 0,
+        "precision" : 0.08333333333333333,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01492537313432836
+      },
+      "proposalsPerFrame" : 0.06896551724137931,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.25,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 4,
+        "fn" : 122,
+        "totalProposals" : 4,
+        "posProposals" : 4,
+        "bgProposals" : 0,
+        "fpPos" : 4,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 4,
+        "fn" : 122,
+        "totalProposals" : 4,
+        "posProposals" : 4,
+        "bgProposals" : 0,
+        "fpPos" : 4,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.022988505747126436,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 1,
+        "fn" : 122,
+        "totalProposals" : 1,
+        "posProposals" : 1,
+        "bgProposals" : 0,
+        "fpPos" : 1,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 1,
+        "fn" : 122,
+        "totalProposals" : 1,
+        "posProposals" : 1,
+        "bgProposals" : 0,
+        "fpPos" : 1,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.005747126436781609,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 84,
+        "fn" : 121,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 71,
+        "fpBg" : 13,
+        "precision" : 0.011764705882352941,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.00966183574879227
+      },
+      "counts30" : {
+        "tp" : 5,
+        "fp" : 80,
+        "fn" : 117,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 67,
+        "fpBg" : 13,
+        "precision" : 0.058823529411764705,
+        "recall" : 0.040983606557377046,
+        "f1" : 0.048309178743961345
+      },
+      "proposalsPerFrame" : 0.4885057471264368,
+      "bgProposalsPerFrame" : 0.14942528735632185
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "lowConfidenceCount" : 109,
+      "poorLocalizationCount" : 7,
+      "nmsSuppressedCount" : 0,
+      "gridMismatchCount" : 5,
+      "detectedCount50" : 1,
+      "detectedCount30" : 5
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 0,
+      "medRecall50" : 0.0,
+      "largeCount" : 103,
+      "largeDetected50" : 1,
+      "largeRecall50" : 0.009708737864077669
+    }
+  },
+  "task13Focal" : {
+    "modelId" : "Task 13 Focal",
+    "name" : "Task 13 Focal Loss (alpha=0.25, gamma=2.0, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task13_focal\\sign_detector-0005.params",
+    "sha256" : "F01EB9AD10DC714BBB0D11BAF96FD50C09A43692105260DF8463237C210A1FFE",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 14,
+        "fp" : 43072,
+        "fn" : 108,
+        "totalProposals" : 43086,
+        "posProposals" : 21372,
+        "bgProposals" : 21714,
+        "fpPos" : 21358,
+        "fpBg" : 21714,
+        "precision" : 3.249315322842687E-4,
+        "recall" : 0.11475409836065574,
+        "f1" : 6.480281429364932E-4
+      },
+      "counts30" : {
+        "tp" : 75,
+        "fp" : 43011,
+        "fn" : 47,
+        "totalProposals" : 43086,
+        "posProposals" : 21372,
+        "bgProposals" : 21714,
+        "fpPos" : 21297,
+        "fpBg" : 21714,
+        "precision" : 0.0017407046372371537,
+        "recall" : 0.6147540983606558,
+        "f1" : 0.003471579337159785
+      },
+      "proposalsPerFrame" : 247.6206896551724,
+      "bgProposalsPerFrame" : 249.58620689655172
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 14,
+        "fp" : 42979,
+        "fn" : 108,
+        "totalProposals" : 42993,
+        "posProposals" : 21343,
+        "bgProposals" : 21650,
+        "fpPos" : 21329,
+        "fpBg" : 21650,
+        "precision" : 3.256344056009118E-4,
+        "recall" : 0.11475409836065574,
+        "f1" : 6.494259538443697E-4
+      },
+      "counts30" : {
+        "tp" : 75,
+        "fp" : 42918,
+        "fn" : 47,
+        "totalProposals" : 42993,
+        "posProposals" : 21343,
+        "bgProposals" : 21650,
+        "fpPos" : 21268,
+        "fpBg" : 21650,
+        "precision" : 0.0017444700300048846,
+        "recall" : 0.6147540983606558,
+        "f1" : 0.0034790676098805525
+      },
+      "proposalsPerFrame" : 247.08620689655172,
+      "bgProposalsPerFrame" : 248.8505747126437
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 14,
+        "fp" : 29510,
+        "fn" : 108,
+        "totalProposals" : 29524,
+        "posProposals" : 16909,
+        "bgProposals" : 12615,
+        "fpPos" : 16895,
+        "fpBg" : 12615,
+        "precision" : 4.741904890936187E-4,
+        "recall" : 0.11475409836065574,
+        "f1" : 9.444781758078662E-4
+      },
+      "counts30" : {
+        "tp" : 68,
+        "fp" : 29456,
+        "fn" : 54,
+        "totalProposals" : 29524,
+        "posProposals" : 16909,
+        "bgProposals" : 12615,
+        "fpPos" : 16841,
+        "fpBg" : 12615,
+        "precision" : 0.002303210947026148,
+        "recall" : 0.5573770491803278,
+        "f1" : 0.004587465425352493
+      },
+      "proposalsPerFrame" : 169.67816091954023,
+      "bgProposalsPerFrame" : 145.0
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 6,
+        "fp" : 1740,
+        "fn" : 116,
+        "totalProposals" : 1746,
+        "posProposals" : 1068,
+        "bgProposals" : 678,
+        "fpPos" : 1062,
+        "fpBg" : 678,
+        "precision" : 0.003436426116838488,
+        "recall" : 0.04918032786885246,
+        "f1" : 0.006423982869379014
+      },
+      "counts30" : {
+        "tp" : 11,
+        "fp" : 1735,
+        "fn" : 111,
+        "totalProposals" : 1746,
+        "posProposals" : 1068,
+        "bgProposals" : 678,
+        "fpPos" : 1057,
+        "fpBg" : 678,
+        "precision" : 0.006300114547537228,
+        "recall" : 0.09016393442622951,
+        "f1" : 0.011777301927194861
+      },
+      "proposalsPerFrame" : 10.03448275862069,
+      "bgProposalsPerFrame" : 7.793103448275862
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 82,
+        "fn" : 122,
+        "totalProposals" : 82,
+        "posProposals" : 56,
+        "bgProposals" : 26,
+        "fpPos" : 56,
+        "fpBg" : 26,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 82,
+        "fn" : 122,
+        "totalProposals" : 82,
+        "posProposals" : 56,
+        "bgProposals" : 26,
+        "fpPos" : 56,
+        "fpBg" : 26,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.47126436781609193,
+      "bgProposalsPerFrame" : 0.2988505747126437
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 8,
+        "fn" : 122,
+        "totalProposals" : 8,
+        "posProposals" : 7,
+        "bgProposals" : 1,
+        "fpPos" : 7,
+        "fpBg" : 1,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 8,
+        "fn" : 122,
+        "totalProposals" : 8,
+        "posProposals" : 7,
+        "bgProposals" : 1,
+        "fpPos" : 7,
+        "fpBg" : 1,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.04597701149425287,
+      "bgProposalsPerFrame" : 0.011494252873563218
+    }, {
+      "threshold" : 0.25,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 6,
+        "fp" : 1740,
+        "fn" : 116,
+        "totalProposals" : 1746,
+        "posProposals" : 1068,
+        "bgProposals" : 678,
+        "fpPos" : 1062,
+        "fpBg" : 678,
+        "precision" : 0.003436426116838488,
+        "recall" : 0.04918032786885246,
+        "f1" : 0.006423982869379014
+      },
+      "counts30" : {
+        "tp" : 11,
+        "fp" : 1735,
+        "fn" : 111,
+        "totalProposals" : 1746,
+        "posProposals" : 1068,
+        "bgProposals" : 678,
+        "fpPos" : 1057,
+        "fpBg" : 678,
+        "precision" : 0.006300114547537228,
+        "recall" : 0.09016393442622951,
+        "f1" : 0.011777301927194861
+      },
+      "proposalsPerFrame" : 10.03448275862069,
+      "bgProposalsPerFrame" : 7.793103448275862
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "lowConfidenceCount" : 79,
+      "poorLocalizationCount" : 12,
+      "nmsSuppressedCount" : 0,
+      "gridMismatchCount" : 25,
+      "detectedCount50" : 6,
+      "detectedCount30" : 11
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 0,
+      "medRecall50" : 0.0,
+      "largeCount" : 103,
+      "largeDetected50" : 6,
+      "largeRecall50" : 0.05825242718446602
+    }
+  },
+  "task14Champion" : {
+    "modelId" : "Task 14 Champion",
+    "name" : "HighResSignDetectorBlock trained with BalancedCalibratedLoss (Npos/Nneg balanced, wBg=12.0, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task14_champion",
+    "sha256" : "6FA08C36671C221B88DE83830240E61B67ECAA73BD72BA767B248F1836C2EF8D",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 12,
+        "fp" : 40216,
+        "fn" : 110,
+        "totalProposals" : 40228,
+        "posProposals" : 20296,
+        "bgProposals" : 19932,
+        "fpPos" : 20284,
+        "fpBg" : 19932,
+        "precision" : 2.9829969175698516E-4,
+        "recall" : 0.09836065573770492,
+        "f1" : 5.947955390334572E-4
+      },
+      "counts30" : {
+        "tp" : 76,
+        "fp" : 40152,
+        "fn" : 46,
+        "totalProposals" : 40228,
+        "posProposals" : 20296,
+        "bgProposals" : 19932,
+        "fpPos" : 20220,
+        "fpBg" : 19932,
+        "precision" : 0.0018892313811275728,
+        "recall" : 0.6229508196721312,
+        "f1" : 0.003767038413878562
+      },
+      "proposalsPerFrame" : 231.19540229885058,
+      "bgProposalsPerFrame" : 229.10344827586206
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 12,
+        "fp" : 36082,
+        "fn" : 110,
+        "totalProposals" : 36094,
+        "posProposals" : 18094,
+        "bgProposals" : 18000,
+        "fpPos" : 18082,
+        "fpBg" : 18000,
+        "precision" : 3.3246522967806286E-4,
+        "recall" : 0.09836065573770492,
+        "f1" : 6.626905235255137E-4
+      },
+      "counts30" : {
+        "tp" : 75,
+        "fp" : 36019,
+        "fn" : 47,
+        "totalProposals" : 36094,
+        "posProposals" : 18094,
+        "bgProposals" : 18000,
+        "fpPos" : 18019,
+        "fpBg" : 18000,
+        "precision" : 0.0020779076854878925,
+        "recall" : 0.6147540983606558,
+        "f1" : 0.00414181577203446
+      },
+      "proposalsPerFrame" : 207.4367816091954,
+      "bgProposalsPerFrame" : 206.89655172413794
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 10,
+        "fp" : 24839,
+        "fn" : 112,
+        "totalProposals" : 24849,
+        "posProposals" : 12366,
+        "bgProposals" : 12483,
+        "fpPos" : 12356,
+        "fpBg" : 12483,
+        "precision" : 4.0243068131514347E-4,
+        "recall" : 0.08196721311475409,
+        "f1" : 8.009290777301671E-4
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 24780,
+        "fn" : 53,
+        "totalProposals" : 24849,
+        "posProposals" : 12366,
+        "bgProposals" : 12483,
+        "fpPos" : 12297,
+        "fpBg" : 12483,
+        "precision" : 0.00277677170107449,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.005526410636338153
+      },
+      "proposalsPerFrame" : 142.81034482758622,
+      "bgProposalsPerFrame" : 143.48275862068965
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 9676,
+        "fn" : 119,
+        "totalProposals" : 9679,
+        "posProposals" : 4650,
+        "bgProposals" : 5029,
+        "fpPos" : 4647,
+        "fpBg" : 5029,
+        "precision" : 3.099493749354272E-4,
+        "recall" : 0.02459016393442623,
+        "f1" : 6.121824303642485E-4
+      },
+      "counts30" : {
+        "tp" : 25,
+        "fp" : 9654,
+        "fn" : 97,
+        "totalProposals" : 9679,
+        "posProposals" : 4650,
+        "bgProposals" : 5029,
+        "fpPos" : 4625,
+        "fpBg" : 5029,
+        "precision" : 0.002582911457795227,
+        "recall" : 0.20491803278688525,
+        "f1" : 0.005101520253035404
+      },
+      "proposalsPerFrame" : 55.62643678160919,
+      "bgProposalsPerFrame" : 57.804597701149426
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 4715,
+        "fn" : 119,
+        "totalProposals" : 4718,
+        "posProposals" : 2385,
+        "bgProposals" : 2333,
+        "fpPos" : 2382,
+        "fpBg" : 2333,
+        "precision" : 6.35862653666808E-4,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0012396694214876034
+      },
+      "counts30" : {
+        "tp" : 18,
+        "fp" : 4700,
+        "fn" : 104,
+        "totalProposals" : 4718,
+        "posProposals" : 2385,
+        "bgProposals" : 2333,
+        "fpPos" : 2367,
+        "fpBg" : 2333,
+        "precision" : 0.0038151759220008477,
+        "recall" : 0.14754098360655737,
+        "f1" : 0.007438016528925621
+      },
+      "proposalsPerFrame" : 27.114942528735632,
+      "bgProposalsPerFrame" : 26.816091954022987
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 2169,
+        "fn" : 119,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1183,
+        "fpBg" : 986,
+        "precision" : 0.0013812154696132596,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0026155187445510023
+      },
+      "counts30" : {
+        "tp" : 12,
+        "fp" : 2160,
+        "fn" : 110,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1174,
+        "fpBg" : 986,
+        "precision" : 0.0055248618784530384,
+        "recall" : 0.09836065573770492,
+        "f1" : 0.01046207497820401
+      },
+      "proposalsPerFrame" : 12.482758620689655,
+      "bgProposalsPerFrame" : 11.333333333333334
+    }, {
+      "threshold" : 0.25,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 865,
+        "fn" : 119,
+        "totalProposals" : 868,
+        "posProposals" : 538,
+        "bgProposals" : 330,
+        "fpPos" : 535,
+        "fpBg" : 330,
+        "precision" : 0.0034562211981566822,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.006060606060606061
+      },
+      "counts30" : {
+        "tp" : 9,
+        "fp" : 859,
+        "fn" : 113,
+        "totalProposals" : 868,
+        "posProposals" : 538,
+        "bgProposals" : 330,
+        "fpPos" : 529,
+        "fpBg" : 330,
+        "precision" : 0.010368663594470046,
+        "recall" : 0.07377049180327869,
+        "f1" : 0.018181818181818184
+      },
+      "proposalsPerFrame" : 4.988505747126437,
+      "bgProposalsPerFrame" : 3.793103448275862
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 325,
+        "fn" : 119,
+        "totalProposals" : 328,
+        "posProposals" : 239,
+        "bgProposals" : 89,
+        "fpPos" : 236,
+        "fpBg" : 89,
+        "precision" : 0.009146341463414634,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.01333333333333333
+      },
+      "counts30" : {
+        "tp" : 6,
+        "fp" : 322,
+        "fn" : 116,
+        "totalProposals" : 328,
+        "posProposals" : 239,
+        "bgProposals" : 89,
+        "fpPos" : 233,
+        "fpBg" : 89,
+        "precision" : 0.018292682926829267,
+        "recall" : 0.04918032786885246,
+        "f1" : 0.02666666666666666
+      },
+      "proposalsPerFrame" : 1.8850574712643677,
+      "bgProposalsPerFrame" : 1.0229885057471264
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 33,
+        "fn" : 121,
+        "totalProposals" : 34,
+        "posProposals" : 27,
+        "bgProposals" : 7,
+        "fpPos" : 26,
+        "fpBg" : 7,
+        "precision" : 0.029411764705882353,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01282051282051282
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 33,
+        "fn" : 121,
+        "totalProposals" : 34,
+        "posProposals" : 27,
+        "bgProposals" : 7,
+        "fpPos" : 26,
+        "fpBg" : 7,
+        "precision" : 0.029411764705882353,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01282051282051282
+      },
+      "proposalsPerFrame" : 0.19540229885057472,
+      "bgProposalsPerFrame" : 0.08045977011494253
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.011494252873563218,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 2169,
+        "fn" : 119,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1183,
+        "fpBg" : 986,
+        "precision" : 0.0013812154696132596,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0026155187445510023
+      },
+      "counts30" : {
+        "tp" : 12,
+        "fp" : 2160,
+        "fn" : 110,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1174,
+        "fpBg" : 986,
+        "precision" : 0.0055248618784530384,
+        "recall" : 0.09836065573770492,
+        "f1" : 0.01046207497820401
+      },
+      "proposalsPerFrame" : 12.482758620689655,
+      "bgProposalsPerFrame" : 11.333333333333334
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "lowConfidenceCount" : 68,
+      "poorLocalizationCount" : 22,
+      "nmsSuppressedCount" : 0,
+      "gridMismatchCount" : 29,
+      "detectedCount50" : 3,
+      "detectedCount30" : 12
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 0,
+      "medRecall50" : 0.0,
+      "largeCount" : 103,
+      "largeDetected50" : 3,
+      "largeRecall50" : 0.02912621359223301
+    }
+  },
+  "task14TestEvaluation" : {
+    "threshold" : 0.2,
+    "counts50" : {
+      "tp" : 2,
+      "fp" : 4408,
+      "fn" : 193,
+      "totalProposals" : 4410,
+      "posProposals" : 1796,
+      "bgProposals" : 2614,
+      "fpPos" : 1794,
+      "fpBg" : 2614,
+      "precision" : 4.5351473922902497E-4,
+      "recall" : 0.010256410256410256,
+      "f1" : 8.686210640608035E-4
+    },
+    "counts30" : {
+      "tp" : 15,
+      "fp" : 4395,
+      "fn" : 180,
+      "totalProposals" : 4410,
+      "posProposals" : 1796,
+      "bgProposals" : 2614,
+      "fpPos" : 1781,
+      "fpBg" : 2614,
+      "precision" : 0.003401360544217687,
+      "recall" : 0.07692307692307693,
+      "f1" : 0.0065146579804560255
+    },
+    "proposalsPerFrame" : 22.05,
+    "bgProposalsPerFrame" : 26.14
+  },
+  "baselineTestEvaluation" : {
+    "threshold" : 0.55,
+    "counts50" : {
+      "tp" : 60,
+      "fp" : 21280,
+      "fn" : 135,
+      "totalProposals" : 21340,
+      "posProposals" : 11140,
+      "bgProposals" : 10200,
+      "fpPos" : 11080,
+      "fpBg" : 10200,
+      "precision" : 0.0028116213683223993,
+      "recall" : 0.3076923076923077,
+      "f1" : 0.0055723241235198515
+    },
+    "counts30" : {
+      "tp" : 137,
+      "fp" : 21203,
+      "fn" : 58,
+      "totalProposals" : 21340,
+      "posProposals" : 11140,
+      "bgProposals" : 10200,
+      "fpPos" : 11003,
+      "fpBg" : 10200,
+      "precision" : 0.0064198687910028114,
+      "recall" : 0.7025641025641025,
+      "f1" : 0.012723473415370327
+    },
+    "proposalsPerFrame" : 106.7,
+    "bgProposalsPerFrame" : 102.0
+  },
+  "championLatency" : {
+    "detectorMs" : 45.64,
+    "cropMs" : 4.72,
+    "classifierMs" : 14.36,
+    "renderingMs" : 24.642228000000003,
+    "totalLatencyMs" : 89.508268,
+    "throughputFps" : 11.172152275362986
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "Task6_C_Repro" : {
+    "experimentKey" : "Task6_C_Repro",
+    "description" : "Uniform Balanced Sampling (repro lr=1e-3)",
+    "valAccuracy" : 0.6188888888888889,
+    "valMacroF1" : 0.4976814838108431,
+    "valWeightedF1" : 0.6083872755223929,
+    "valMacroRecall" : 0.5407607180594406,
+    "valZeroRecallClasses" : 13,
+    "trainingDurationMs" : 37433,
+    "checkpointDir" : "models/checkpoints/task6/c_repro/task6_c_repro_best"
+  },
+  "Task6_C1_Sqrt" : {
+    "experimentKey" : "Task6_C1_Sqrt",
+    "description" : "Square-Root Smoothed Sampling (power=0.5)",
+    "valAccuracy" : 0.6555555555555556,
+    "valMacroF1" : 0.48232737265246806,
+    "valWeightedF1" : 0.6471634696526323,
+    "valMacroRecall" : 0.49828130498796197,
+    "valZeroRecallClasses" : 17,
+    "trainingDurationMs" : 37272,
+    "checkpointDir" : "models/checkpoints/task6/c1_sqrt/task6_c1_sqrt_best"
+  },
+  "Task6_C2_Photo" : {
+    "experimentKey" : "Task6_C2_Photo",
+    "description" : "Balanced Sampling + Photometric Jitter (+-10%)",
+    "valAccuracy" : 0.6244444444444445,
+    "valMacroF1" : 0.530714487505042,
+    "valWeightedF1" : 0.6146200492360638,
+    "valMacroRecall" : 0.5597335015633443,
+    "valZeroRecallClasses" : 12,
+    "trainingDurationMs" : 40270,
+    "checkpointDir" : "models/checkpoints/task6/c2_photo/task6_c2_photo_best"
+  },
+  "Task6_C3_Lr5e4" : {
+    "experimentKey" : "Task6_C3_Lr5e4",
+    "description" : "Balanced Sampling with tuned lr=5e-4",
+    "valAccuracy" : 0.5888888888888889,
+    "valMacroF1" : 0.47996708165537677,
+    "valWeightedF1" : 0.573605063213394,
+    "valMacroRecall" : 0.5031222212856865,
+    "valZeroRecallClasses" : 18,
+    "trainingDurationMs" : 32603,
+    "checkpointDir" : "models/checkpoints/task6/c3_lr5e4/task6_c3_lr5e4_best"
+  }
+}

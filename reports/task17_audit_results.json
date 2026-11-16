@@ -1,0 +1,2500 @@
+{
+  "title" : "Task 17 False-Positive and Safety-State Integrity Audit Report",
+  "timestamp" : "2026-10-22T05:35:52.331121Z",
+  "checkpoints" : [ {
+    "modelType" : "HighResSignDetector (Task 15 Champion)",
+    "checkpointPath" : "models\\checkpoints\\detector_task15_champion\\sign_detector-0004.params",
+    "sha256Hex" : "BBF93047525E290198C10E541714CCFF31BCACB2B84818AFAF468C9D3F1FAB74",
+    "fileSizeBytes" : 974632
+  }, {
+    "modelType" : "IndianTrafficSignCnnBlock (Task 7 Champion)",
+    "checkpointPath" : "models\\checkpoints\\task7_champion\\exp_b_48x48-0008.params",
+    "sha256Hex" : "E747125B9B54609EDD944018A49C5086B3F4E2D264BF9A691A4510E1D3CCD18F",
+    "fileSizeBytes" : 5186315
+  } ],
+  "evaluationCases" : [ {
+    "caseName" : "Clear Speed-Limit 40 Sign",
+    "inputPath" : "data/raw/traffic_sign_classification_dataset/test/SPEED_LIMIT_40/66000.jpg (embedded in road scene)",
+    "imageWidth" : 800,
+    "imageHeight" : 600,
+    "groundTruthSignCount" : 1,
+    "configResults" : {
+      "Config A (Task 16 UI Defaults: Det 0.20, Cls 0.25)" : {
+        "detConfidenceThreshold" : 0.2,
+        "clsConfidenceThreshold" : 0.25,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 25,
+        "confidentDetectionsCount" : 2,
+        "uncertainDetectionsCount" : 23,
+        "detections" : [ {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.5595741,
+          "clsConfidence" : 0.21683915,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5477662608027458, 0.3469473272562027, 0.6218881085515022, 0.4703506678342819 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.4328768,
+          "clsConfidence" : 0.19902307,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5063575096428394, 0.371193990111351, 0.5757716111838818, 0.4617825299501419 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.39540806,
+          "clsConfidence" : 0.2071773,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5665505472570658, 0.3078451566398144, 0.6086623128503561, 0.39004339650273323 ]
+        }, {
+          "classId" : 31,
+          "className" : "No Entry",
+          "detConfidence" : 0.3730399,
+          "clsConfidence" : 0.35986423,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.5691037978976965, 0.4021720662713051, 0.6060724649578333, 0.5302913412451744 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.35768417,
+          "clsConfidence" : 0.21401258,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5086674224585295, 0.300322737544775, 0.5601112116128206, 0.4190239645540714 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.35611954,
+          "clsConfidence" : 0.12049502,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.550833098590374, 0.44954539090394974, 0.6289473846554756, 0.612874262034893 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3428328,
+          "clsConfidence" : 0.34238553,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.6150696575641632, 0.3864445611834526, 0.6940397918224335, 0.5404931381344795 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.34132415,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.625287264585495, 0.5087350830435753, 0.6923158466815948, 0.6678830161690712 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.34090224,
+          "clsConfidence" : 0.09134778,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.06367543339729309, 0.49741681665182114, 0.13425515592098236, 0.6784724369645119 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.1244325041770935, 0.5046877637505531, 0.19347554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.1869325041770935, 0.5046877637505531, 0.25597554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.2494325041770935, 0.5046877637505531, 0.31847554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.3119325041770935, 0.5046877637505531, 0.38097554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.7494325041770935, 0.5046877637505531, 0.8184755444526672, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8119325041770935, 0.5046877637505531, 0.8809755444526672, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33849904,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.061722397804260254, 0.6218752041459084, 0.1354888379573822, 0.8037842139601707 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33849904,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.061722397804260254, 0.7468752041459084, 0.1354888379573822, 0.9287842139601707 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33802047,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6891157850623131, 0.505396842956543, 0.7545928731560707, 0.6714211702346802 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.337694,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5020097382366657, 0.5099410638213158, 0.5652910582721233, 0.671267069876194 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33710793,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.37456511706113815, 0.5043060854077339, 0.4432511404156685, 0.6720193549990654 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.43532027676701546, 0.5664961487054825, 0.5073652677237988, 0.7350824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5603203065693378, 0.5664961487054825, 0.6323652975261211, 0.7350824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.12282027676701546, 0.6289961487054825, 0.19486526772379875, 0.7975824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.18532027676701546, 0.6289961487054825, 0.25736526772379875, 0.7975824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.09294876,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.24782027676701546, 0.6289961487054825, 0.31986526772379875, 0.7975824922323227 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-b1bc2267",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 22%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1002-73a30376",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1003-021e1a7d",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 21%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1004-27e33e4b",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "CRITICAL",
+          "displayName" : "No Entry",
+          "numericalValue" : null,
+          "driverAdvisory" : "Entry prohibited for all vehicles. One-way traffic or closed passage ahead."
+        }, {
+          "eventId" : "EVT-1-1005-3a52510f",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 21%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1006-b1cc9316",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 12%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1007-730fd38a",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "WARNING",
+          "displayName" : "Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Sound audible horn before entering blind turn or ghat hairpin curve."
+        }, {
+          "eventId" : "EVT-1-1008-58270733",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1009-339554c2",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1010-703e77db",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1011-246a8904",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1012-ef520f60",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1013-0d928c68",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1014-c9dec2ea",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1015-c3599fa9",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1016-2f936c52",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1017-5e1c7e57",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1018-7a9e5385",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1019-b17fc621",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1020-ac24079d",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1021-3d6aab82",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1022-97f5d2f2",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1023-071d2ef8",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1024-d4fdc95e",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1025-7a8ad98c",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ "Compulsory Sound Horn", "No Entry" ],
+          "activeHazards" : [ ]
+        }
+      },
+      "Config B (Unfiltered Low Threshold: Det 0.20, Cls 0.20)" : {
+        "detConfidenceThreshold" : 0.2,
+        "clsConfidenceThreshold" : 0.2,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 25,
+        "confidentDetectionsCount" : 5,
+        "uncertainDetectionsCount" : 20,
+        "detections" : [ {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.5595741,
+          "clsConfidence" : 0.21683915,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.5477662608027458, 0.3469473272562027, 0.6218881085515022, 0.4703506678342819 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.4328768,
+          "clsConfidence" : 0.19902307,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5063575096428394, 0.371193990111351, 0.5757716111838818, 0.4617825299501419 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.39540806,
+          "clsConfidence" : 0.2071773,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.5665505472570658, 0.3078451566398144, 0.6086623128503561, 0.39004339650273323 ]
+        }, {
+          "classId" : 31,
+          "className" : "No Entry",
+          "detConfidence" : 0.3730399,
+          "clsConfidence" : 0.35986423,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.5691037978976965, 0.4021720662713051, 0.6060724649578333, 0.5302913412451744 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.35768417,
+          "clsConfidence" : 0.21401258,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.5086674224585295, 0.300322737544775, 0.5601112116128206, 0.4190239645540714 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.35611954,
+          "clsConfidence" : 0.12049502,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.550833098590374, 0.44954539090394974, 0.6289473846554756, 0.612874262034893 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3428328,
+          "clsConfidence" : 0.34238553,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.6150696575641632, 0.3864445611834526, 0.6940397918224335, 0.5404931381344795 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.34132415,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.625287264585495, 0.5087350830435753, 0.6923158466815948, 0.6678830161690712 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.34090224,
+          "clsConfidence" : 0.09134778,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.06367543339729309, 0.49741681665182114, 0.13425515592098236, 0.6784724369645119 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.1244325041770935, 0.5046877637505531, 0.19347554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.1869325041770935, 0.5046877637505531, 0.25597554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.2494325041770935, 0.5046877637505531, 0.31847554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.3119325041770935, 0.5046877637505531, 0.38097554445266724, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.7494325041770935, 0.5046877637505531, 0.8184755444526672, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.3385019,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8119325041770935, 0.5046877637505531, 0.8809755444526672, 0.6721362099051476 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33849904,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.061722397804260254, 0.6218752041459084, 0.1354888379573822, 0.8037842139601707 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33849904,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.061722397804260254, 0.7468752041459084, 0.1354888379573822, 0.9287842139601707 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33802047,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6891157850623131, 0.505396842956543, 0.7545928731560707, 0.6714211702346802 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.337694,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5020097382366657, 0.5099410638213158, 0.5652910582721233, 0.671267069876194 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33710793,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.37456511706113815, 0.5043060854077339, 0.4432511404156685, 0.6720193549990654 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.43532027676701546, 0.5664961487054825, 0.5073652677237988, 0.7350824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5603203065693378, 0.5664961487054825, 0.6323652975261211, 0.7350824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.12282027676701546, 0.6289961487054825, 0.19486526772379875, 0.7975824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.092948735,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.18532027676701546, 0.6289961487054825, 0.25736526772379875, 0.7975824922323227 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.33649322,
+          "clsConfidence" : 0.09294876,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.24782027676701546, 0.6289961487054825, 0.31986526772379875, 0.7975824922323227 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-dabb2d2c",
+          "eventType" : "SPEED_LIMIT_POSTED",
+          "severity" : "WARNING",
+          "displayName" : "Speed Limit 40 km/h",
+          "numericalValue" : 40.0,
+          "driverAdvisory" : "Maximum permissible speed is 40 km/h. Decelerate to posted maximum."
+        }, {
+          "eventId" : "EVT-1-1002-39766ea9",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1003-73168d0a",
+          "eventType" : "SPEED_LIMIT_POSTED",
+          "severity" : "WARNING",
+          "displayName" : "Speed Limit 40 km/h",
+          "numericalValue" : 40.0,
+          "driverAdvisory" : "Maximum permissible speed is 40 km/h. Decelerate to posted maximum."
+        }, {
+          "eventId" : "EVT-1-1004-c0483fa6",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "CRITICAL",
+          "displayName" : "No Entry",
+          "numericalValue" : null,
+          "driverAdvisory" : "Entry prohibited for all vehicles. One-way traffic or closed passage ahead."
+        }, {
+          "eventId" : "EVT-1-1005-5641fc5c",
+          "eventType" : "SPEED_LIMIT_POSTED",
+          "severity" : "WARNING",
+          "displayName" : "Speed Limit 40 km/h",
+          "numericalValue" : 40.0,
+          "driverAdvisory" : "Maximum permissible speed is 40 km/h. Decelerate to posted maximum."
+        }, {
+          "eventId" : "EVT-1-1006-a4416ec4",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 12%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1007-f6000dc2",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "WARNING",
+          "displayName" : "Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Sound audible horn before entering blind turn or ghat hairpin curve."
+        }, {
+          "eventId" : "EVT-1-1008-9b44038f",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1009-856be2f3",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1010-68879721",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1011-78cb2946",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1012-d47e76f7",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1013-290a0165",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1014-0f4a8ad7",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1015-9a0cd011",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1016-b2be12bb",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1017-5f19e9e0",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1018-3be8a035",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1019-b93a1442",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1020-afd0e223",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1021-10f70418",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1022-d0fdd9dd",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1023-5ccb0d1d",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1024-feff1636",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1025-df1e0651",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 9%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : 40,
+          "activeRestrictions" : [ "Compulsory Sound Horn", "No Entry" ],
+          "activeHazards" : [ ]
+        }
+      },
+      "Config C (Calibrated Balanced: Det 0.50, Cls 0.25)" : {
+        "detConfidenceThreshold" : 0.5,
+        "clsConfidenceThreshold" : 0.25,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 1,
+        "confidentDetectionsCount" : 0,
+        "uncertainDetectionsCount" : 1,
+        "detections" : [ {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.5595741,
+          "clsConfidence" : 0.21683942,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5477662608027458, 0.3469473272562027, 0.6218881085515022, 0.4703506678342819 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-be078fd3",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 22%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ ],
+          "activeHazards" : [ ]
+        }
+      },
+      "Config D (Calibrated False-Positive Suppression: Det 0.55, Cls 0.35)" : {
+        "detConfidenceThreshold" : 0.55,
+        "clsConfidenceThreshold" : 0.35,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 1,
+        "confidentDetectionsCount" : 0,
+        "uncertainDetectionsCount" : 1,
+        "detections" : [ {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.5595741,
+          "clsConfidence" : 0.21683942,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5477662608027458, 0.3469473272562027, 0.6218881085515022, 0.4703506678342819 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-80a4b8c4",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 22%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ ],
+          "activeHazards" : [ ]
+        }
+      }
+    }
+  }, {
+    "caseName" : "Empty Road Frame (Zero Signs)",
+    "inputPath" : "data\\raw\\indian-road-driving-sample\\inspection\\000db725-8180-4770-8b6a-4eb74aeda9f9_0004.jpg",
+    "imageWidth" : 1920,
+    "imageHeight" : 994,
+    "groundTruthSignCount" : 0,
+    "configResults" : {
+      "Config A (Task 16 UI Defaults: Det 0.20, Cls 0.25)" : {
+        "detConfidenceThreshold" : 0.2,
+        "clsConfidenceThreshold" : 0.25,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 25,
+        "confidentDetectionsCount" : 8,
+        "uncertainDetectionsCount" : 17,
+        "detections" : [ {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.54569197,
+          "clsConfidence" : 0.13971825,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.32709955610334873, 0.4484365228563547, 0.35283792577683926, 0.5027092453092337 ]
+        }, {
+          "classId" : 14,
+          "className" : "Cross Road",
+          "detConfidence" : 0.54103386,
+          "clsConfidence" : 0.4129828,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8013374768197536, 0.15829483792185783, 0.8461366929113865, 0.2737642414867878 ]
+        }, {
+          "classId" : 8,
+          "className" : "Compulsory Keep Left",
+          "detConfidence" : 0.5307585,
+          "clsConfidence" : 0.24614501,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6197582678869367, 0.2360237017273903, 0.65063367318362, 0.3067583069205284 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.513918,
+          "clsConfidence" : 0.13027768,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.25233042892068624, 0.44371679797768593, 0.28236495796591043, 0.48337849602103233 ]
+        }, {
+          "classId" : 21,
+          "className" : "Guarded Level Crossing",
+          "detConfidence" : 0.5112723,
+          "clsConfidence" : 0.10850549,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.011970503255724907, 0.16385116428136826, 0.04820212535560131, 0.288899727165699 ]
+        }, {
+          "classId" : 27,
+          "className" : "Left Turn Prohibited",
+          "detConfidence" : 0.5026591,
+          "clsConfidence" : 0.11567956,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.016534697264432907, 0.11157277226448059, 0.04590430483222008, 0.21263375878334045 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.4993233,
+          "clsConfidence" : 0.12421854,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.42851621750742197, 0.2428378313779831, 0.456826857291162, 0.31540723145008087 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.46861082,
+          "clsConfidence" : 0.22337346,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.006785677745938301, 0.31112004444003105, 0.04841277189552784, 0.395538616925478 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.46695846,
+          "clsConfidence" : 0.2917589,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8232073299586773, 0.22428088262677193, 0.8419238813221455, 0.3190901391208172 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.46234247,
+          "clsConfidence" : 0.15332976,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8792471075430512, 0.17462506145238876, 0.8992659663781524, 0.23996616154909134 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.45814198,
+          "clsConfidence" : 0.15977973,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.7079031872563064, 0.31691746041178703, 0.7234669518657029, 0.3809664435684681 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.45310417,
+          "clsConfidence" : 0.32646653,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.428123427554965, 0.16261207684874535, 0.46223549731075764, 0.25693554058671 ]
+        }, {
+          "classId" : 61,
+          "className" : "T-Intersection",
+          "detConfidence" : 0.45007983,
+          "clsConfidence" : 0.092415124,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.14407267421483994, 0.39528386667370796, 0.16631928831338882, 0.43598128482699394 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.44877568,
+          "clsConfidence" : 0.21273509,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6961601004004478, 0.23464986309409142, 0.7157182469964027, 0.3266470767557621 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.44427335,
+          "clsConfidence" : 0.19669299,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.20596163906157017, 0.3211256042122841, 0.2535612042993307, 0.3931153044104576 ]
+        }, {
+          "classId" : 14,
+          "className" : "Cross Road",
+          "detConfidence" : 0.44352037,
+          "clsConfidence" : 0.38524464,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.3724948428571224, 0.20727335661649704, 0.4494735337793827, 0.3637058809399605 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.43774068,
+          "clsConfidence" : 0.27098417,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.024116424843668938, 0.3766374886035919, 0.059629255905747414, 0.4438999593257904 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.4345536,
+          "clsConfidence" : 0.16551042,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.3195664491504431, 0.6145984344184399, 0.3522996697574854, 0.6887340135872364 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.4333781,
+          "clsConfidence" : 0.44054225,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.25481971725821495, 0.30472591146826744, 0.2882489897310734, 0.3875025846064091 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.43306282,
+          "clsConfidence" : 0.36174664,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8285805536434054, 0.28922003880143166, 0.8513117479160428, 0.3835512362420559 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.43199664,
+          "clsConfidence" : 0.59285533,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.9346660263836384, 0.10192260518670082, 0.9767526499927044, 0.2124197743833065 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.4291813,
+          "clsConfidence" : 0.20655395,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.15036686230450869, 0.4519700612872839, 0.16772908996790648, 0.4899322185665369 ]
+        }, {
+          "classId" : 63,
+          "className" : "Turn Right Ahead",
+          "detConfidence" : 0.42846018,
+          "clsConfidence" : 0.08939583,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0013456307351589203, 0.017915740609169006, 0.06501030549407005, 0.17248015105724335 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.42831644,
+          "clsConfidence" : 0.24859004,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.4459404777735472, 0.48021069914102554, 0.4895379114896059, 0.5668212994933128 ]
+        }, {
+          "classId" : 29,
+          "className" : "Men at Work",
+          "detConfidence" : 0.42771465,
+          "clsConfidence" : 0.091342926,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.07602862175554037, 0.3929933197796345, 0.10457166377454996, 0.43638820573687553 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-e6bda35d",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 14%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1002-6671e6a1",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Cross Road Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Four-way crossroads ahead. Decelerate, scan crossing traffic, and yield as required."
+        }, {
+          "eventId" : "EVT-1-1003-a13a6870",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Keep Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Keep Left, conf 25%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1004-c295aee9",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 13%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1005-03147bf6",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Guarded Level Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Guarded Level Crossing, conf 11%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1006-30fbe95f",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Turn Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Turn Prohibited, conf 12%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1007-0e62369e",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Handcarts Prohibited, conf 12%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1008-e87051fd",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 22%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1009-4cc67d3e",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1010-b72f4703",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Pedestrian Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Pedestrian Crossing, conf 15%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1011-85c17833",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Pedestrian Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Pedestrian Crossing, conf 16%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1012-79d54e85",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1013-aee68c44",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: T-Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (T-Intersection, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1014-5aaa7235",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Pedestrian Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Pedestrian Crossing, conf 21%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1015-3ea489f8",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1016-694c0866",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Cross Road Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Four-way crossroads ahead. Decelerate, scan crossing traffic, and yield as required."
+        }, {
+          "eventId" : "EVT-1-1017-1d7b7a87",
+          "eventType" : "GIVE_WAY_MANDATE",
+          "severity" : "CRITICAL",
+          "displayName" : "Give Way / Yield",
+          "numericalValue" : null,
+          "driverAdvisory" : "Yield right of way to priority traffic on intersecting carriageway."
+        }, {
+          "eventId" : "EVT-1-1018-c67b6c15",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 17%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1019-f42d6558",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1020-facfed0b",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1021-760d3074",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1022-0aaf7202",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 21%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1023-2caff5e5",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Turn Right Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Turn Right Ahead, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1024-ca6d0384",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Sound Horn, conf 25%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1025-54bd368a",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Men at Work",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Men at Work, conf 9%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ "Handcarts Prohibited" ],
+          "activeHazards" : [ "Cross Road Intersection", "Pedestrian Crossing Ahead", "Give Way / Yield" ]
+        }
+      },
+      "Config B (Unfiltered Low Threshold: Det 0.20, Cls 0.20)" : {
+        "detConfidenceThreshold" : 0.2,
+        "clsConfidenceThreshold" : 0.2,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 25,
+        "confidentDetectionsCount" : 13,
+        "uncertainDetectionsCount" : 12,
+        "detections" : [ {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.54569197,
+          "clsConfidence" : 0.13971825,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.32709955610334873, 0.4484365228563547, 0.35283792577683926, 0.5027092453092337 ]
+        }, {
+          "classId" : 14,
+          "className" : "Cross Road",
+          "detConfidence" : 0.54103386,
+          "clsConfidence" : 0.4129828,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8013374768197536, 0.15829483792185783, 0.8461366929113865, 0.2737642414867878 ]
+        }, {
+          "classId" : 8,
+          "className" : "Compulsory Keep Left",
+          "detConfidence" : 0.5307585,
+          "clsConfidence" : 0.24614501,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.6197582678869367, 0.2360237017273903, 0.65063367318362, 0.3067583069205284 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.513918,
+          "clsConfidence" : 0.13027768,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.25233042892068624, 0.44371679797768593, 0.28236495796591043, 0.48337849602103233 ]
+        }, {
+          "classId" : 21,
+          "className" : "Guarded Level Crossing",
+          "detConfidence" : 0.5112723,
+          "clsConfidence" : 0.10850549,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.011970503255724907, 0.16385116428136826, 0.04820212535560131, 0.288899727165699 ]
+        }, {
+          "classId" : 27,
+          "className" : "Left Turn Prohibited",
+          "detConfidence" : 0.5026591,
+          "clsConfidence" : 0.11567956,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.016534697264432907, 0.11157277226448059, 0.04590430483222008, 0.21263375878334045 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.4993233,
+          "clsConfidence" : 0.12421854,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.42851621750742197, 0.2428378313779831, 0.456826857291162, 0.31540723145008087 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.46861082,
+          "clsConfidence" : 0.22337346,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.006785677745938301, 0.31112004444003105, 0.04841277189552784, 0.395538616925478 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.46695846,
+          "clsConfidence" : 0.2917589,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8232073299586773, 0.22428088262677193, 0.8419238813221455, 0.3190901391208172 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.46234247,
+          "clsConfidence" : 0.15332976,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8792471075430512, 0.17462506145238876, 0.8992659663781524, 0.23996616154909134 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.45814198,
+          "clsConfidence" : 0.15977973,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.7079031872563064, 0.31691746041178703, 0.7234669518657029, 0.3809664435684681 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.45310417,
+          "clsConfidence" : 0.32646653,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.428123427554965, 0.16261207684874535, 0.46223549731075764, 0.25693554058671 ]
+        }, {
+          "classId" : 61,
+          "className" : "T-Intersection",
+          "detConfidence" : 0.45007983,
+          "clsConfidence" : 0.092415124,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.14407267421483994, 0.39528386667370796, 0.16631928831338882, 0.43598128482699394 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.44877568,
+          "clsConfidence" : 0.21273509,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.6961601004004478, 0.23464986309409142, 0.7157182469964027, 0.3266470767557621 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.44427335,
+          "clsConfidence" : 0.19669299,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.20596163906157017, 0.3211256042122841, 0.2535612042993307, 0.3931153044104576 ]
+        }, {
+          "classId" : 14,
+          "className" : "Cross Road",
+          "detConfidence" : 0.44352037,
+          "clsConfidence" : 0.38524464,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.3724948428571224, 0.20727335661649704, 0.4494735337793827, 0.3637058809399605 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.43774068,
+          "clsConfidence" : 0.27098417,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.024116424843668938, 0.3766374886035919, 0.059629255905747414, 0.4438999593257904 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.4345536,
+          "clsConfidence" : 0.16551042,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.3195664491504431, 0.6145984344184399, 0.3522996697574854, 0.6887340135872364 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.4333781,
+          "clsConfidence" : 0.44054225,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.25481971725821495, 0.30472591146826744, 0.2882489897310734, 0.3875025846064091 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.43306282,
+          "clsConfidence" : 0.36174664,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8285805536434054, 0.28922003880143166, 0.8513117479160428, 0.3835512362420559 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.43199664,
+          "clsConfidence" : 0.59285533,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.9346660263836384, 0.10192260518670082, 0.9767526499927044, 0.2124197743833065 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.4291813,
+          "clsConfidence" : 0.20655395,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.15036686230450869, 0.4519700612872839, 0.16772908996790648, 0.4899322185665369 ]
+        }, {
+          "classId" : 63,
+          "className" : "Turn Right Ahead",
+          "detConfidence" : 0.42846018,
+          "clsConfidence" : 0.08939583,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0013456307351589203, 0.017915740609169006, 0.06501030549407005, 0.17248015105724335 ]
+        }, {
+          "classId" : 11,
+          "className" : "Compulsory Sound Horn",
+          "detConfidence" : 0.42831644,
+          "clsConfidence" : 0.24859004,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.4459404777735472, 0.48021069914102554, 0.4895379114896059, 0.5668212994933128 ]
+        }, {
+          "classId" : 29,
+          "className" : "Men at Work",
+          "detConfidence" : 0.42771465,
+          "clsConfidence" : 0.091342926,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.07602862175554037, 0.3929933197796345, 0.10457166377454996, 0.43638820573687553 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-235e40a0",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 14%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1002-81da9974",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Cross Road Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Four-way crossroads ahead. Decelerate, scan crossing traffic, and yield as required."
+        }, {
+          "eventId" : "EVT-1-1003-744d4144",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Compulsory Keep Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Pass road divider or island on the left side only."
+        }, {
+          "eventId" : "EVT-1-1004-223f13d8",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 13%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1005-6d9a664f",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Guarded Level Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Guarded Level Crossing, conf 11%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1006-eb777540",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Turn Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Turn Prohibited, conf 12%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1007-8e4af459",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Handcarts Prohibited, conf 12%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1008-e7912a3b",
+          "eventType" : "GIVE_WAY_MANDATE",
+          "severity" : "CRITICAL",
+          "displayName" : "Give Way / Yield",
+          "numericalValue" : null,
+          "driverAdvisory" : "Yield right of way to priority traffic on intersecting carriageway."
+        }, {
+          "eventId" : "EVT-1-1009-3af1f1e6",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1010-9a5b74ed",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Pedestrian Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Pedestrian Crossing, conf 15%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1011-ef28885a",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Pedestrian Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Pedestrian Crossing, conf 16%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1012-f66cc9c0",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1013-1c401a2d",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: T-Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (T-Intersection, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1014-86da6043",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1015-09cd8e92",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1016-cb2c3b4e",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Cross Road Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Four-way crossroads ahead. Decelerate, scan crossing traffic, and yield as required."
+        }, {
+          "eventId" : "EVT-1-1017-2a0c2392",
+          "eventType" : "GIVE_WAY_MANDATE",
+          "severity" : "CRITICAL",
+          "displayName" : "Give Way / Yield",
+          "numericalValue" : null,
+          "driverAdvisory" : "Yield right of way to priority traffic on intersecting carriageway."
+        }, {
+          "eventId" : "EVT-1-1018-9c95d3a8",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 17%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1019-69043b94",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1020-27b9eb8c",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1021-fe8d78ea",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1022-2372f318",
+          "eventType" : "GIVE_WAY_MANDATE",
+          "severity" : "CRITICAL",
+          "displayName" : "Give Way / Yield",
+          "numericalValue" : null,
+          "driverAdvisory" : "Yield right of way to priority traffic on intersecting carriageway."
+        }, {
+          "eventId" : "EVT-1-1023-91e290cc",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Turn Right Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Turn Right Ahead, conf 9%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1024-83802b17",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "WARNING",
+          "displayName" : "Compulsory Sound Horn",
+          "numericalValue" : null,
+          "driverAdvisory" : "Sound audible horn before entering blind turn or ghat hairpin curve."
+        }, {
+          "eventId" : "EVT-1-1025-7d28dfe3",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Men at Work",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Men at Work, conf 9%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ "Handcarts Prohibited", "Compulsory Sound Horn", "Compulsory Keep Left" ],
+          "activeHazards" : [ "Cross Road Intersection", "Give Way / Yield", "Pedestrian Crossing Ahead" ]
+        }
+      },
+      "Config C (Calibrated Balanced: Det 0.50, Cls 0.25)" : {
+        "detConfidenceThreshold" : 0.5,
+        "clsConfidenceThreshold" : 0.25,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 6,
+        "confidentDetectionsCount" : 1,
+        "uncertainDetectionsCount" : 5,
+        "detections" : [ {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.54569197,
+          "clsConfidence" : 0.13971822,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.32709955610334873, 0.4484365228563547, 0.35283792577683926, 0.5027092453092337 ]
+        }, {
+          "classId" : 14,
+          "className" : "Cross Road",
+          "detConfidence" : 0.54103386,
+          "clsConfidence" : 0.4129829,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8013374768197536, 0.15829483792185783, 0.8461366929113865, 0.2737642414867878 ]
+        }, {
+          "classId" : 8,
+          "className" : "Compulsory Keep Left",
+          "detConfidence" : 0.5307585,
+          "clsConfidence" : 0.24614486,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6197582678869367, 0.2360237017273903, 0.65063367318362, 0.3067583069205284 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.513918,
+          "clsConfidence" : 0.13027768,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.25233042892068624, 0.44371679797768593, 0.28236495796591043, 0.48337849602103233 ]
+        }, {
+          "classId" : 21,
+          "className" : "Guarded Level Crossing",
+          "detConfidence" : 0.5112723,
+          "clsConfidence" : 0.10850548,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.011970503255724907, 0.16385116428136826, 0.04820212535560131, 0.288899727165699 ]
+        }, {
+          "classId" : 27,
+          "className" : "Left Turn Prohibited",
+          "detConfidence" : 0.5026591,
+          "clsConfidence" : 0.11567958,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.016534697264432907, 0.11157277226448059, 0.04590430483222008, 0.21263375878334045 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-62cb6ab5",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 14%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1002-f51c9a53",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Cross Road Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Four-way crossroads ahead. Decelerate, scan crossing traffic, and yield as required."
+        }, {
+          "eventId" : "EVT-1-1003-c660df2c",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Keep Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Keep Left, conf 25%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1004-67a6b6d6",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 13%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1005-d8d32650",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Guarded Level Crossing",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Guarded Level Crossing, conf 11%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1006-46868cf8",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Turn Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Turn Prohibited, conf 12%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ ],
+          "activeHazards" : [ "Cross Road Intersection" ]
+        }
+      },
+      "Config D (Calibrated False-Positive Suppression: Det 0.55, Cls 0.35)" : {
+        "detConfidenceThreshold" : 0.55,
+        "clsConfidenceThreshold" : 0.35,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 0,
+        "confidentDetectionsCount" : 0,
+        "uncertainDetectionsCount" : 0,
+        "detections" : [ ],
+        "emittedEvents" : [ ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ ],
+          "activeHazards" : [ ]
+        }
+      }
+    }
+  }, {
+    "caseName" : "Multi-Sign Indian Road Frame",
+    "inputPath" : "data\\raw\\indian-road-driving-sample\\inspection\\000db725-8180-4770-8b6a-4eb74aeda9f9_0015.jpg",
+    "imageWidth" : 1920,
+    "imageHeight" : 994,
+    "groundTruthSignCount" : 4,
+    "configResults" : {
+      "Config A (Task 16 UI Defaults: Det 0.20, Cls 0.25)" : {
+        "detConfidenceThreshold" : 0.2,
+        "clsConfidenceThreshold" : 0.25,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 25,
+        "confidentDetectionsCount" : 7,
+        "uncertainDetectionsCount" : 18,
+        "detections" : [ {
+          "classId" : 29,
+          "className" : "Men at Work",
+          "detConfidence" : 0.5442005,
+          "clsConfidence" : 0.070300825,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.25122680328786373, 0.3322782889008522, 0.29111204482614994, 0.3683619126677513 ]
+        }, {
+          "classId" : 26,
+          "className" : "Left Reverse Bend",
+          "detConfidence" : 0.52116257,
+          "clsConfidence" : 0.18214418,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.3801286332309246, 0.17019330710172653, 0.4244859106838703, 0.2881665304303169 ]
+        }, {
+          "classId" : 26,
+          "className" : "Left Reverse Bend",
+          "detConfidence" : 0.51918435,
+          "clsConfidence" : 0.25114632,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8077283836901188, 0.12418470159173012, 0.8460780642926693, 0.20375990495085716 ]
+        }, {
+          "classId" : 45,
+          "className" : "Side Road Left",
+          "detConfidence" : 0.51370835,
+          "clsConfidence" : 0.1776869,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0035067517310380936, 0.16184191778302193, 0.04641642980277538, 0.28324253484606743 ]
+        }, {
+          "classId" : 50,
+          "className" : "Speed Limit (30 km/h)",
+          "detConfidence" : 0.4997933,
+          "clsConfidence" : 0.20933346,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.5086248004809022, 0.37248169630765915, 0.5323042785748839, 0.43851274996995926 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.48433796,
+          "clsConfidence" : 0.30539218,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.444030474871397, 0.36481305956840515, 0.47604160383343697, 0.44533929228782654 ]
+        }, {
+          "classId" : 52,
+          "className" : "Speed Limit (50 km/h)",
+          "detConfidence" : 0.4813273,
+          "clsConfidence" : 0.24405365,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8227604301646352, 0.3027705177664757, 0.8488688794896007, 0.40297404676675797 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.47462273,
+          "clsConfidence" : 0.26588437,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.572045773267746, 0.31594785302877426, 0.6249149143695831, 0.3885020390152931 ]
+        }, {
+          "classId" : 25,
+          "className" : "Hump or Rough Road (Speed Breaker)",
+          "detConfidence" : 0.4699162,
+          "clsConfidence" : 0.13838291,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.7493429388850927, 0.26897918805480003, 0.7886682543903589, 0.3104943074285984 ]
+        }, {
+          "classId" : 9,
+          "className" : "Compulsory Keep Right",
+          "detConfidence" : 0.4694071,
+          "clsConfidence" : 0.22282466,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.744051868095994, 0.17826315015554428, 0.7858081515878439, 0.25858182460069656 ]
+        }, {
+          "classId" : 68,
+          "className" : "Compulsory Turn Left Ahead",
+          "detConfidence" : 0.46889138,
+          "clsConfidence" : 0.16545695,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.18522970750927925, 0.30999922938644886, 0.22435931488871574, 0.3674222808331251 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.4657177,
+          "clsConfidence" : 0.3553548,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.9360040556639433, 0.2740471586585045, 0.9782794583588839, 0.39321253448724747 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.4545335,
+          "clsConfidence" : 0.18130003,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8202297780662775, 0.48297473043203354, 0.8520284797996283, 0.5574130192399025 ]
+        }, {
+          "classId" : 27,
+          "className" : "Left Turn Prohibited",
+          "detConfidence" : 0.45335683,
+          "clsConfidence" : 0.19776943,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.38901230692863464, 0.38351197354495525, 0.4118008315563202, 0.4340388644486666 ]
+        }, {
+          "classId" : 69,
+          "className" : "Compulsory Turn Right",
+          "detConfidence" : 0.4533543,
+          "clsConfidence" : 0.21668825,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0018480382859706879, 0.244038924574852, 0.04216763377189636, 0.3350895792245865 ]
+        }, {
+          "classId" : 69,
+          "className" : "Compulsory Turn Right",
+          "detConfidence" : 0.44676873,
+          "clsConfidence" : 0.19692199,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.007627171464264393, 0.3157121501863003, 0.03851465042680502, 0.3906424678862095 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.4458475,
+          "clsConfidence" : 0.2677495,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8257180880755186, 0.5538852177560329, 0.8648296166211367, 0.6362617053091526 ]
+        }, {
+          "classId" : 52,
+          "className" : "Speed Limit (50 km/h)",
+          "detConfidence" : 0.44472152,
+          "clsConfidence" : 0.19191562,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6238453090190887, 0.2475353181362152, 0.7167085707187653, 0.34048542380332947 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.44419658,
+          "clsConfidence" : 0.18937321,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0734382625669241, 0.3833274766802788, 0.11691972054541111, 0.4480125978589058 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.44407615,
+          "clsConfidence" : 0.48085192,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.501956457272172, 0.31343798339366913, 0.5414845999330282, 0.3745315819978714 ]
+        }, {
+          "classId" : 9,
+          "className" : "Compulsory Keep Right",
+          "detConfidence" : 0.4433236,
+          "clsConfidence" : 0.3552351,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.7047726456075907, 0.1949423998594284, 0.7429283317178488, 0.252277210354805 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.44271347,
+          "clsConfidence" : 0.21536946,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8320659082382917, 0.26774425245821476, 0.8614234048873186, 0.3145823385566473 ]
+        }, {
+          "classId" : 61,
+          "className" : "T-Intersection",
+          "detConfidence" : 0.4405451,
+          "clsConfidence" : 0.11440791,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6371021466329694, 0.3232561331242323, 0.6648952765390277, 0.37287295050919056 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.438894,
+          "clsConfidence" : 0.103872456,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.26870809867978096, 0.41496293246746063, 0.2865160219371319, 0.5106831938028336 ]
+        }, {
+          "classId" : 45,
+          "className" : "Side Road Left",
+          "detConfidence" : 0.43245652,
+          "clsConfidence" : 0.10171808,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.37997534684836864, 0.31603542529046535, 0.42283746786415577, 0.3667419198900461 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-0359f27f",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Men at Work",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Men at Work, conf 7%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1002-f5cf59d2",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Reverse Bend",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Reverse Bend, conf 18%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1003-6d63db77",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Left Reverse Bend",
+          "numericalValue" : null,
+          "driverAdvisory" : "Double curve commencing with left bend. Decelerate and maintain lane discipline."
+        }, {
+          "eventId" : "EVT-1-1004-1fa47499",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Side Road Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Side Road Left, conf 18%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1005-1afebd16",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (30 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (30 km/h), conf 21%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1006-8d9a0ac3",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1007-20b4b53c",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (50 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (50 km/h), conf 24%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1008-0e909fa3",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1009-58ab9021",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Hump or Rough Road (Speed Breaker)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Hump or Rough Road (Speed Breaker), conf 14%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1010-4e78b074",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Keep Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Keep Right, conf 22%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1011-f3efa9b9",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Turn Left Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Turn Left Ahead, conf 17%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1012-3ac448fe",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1013-fb7ae13c",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 18%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1014-b19c8e30",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Turn Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Turn Prohibited, conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1015-9a7da0d5",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Turn Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Turn Right, conf 22%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1016-8e69a2f1",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Turn Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Turn Right, conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1017-ec3a89a3",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1018-29454a83",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (50 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (50 km/h), conf 19%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1019-106a7fe7",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Handcarts Prohibited, conf 19%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1020-7328c936",
+          "eventType" : "GIVE_WAY_MANDATE",
+          "severity" : "CRITICAL",
+          "displayName" : "Give Way / Yield",
+          "numericalValue" : null,
+          "driverAdvisory" : "Yield right of way to priority traffic on intersecting carriageway."
+        }, {
+          "eventId" : "EVT-1-1021-e9711cfc",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Compulsory Keep Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Pass obstruction or traffic divider on the right side only."
+        }, {
+          "eventId" : "EVT-1-1022-cace1c6e",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Give Way",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Give Way, conf 22%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1023-6f1b3390",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: T-Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (T-Intersection, conf 11%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1024-adaf043e",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 10%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1025-ffb60ff6",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Side Road Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Side Road Left, conf 10%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ "Handcarts Prohibited", "Compulsory Keep Right" ],
+          "activeHazards" : [ "Left Reverse Bend", "Pedestrian Crossing Ahead", "Give Way / Yield" ]
+        }
+      },
+      "Config B (Unfiltered Low Threshold: Det 0.20, Cls 0.20)" : {
+        "detConfidenceThreshold" : 0.2,
+        "clsConfidenceThreshold" : 0.2,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 25,
+        "confidentDetectionsCount" : 12,
+        "uncertainDetectionsCount" : 13,
+        "detections" : [ {
+          "classId" : 29,
+          "className" : "Men at Work",
+          "detConfidence" : 0.5442005,
+          "clsConfidence" : 0.070300825,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.25122680328786373, 0.3322782889008522, 0.29111204482614994, 0.3683619126677513 ]
+        }, {
+          "classId" : 26,
+          "className" : "Left Reverse Bend",
+          "detConfidence" : 0.52116257,
+          "clsConfidence" : 0.18214418,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.3801286332309246, 0.17019330710172653, 0.4244859106838703, 0.2881665304303169 ]
+        }, {
+          "classId" : 26,
+          "className" : "Left Reverse Bend",
+          "detConfidence" : 0.51918435,
+          "clsConfidence" : 0.25114632,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8077283836901188, 0.12418470159173012, 0.8460780642926693, 0.20375990495085716 ]
+        }, {
+          "classId" : 45,
+          "className" : "Side Road Left",
+          "detConfidence" : 0.51370835,
+          "clsConfidence" : 0.1776869,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0035067517310380936, 0.16184191778302193, 0.04641642980277538, 0.28324253484606743 ]
+        }, {
+          "classId" : 50,
+          "className" : "Speed Limit (30 km/h)",
+          "detConfidence" : 0.4997933,
+          "clsConfidence" : 0.20933346,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.5086248004809022, 0.37248169630765915, 0.5323042785748839, 0.43851274996995926 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.48433796,
+          "clsConfidence" : 0.30539218,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.444030474871397, 0.36481305956840515, 0.47604160383343697, 0.44533929228782654 ]
+        }, {
+          "classId" : 52,
+          "className" : "Speed Limit (50 km/h)",
+          "detConfidence" : 0.4813273,
+          "clsConfidence" : 0.24405365,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8227604301646352, 0.3027705177664757, 0.8488688794896007, 0.40297404676675797 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.47462273,
+          "clsConfidence" : 0.26588437,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.572045773267746, 0.31594785302877426, 0.6249149143695831, 0.3885020390152931 ]
+        }, {
+          "classId" : 25,
+          "className" : "Hump or Rough Road (Speed Breaker)",
+          "detConfidence" : 0.4699162,
+          "clsConfidence" : 0.13838291,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.7493429388850927, 0.26897918805480003, 0.7886682543903589, 0.3104943074285984 ]
+        }, {
+          "classId" : 9,
+          "className" : "Compulsory Keep Right",
+          "detConfidence" : 0.4694071,
+          "clsConfidence" : 0.22282466,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.744051868095994, 0.17826315015554428, 0.7858081515878439, 0.25858182460069656 ]
+        }, {
+          "classId" : 68,
+          "className" : "Compulsory Turn Left Ahead",
+          "detConfidence" : 0.46889138,
+          "clsConfidence" : 0.16545695,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.18522970750927925, 0.30999922938644886, 0.22435931488871574, 0.3674222808331251 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.4657177,
+          "clsConfidence" : 0.3553548,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.9360040556639433, 0.2740471586585045, 0.9782794583588839, 0.39321253448724747 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.4545335,
+          "clsConfidence" : 0.18130003,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.8202297780662775, 0.48297473043203354, 0.8520284797996283, 0.5574130192399025 ]
+        }, {
+          "classId" : 27,
+          "className" : "Left Turn Prohibited",
+          "detConfidence" : 0.45335683,
+          "clsConfidence" : 0.19776943,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.38901230692863464, 0.38351197354495525, 0.4118008315563202, 0.4340388644486666 ]
+        }, {
+          "classId" : 69,
+          "className" : "Compulsory Turn Right",
+          "detConfidence" : 0.4533543,
+          "clsConfidence" : 0.21668825,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.0018480382859706879, 0.244038924574852, 0.04216763377189636, 0.3350895792245865 ]
+        }, {
+          "classId" : 69,
+          "className" : "Compulsory Turn Right",
+          "detConfidence" : 0.44676873,
+          "clsConfidence" : 0.19692199,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.007627171464264393, 0.3157121501863003, 0.03851465042680502, 0.3906424678862095 ]
+        }, {
+          "classId" : 36,
+          "className" : "Pedestrian Crossing",
+          "detConfidence" : 0.4458475,
+          "clsConfidence" : 0.2677495,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8257180880755186, 0.5538852177560329, 0.8648296166211367, 0.6362617053091526 ]
+        }, {
+          "classId" : 52,
+          "className" : "Speed Limit (50 km/h)",
+          "detConfidence" : 0.44472152,
+          "clsConfidence" : 0.19191562,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6238453090190887, 0.2475353181362152, 0.7167085707187653, 0.34048542380332947 ]
+        }, {
+          "classId" : 22,
+          "className" : "Handcarts Prohibited",
+          "detConfidence" : 0.44419658,
+          "clsConfidence" : 0.18937321,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0734382625669241, 0.3833274766802788, 0.11691972054541111, 0.4480125978589058 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.44407615,
+          "clsConfidence" : 0.48085192,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.501956457272172, 0.31343798339366913, 0.5414845999330282, 0.3745315819978714 ]
+        }, {
+          "classId" : 9,
+          "className" : "Compulsory Keep Right",
+          "detConfidence" : 0.4433236,
+          "clsConfidence" : 0.3552351,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.7047726456075907, 0.1949423998594284, 0.7429283317178488, 0.252277210354805 ]
+        }, {
+          "classId" : 20,
+          "className" : "Give Way",
+          "detConfidence" : 0.44271347,
+          "clsConfidence" : 0.21536946,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8320659082382917, 0.26774425245821476, 0.8614234048873186, 0.3145823385566473 ]
+        }, {
+          "classId" : 61,
+          "className" : "T-Intersection",
+          "detConfidence" : 0.4405451,
+          "clsConfidence" : 0.11440791,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.6371021466329694, 0.3232561331242323, 0.6648952765390277, 0.37287295050919056 ]
+        }, {
+          "classId" : 51,
+          "className" : "Speed Limit (40 km/h)",
+          "detConfidence" : 0.438894,
+          "clsConfidence" : 0.103872456,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.26870809867978096, 0.41496293246746063, 0.2865160219371319, 0.5106831938028336 ]
+        }, {
+          "classId" : 45,
+          "className" : "Side Road Left",
+          "detConfidence" : 0.43245652,
+          "clsConfidence" : 0.10171808,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.37997534684836864, 0.31603542529046535, 0.42283746786415577, 0.3667419198900461 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-c808682c",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Men at Work",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Men at Work, conf 7%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1002-f1ba1d44",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Reverse Bend",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Reverse Bend, conf 18%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1003-4f49bf07",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Left Reverse Bend",
+          "numericalValue" : null,
+          "driverAdvisory" : "Double curve commencing with left bend. Decelerate and maintain lane discipline."
+        }, {
+          "eventId" : "EVT-1-1004-de9b3934",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Side Road Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Side Road Left, conf 18%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1005-eeafefd6",
+          "eventType" : "SPEED_LIMIT_POSTED",
+          "severity" : "WARNING",
+          "displayName" : "Speed Limit 30 km/h",
+          "numericalValue" : 30.0,
+          "driverAdvisory" : "Maximum permissible speed is 30 km/h. Urban / residential zone compliance."
+        }, {
+          "eventId" : "EVT-1-1006-4fc21f3c",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1007-e77a45b0",
+          "eventType" : "SPEED_LIMIT_POSTED",
+          "severity" : "WARNING",
+          "displayName" : "Speed Limit 50 km/h",
+          "numericalValue" : 50.0,
+          "driverAdvisory" : "Maximum permissible speed is 50 km/h. City arterial speed compliance."
+        }, {
+          "eventId" : "EVT-1-1008-0d2242b0",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1009-2859e064",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Hump or Rough Road (Speed Breaker)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Hump or Rough Road (Speed Breaker), conf 14%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1010-fe29cefb",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Compulsory Keep Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Pass obstruction or traffic divider on the right side only."
+        }, {
+          "eventId" : "EVT-1-1011-3b42e72a",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Turn Left Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Turn Left Ahead, conf 17%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1012-f118d78b",
+          "eventType" : "PROHIBITION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Manual handcarts and pushcarts prohibited beyond this point."
+        }, {
+          "eventId" : "EVT-1-1013-ef2c93db",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 18%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1014-733a6916",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Turn Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Turn Prohibited, conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1015-be744d2d",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Compulsory Turn Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Mandatory right turn. Straight movement prohibited."
+        }, {
+          "eventId" : "EVT-1-1016-d22b5afd",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Compulsory Turn Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Compulsory Turn Right, conf 20%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1017-b8912f8d",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Pedestrian Crossing Ahead",
+          "numericalValue" : null,
+          "driverAdvisory" : "Zebra crossing ahead. Slow down and be prepared to yield completely to pedestrians."
+        }, {
+          "eventId" : "EVT-1-1018-037f7126",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (50 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (50 km/h), conf 19%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1019-0851a899",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Handcarts Prohibited",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Handcarts Prohibited, conf 19%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1020-78eac532",
+          "eventType" : "GIVE_WAY_MANDATE",
+          "severity" : "CRITICAL",
+          "displayName" : "Give Way / Yield",
+          "numericalValue" : null,
+          "driverAdvisory" : "Yield right of way to priority traffic on intersecting carriageway."
+        }, {
+          "eventId" : "EVT-1-1021-ab11db87",
+          "eventType" : "RESTRICTION_ALERT",
+          "severity" : "INFO",
+          "displayName" : "Compulsory Keep Right",
+          "numericalValue" : null,
+          "driverAdvisory" : "Pass obstruction or traffic divider on the right side only."
+        }, {
+          "eventId" : "EVT-1-1022-66fa74d6",
+          "eventType" : "GIVE_WAY_MANDATE",
+          "severity" : "CRITICAL",
+          "displayName" : "Give Way / Yield",
+          "numericalValue" : null,
+          "driverAdvisory" : "Yield right of way to priority traffic on intersecting carriageway."
+        }, {
+          "eventId" : "EVT-1-1023-9a4336db",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: T-Intersection",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (T-Intersection, conf 11%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1024-7b491c1e",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Speed Limit (40 km/h)",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Speed Limit (40 km/h), conf 10%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1025-cb29e752",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Side Road Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Side Road Left, conf 10%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : 50,
+          "activeRestrictions" : [ "Handcarts Prohibited", "Compulsory Turn Right", "Compulsory Keep Right" ],
+          "activeHazards" : [ "Left Reverse Bend", "Pedestrian Crossing Ahead", "Give Way / Yield" ]
+        }
+      },
+      "Config C (Calibrated Balanced: Det 0.50, Cls 0.25)" : {
+        "detConfidenceThreshold" : 0.5,
+        "clsConfidenceThreshold" : 0.25,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 4,
+        "confidentDetectionsCount" : 1,
+        "uncertainDetectionsCount" : 3,
+        "detections" : [ {
+          "classId" : 29,
+          "className" : "Men at Work",
+          "detConfidence" : 0.5442005,
+          "clsConfidence" : 0.07030083,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.25122680328786373, 0.3322782889008522, 0.29111204482614994, 0.3683619126677513 ]
+        }, {
+          "classId" : 26,
+          "className" : "Left Reverse Bend",
+          "detConfidence" : 0.52116257,
+          "clsConfidence" : 0.18214422,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.3801286332309246, 0.17019330710172653, 0.4244859106838703, 0.2881665304303169 ]
+        }, {
+          "classId" : 26,
+          "className" : "Left Reverse Bend",
+          "detConfidence" : 0.51918435,
+          "clsConfidence" : 0.2511463,
+          "uncertaintyState" : "CONFIDENT",
+          "normalizedBox" : [ 0.8077283836901188, 0.12418470159173012, 0.8460780642926693, 0.20375990495085716 ]
+        }, {
+          "classId" : 45,
+          "className" : "Side Road Left",
+          "detConfidence" : 0.51370835,
+          "clsConfidence" : 0.1776869,
+          "uncertaintyState" : "LOW_CLASSIFICATION_CONFIDENCE",
+          "normalizedBox" : [ 0.0035067517310380936, 0.16184191778302193, 0.04641642980277538, 0.28324253484606743 ]
+        } ],
+        "emittedEvents" : [ {
+          "eventId" : "EVT-1-1001-4820b1ac",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Men at Work",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Men at Work, conf 7%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1002-0285bbc4",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Left Reverse Bend",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Left Reverse Bend, conf 18%); visual verification required."
+        }, {
+          "eventId" : "EVT-1-1003-5f54f8fa",
+          "eventType" : "HAZARD_WARNING",
+          "severity" : "WARNING",
+          "displayName" : "Left Reverse Bend",
+          "numericalValue" : null,
+          "driverAdvisory" : "Double curve commencing with left bend. Decelerate and maintain lane discipline."
+        }, {
+          "eventId" : "EVT-1-1004-acb95c5a",
+          "eventType" : "UNCERTAIN_DETECTION",
+          "severity" : "INFO",
+          "displayName" : "Uncertain: Side Road Left",
+          "numericalValue" : null,
+          "driverAdvisory" : "Uncertain sign observation (Side Road Left, conf 18%); visual verification required."
+        } ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ ],
+          "activeHazards" : [ "Left Reverse Bend" ]
+        }
+      },
+      "Config D (Calibrated False-Positive Suppression: Det 0.55, Cls 0.35)" : {
+        "detConfidenceThreshold" : 0.55,
+        "clsConfidenceThreshold" : 0.35,
+        "nmsIouThreshold" : 0.25,
+        "maxProposalsPerFrame" : 25,
+        "rawProposalsCount" : 0,
+        "confidentDetectionsCount" : 0,
+        "uncertainDetectionsCount" : 0,
+        "detections" : [ ],
+        "emittedEvents" : [ ],
+        "hudState" : {
+          "currentPostedSpeedLimit" : null,
+          "activeRestrictions" : [ ],
+          "activeHazards" : [ ]
+        }
+      }
+    }
+  } ]
+}

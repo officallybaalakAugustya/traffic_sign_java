@@ -1,0 +1,944 @@
+{
+  "timestamp" : "2026-10-19T22:01:03.680179200Z",
+  "totalValidationSamples" : 900,
+  "overallAccuracy" : 0.6233333333333333,
+  "macroF1" : 0.4872334568755277,
+  "weightedF1" : 0.6152352213859413,
+  "macroRecall" : 0.5208697724785106,
+  "zeroRecallClassCount" : 17,
+  "zeroRecallClasses" : [ "Class 2: Barrier Ahead (Support: 1)", "Class 15: Cycles Prohibited (Support: 9)", "Class 16: Dangerous Dip (Support: 3)", "Class 21: Guarded Level Crossing (Support: 3)", "Class 40: Restriction Ends (Support: 1)", "Class 58: Steep Descent (Support: 1)", "Class 61: T-Intersection (Support: 2)", "Class 69: Compulsory Turn Right (Support: 1)", "Class 70: Cycle Crossing (Support: 9)", "Class 71: Ferry (Support: 1)", "Class 72: Left Hairpin Bend (Support: 2)", "Class 75: Load Limit (Support: 2)", "Class 77: Right Reverse Bend (Support: 2)", "Class 79: Road Widens Ahead (Support: 1)", "Class 80: Speed Limit (20 km/h) (Support: 1)", "Class 81: Tonga Prohibited (Support: 1)", "Class 83: Unguarded Level Crossing (Support: 1)" ],
+  "top10ConfusedPairs" : [ {
+    "trueClassId" : 52,
+    "trueClassName" : "Speed Limit (50 km/h)",
+    "predictedClassId" : 50,
+    "predictedClassName" : "Speed Limit (30 km/h)",
+    "count" : 13
+  }, {
+    "trueClassId" : 50,
+    "trueClassName" : "Speed Limit (30 km/h)",
+    "predictedClassId" : 52,
+    "predictedClassName" : "Speed Limit (50 km/h)",
+    "count" : 11
+  }, {
+    "trueClassId" : 9,
+    "trueClassName" : "Compulsory Keep Right",
+    "predictedClassId" : 12,
+    "predictedClassName" : "Compulsory Turn Left",
+    "count" : 8
+  }, {
+    "trueClassId" : 36,
+    "trueClassName" : "Pedestrian Crossing",
+    "predictedClassId" : 45,
+    "predictedClassName" : "Side Road Left",
+    "count" : 7
+  }, {
+    "trueClassId" : 53,
+    "trueClassName" : "Speed Limit (60 km/h)",
+    "predictedClassId" : 51,
+    "predictedClassName" : "Speed Limit (40 km/h)",
+    "count" : 7
+  }, {
+    "trueClassId" : 55,
+    "trueClassName" : "Speed Limit (80 km/h)",
+    "predictedClassId" : 51,
+    "predictedClassName" : "Speed Limit (40 km/h)",
+    "count" : 7
+  }, {
+    "trueClassId" : 14,
+    "trueClassName" : "Cross Road",
+    "predictedClassId" : 19,
+    "predictedClassName" : "Gap in Median",
+    "count" : 6
+  }, {
+    "trueClassId" : 24,
+    "trueClassName" : "Horn Prohibited",
+    "predictedClassId" : 19,
+    "predictedClassName" : "Gap in Median",
+    "count" : 6
+  }, {
+    "trueClassId" : 48,
+    "trueClassName" : "Speed Limit (5 km/h)",
+    "predictedClassId" : 49,
+    "predictedClassName" : "Speed Limit (15 km/h)",
+    "count" : 6
+  }, {
+    "trueClassId" : 51,
+    "trueClassName" : "Speed Limit (40 km/h)",
+    "predictedClassId" : 53,
+    "predictedClassName" : "Speed Limit (60 km/h)",
+    "count" : 6
+  } ],
+  "perClassMetrics" : [ {
+    "classId" : 0,
+    "className" : "All Motor Vehicles Prohibited",
+    "precision" : 0.3333333333333333,
+    "recall" : 0.6666666666666666,
+    "f1" : 0.4444444444444444,
+    "support" : 3,
+    "predictedCount" : 6,
+    "trainSupport" : 13
+  }, {
+    "classId" : 1,
+    "className" : "Axle Load Limit",
+    "precision" : 0.8,
+    "recall" : 1.0,
+    "f1" : 0.888888888888889,
+    "support" : 4,
+    "predictedCount" : 5,
+    "trainSupport" : 14
+  }, {
+    "classId" : 2,
+    "className" : "Barrier Ahead",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 1,
+    "trainSupport" : 6
+  }, {
+    "classId" : 3,
+    "className" : "Bullock Carts Prohibited",
+    "precision" : 0.3333333333333333,
+    "recall" : 0.5,
+    "f1" : 0.4,
+    "support" : 2,
+    "predictedCount" : 3,
+    "trainSupport" : 8
+  }, {
+    "classId" : 4,
+    "className" : "Cattle Crossing",
+    "precision" : 0.4,
+    "recall" : 0.2857142857142857,
+    "f1" : 0.3333333333333333,
+    "support" : 7,
+    "predictedCount" : 5,
+    "trainSupport" : 29
+  }, {
+    "classId" : 5,
+    "className" : "Compulsory Ahead Only",
+    "precision" : 1.0,
+    "recall" : 0.7777777777777778,
+    "f1" : 0.8750000000000001,
+    "support" : 9,
+    "predictedCount" : 7,
+    "trainSupport" : 33
+  }, {
+    "classId" : 6,
+    "className" : "Compulsory Ahead or Turn Right",
+    "precision" : 1.0,
+    "recall" : 0.5,
+    "f1" : 0.6666666666666666,
+    "support" : 8,
+    "predictedCount" : 4,
+    "trainSupport" : 27
+  }, {
+    "classId" : 7,
+    "className" : "Compulsory Cycle Track",
+    "precision" : 1.0,
+    "recall" : 0.3333333333333333,
+    "f1" : 0.5,
+    "support" : 3,
+    "predictedCount" : 1,
+    "trainSupport" : 12
+  }, {
+    "classId" : 8,
+    "className" : "Compulsory Keep Left",
+    "precision" : 0.5,
+    "recall" : 0.08333333333333333,
+    "f1" : 0.14285714285714285,
+    "support" : 12,
+    "predictedCount" : 2,
+    "trainSupport" : 46
+  }, {
+    "classId" : 9,
+    "className" : "Compulsory Keep Right",
+    "precision" : 0.9210526315789473,
+    "recall" : 0.7446808510638298,
+    "f1" : 0.8235294117647057,
+    "support" : 47,
+    "predictedCount" : 38,
+    "trainSupport" : 176
+  }, {
+    "classId" : 10,
+    "className" : "Compulsory Minimum Speed",
+    "precision" : 1.0,
+    "recall" : 1.0,
+    "f1" : 1.0,
+    "support" : 4,
+    "predictedCount" : 4,
+    "trainSupport" : 19
+  }, {
+    "classId" : 11,
+    "className" : "Compulsory Sound Horn",
+    "precision" : 0.8181818181818182,
+    "recall" : 0.8181818181818182,
+    "f1" : 0.8181818181818182,
+    "support" : 11,
+    "predictedCount" : 11,
+    "trainSupport" : 36
+  }, {
+    "classId" : 12,
+    "className" : "Compulsory Turn Left",
+    "precision" : 0.42857142857142855,
+    "recall" : 0.6666666666666666,
+    "f1" : 0.5217391304347826,
+    "support" : 9,
+    "predictedCount" : 14,
+    "trainSupport" : 33
+  }, {
+    "classId" : 13,
+    "className" : "Compulsory Turn Right Ahead",
+    "precision" : 0.5,
+    "recall" : 1.0,
+    "f1" : 0.6666666666666666,
+    "support" : 6,
+    "predictedCount" : 12,
+    "trainSupport" : 23
+  }, {
+    "classId" : 14,
+    "className" : "Cross Road",
+    "precision" : 0.6176470588235294,
+    "recall" : 0.75,
+    "f1" : 0.6774193548387097,
+    "support" : 28,
+    "predictedCount" : 34,
+    "trainSupport" : 112
+  }, {
+    "classId" : 15,
+    "className" : "Cycles Prohibited",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 9,
+    "predictedCount" : 0,
+    "trainSupport" : 35
+  }, {
+    "classId" : 16,
+    "className" : "Dangerous Dip",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 3,
+    "predictedCount" : 5,
+    "trainSupport" : 10
+  }, {
+    "classId" : 17,
+    "className" : "Direction / Side Indicator",
+    "precision" : 1.0,
+    "recall" : 1.0,
+    "f1" : 1.0,
+    "support" : 1,
+    "predictedCount" : 1,
+    "trainSupport" : 5
+  }, {
+    "classId" : 18,
+    "className" : "Falling Rocks",
+    "precision" : 0.25,
+    "recall" : 0.16666666666666666,
+    "f1" : 0.2,
+    "support" : 6,
+    "predictedCount" : 4,
+    "trainSupport" : 23
+  }, {
+    "classId" : 19,
+    "className" : "Gap in Median",
+    "precision" : 0.5555555555555556,
+    "recall" : 0.8333333333333334,
+    "f1" : 0.6666666666666667,
+    "support" : 36,
+    "predictedCount" : 54,
+    "trainSupport" : 144
+  }, {
+    "classId" : 20,
+    "className" : "Give Way",
+    "precision" : 1.0,
+    "recall" : 0.9230769230769231,
+    "f1" : 0.9600000000000001,
+    "support" : 13,
+    "predictedCount" : 12,
+    "trainSupport" : 54
+  }, {
+    "classId" : 21,
+    "className" : "Guarded Level Crossing",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 3,
+    "predictedCount" : 0,
+    "trainSupport" : 15
+  }, {
+    "classId" : 22,
+    "className" : "Handcarts Prohibited",
+    "precision" : 0.36363636363636365,
+    "recall" : 0.5714285714285714,
+    "f1" : 0.4444444444444444,
+    "support" : 7,
+    "predictedCount" : 11,
+    "trainSupport" : 20
+  }, {
+    "classId" : 23,
+    "className" : "Height Limit",
+    "precision" : 1.0,
+    "recall" : 0.5,
+    "f1" : 0.6666666666666666,
+    "support" : 4,
+    "predictedCount" : 2,
+    "trainSupport" : 18
+  }, {
+    "classId" : 24,
+    "className" : "Horn Prohibited",
+    "precision" : 0.9444444444444444,
+    "recall" : 0.5483870967741935,
+    "f1" : 0.6938775510204082,
+    "support" : 31,
+    "predictedCount" : 18,
+    "trainSupport" : 129
+  }, {
+    "classId" : 25,
+    "className" : "Hump or Rough Road (Speed Breaker)",
+    "precision" : 0.42857142857142855,
+    "recall" : 0.15,
+    "f1" : 0.2222222222222222,
+    "support" : 20,
+    "predictedCount" : 7,
+    "trainSupport" : 81
+  }, {
+    "classId" : 26,
+    "className" : "Left Reverse Bend",
+    "precision" : 0.6666666666666666,
+    "recall" : 0.8,
+    "f1" : 0.7272727272727272,
+    "support" : 5,
+    "predictedCount" : 6,
+    "trainSupport" : 15
+  }, {
+    "classId" : 27,
+    "className" : "Left Turn Prohibited",
+    "precision" : 0.9666666666666667,
+    "recall" : 1.0,
+    "f1" : 0.983050847457627,
+    "support" : 29,
+    "predictedCount" : 30,
+    "trainSupport" : 97
+  }, {
+    "classId" : 28,
+    "className" : "Loose Gravel",
+    "precision" : 0.2222222222222222,
+    "recall" : 0.5,
+    "f1" : 0.30769230769230765,
+    "support" : 4,
+    "predictedCount" : 9,
+    "trainSupport" : 18
+  }, {
+    "classId" : 29,
+    "className" : "Men at Work",
+    "precision" : 0.7272727272727273,
+    "recall" : 1.0,
+    "f1" : 0.8421052631578948,
+    "support" : 8,
+    "predictedCount" : 11,
+    "trainSupport" : 45
+  }, {
+    "classId" : 30,
+    "className" : "Narrow Road Ahead",
+    "precision" : 1.0,
+    "recall" : 0.4,
+    "f1" : 0.5714285714285715,
+    "support" : 5,
+    "predictedCount" : 2,
+    "trainSupport" : 18
+  }, {
+    "classId" : 31,
+    "className" : "No Entry",
+    "precision" : 0.975,
+    "recall" : 0.8863636363636364,
+    "f1" : 0.9285714285714285,
+    "support" : 44,
+    "predictedCount" : 40,
+    "trainSupport" : 130
+  }, {
+    "classId" : 32,
+    "className" : "No Parking",
+    "precision" : 1.0,
+    "recall" : 0.9090909090909091,
+    "f1" : 0.9523809523809523,
+    "support" : 11,
+    "predictedCount" : 10,
+    "trainSupport" : 33
+  }, {
+    "classId" : 33,
+    "className" : "No Stopping or Standing",
+    "precision" : 1.0,
+    "recall" : 1.0,
+    "f1" : 1.0,
+    "support" : 42,
+    "predictedCount" : 42,
+    "trainSupport" : 200
+  }, {
+    "classId" : 34,
+    "className" : "Overtaking Prohibited",
+    "precision" : 0.3333333333333333,
+    "recall" : 0.4,
+    "f1" : 0.3636363636363636,
+    "support" : 5,
+    "predictedCount" : 6,
+    "trainSupport" : 19
+  }, {
+    "classId" : 35,
+    "className" : "Pass Either Side",
+    "precision" : 1.0,
+    "recall" : 1.0,
+    "f1" : 1.0,
+    "support" : 5,
+    "predictedCount" : 5,
+    "trainSupport" : 18
+  }, {
+    "classId" : 36,
+    "className" : "Pedestrian Crossing",
+    "precision" : 0.7142857142857143,
+    "recall" : 0.6818181818181818,
+    "f1" : 0.6976744186046512,
+    "support" : 22,
+    "predictedCount" : 21,
+    "trainSupport" : 99
+  }, {
+    "classId" : 37,
+    "className" : "Pedestrians Prohibited",
+    "precision" : 0.5,
+    "recall" : 0.8333333333333334,
+    "f1" : 0.625,
+    "support" : 6,
+    "predictedCount" : 10,
+    "trainSupport" : 25
+  }, {
+    "classId" : 38,
+    "className" : "Priority for Oncoming Vehicles",
+    "precision" : 1.0,
+    "recall" : 0.6666666666666666,
+    "f1" : 0.8,
+    "support" : 3,
+    "predictedCount" : 2,
+    "trainSupport" : 11
+  }, {
+    "classId" : 39,
+    "className" : "Quay Side or River Bank",
+    "precision" : 1.0,
+    "recall" : 0.3333333333333333,
+    "f1" : 0.5,
+    "support" : 9,
+    "predictedCount" : 3,
+    "trainSupport" : 34
+  }, {
+    "classId" : 40,
+    "className" : "Restriction Ends",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 1,
+    "trainSupport" : 5
+  }, {
+    "classId" : 41,
+    "className" : "Right Hairpin Bend",
+    "precision" : 0.5,
+    "recall" : 0.6666666666666666,
+    "f1" : 0.5714285714285715,
+    "support" : 3,
+    "predictedCount" : 4,
+    "trainSupport" : 12
+  }, {
+    "classId" : 42,
+    "className" : "Right Hand Curve",
+    "precision" : 1.0,
+    "recall" : 0.6666666666666666,
+    "f1" : 0.8,
+    "support" : 3,
+    "predictedCount" : 2,
+    "trainSupport" : 13
+  }, {
+    "classId" : 43,
+    "className" : "Roundabout",
+    "precision" : 0.3333333333333333,
+    "recall" : 0.1,
+    "f1" : 0.15384615384615383,
+    "support" : 10,
+    "predictedCount" : 3,
+    "trainSupport" : 40
+  }, {
+    "classId" : 44,
+    "className" : "School Ahead",
+    "precision" : 0.5555555555555556,
+    "recall" : 0.625,
+    "f1" : 0.5882352941176471,
+    "support" : 8,
+    "predictedCount" : 9,
+    "trainSupport" : 31
+  }, {
+    "classId" : 45,
+    "className" : "Side Road Left",
+    "precision" : 0.2727272727272727,
+    "recall" : 0.375,
+    "f1" : 0.3157894736842105,
+    "support" : 8,
+    "predictedCount" : 11,
+    "trainSupport" : 28
+  }, {
+    "classId" : 46,
+    "className" : "Side Road Right",
+    "precision" : 0.18181818181818182,
+    "recall" : 1.0,
+    "f1" : 0.3076923076923077,
+    "support" : 2,
+    "predictedCount" : 11,
+    "trainSupport" : 8
+  }, {
+    "classId" : 47,
+    "className" : "Slippery Road",
+    "precision" : 0.2857142857142857,
+    "recall" : 0.2857142857142857,
+    "f1" : 0.2857142857142857,
+    "support" : 7,
+    "predictedCount" : 7,
+    "trainSupport" : 29
+  }, {
+    "classId" : 48,
+    "className" : "Speed Limit (5 km/h)",
+    "precision" : 0.8333333333333334,
+    "recall" : 0.7142857142857143,
+    "f1" : 0.7692307692307692,
+    "support" : 21,
+    "predictedCount" : 18,
+    "trainSupport" : 78
+  }, {
+    "classId" : 49,
+    "className" : "Speed Limit (15 km/h)",
+    "precision" : 0.42857142857142855,
+    "recall" : 0.75,
+    "f1" : 0.5454545454545454,
+    "support" : 8,
+    "predictedCount" : 14,
+    "trainSupport" : 31
+  }, {
+    "classId" : 50,
+    "className" : "Speed Limit (30 km/h)",
+    "precision" : 0.38461538461538464,
+    "recall" : 0.32608695652173914,
+    "f1" : 0.3529411764705882,
+    "support" : 46,
+    "predictedCount" : 39,
+    "trainSupport" : 192
+  }, {
+    "classId" : 51,
+    "className" : "Speed Limit (40 km/h)",
+    "precision" : 0.5333333333333333,
+    "recall" : 0.6857142857142857,
+    "f1" : 0.6,
+    "support" : 35,
+    "predictedCount" : 45,
+    "trainSupport" : 135
+  }, {
+    "classId" : 52,
+    "className" : "Speed Limit (50 km/h)",
+    "precision" : 0.4722222222222222,
+    "recall" : 0.3953488372093023,
+    "f1" : 0.43037974683544306,
+    "support" : 43,
+    "predictedCount" : 36,
+    "trainSupport" : 157
+  }, {
+    "classId" : 53,
+    "className" : "Speed Limit (60 km/h)",
+    "precision" : 0.4418604651162791,
+    "recall" : 0.5135135135135135,
+    "f1" : 0.47500000000000003,
+    "support" : 37,
+    "predictedCount" : 43,
+    "trainSupport" : 153
+  }, {
+    "classId" : 54,
+    "className" : "Speed Limit (70 km/h)",
+    "precision" : 0.6470588235294118,
+    "recall" : 0.7096774193548387,
+    "f1" : 0.6769230769230768,
+    "support" : 31,
+    "predictedCount" : 34,
+    "trainSupport" : 129
+  }, {
+    "classId" : 55,
+    "className" : "Speed Limit (80 km/h)",
+    "precision" : 0.7368421052631579,
+    "recall" : 0.358974358974359,
+    "f1" : 0.4827586206896552,
+    "support" : 39,
+    "predictedCount" : 19,
+    "trainSupport" : 153
+  }, {
+    "classId" : 56,
+    "className" : "Staggered Intersection",
+    "precision" : 0.1111111111111111,
+    "recall" : 0.3333333333333333,
+    "f1" : 0.16666666666666666,
+    "support" : 3,
+    "predictedCount" : 9,
+    "trainSupport" : 12
+  }, {
+    "classId" : 57,
+    "className" : "Steep Ascent",
+    "precision" : 0.2,
+    "recall" : 0.3333333333333333,
+    "f1" : 0.25,
+    "support" : 3,
+    "predictedCount" : 5,
+    "trainSupport" : 11
+  }, {
+    "classId" : 58,
+    "className" : "Steep Descent",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 0,
+    "trainSupport" : 6
+  }, {
+    "classId" : 59,
+    "className" : "Stop",
+    "precision" : 0.75,
+    "recall" : 0.9,
+    "f1" : 0.8181818181818182,
+    "support" : 10,
+    "predictedCount" : 12,
+    "trainSupport" : 40
+  }, {
+    "classId" : 60,
+    "className" : "Straight Prohibited",
+    "precision" : 0.8461538461538461,
+    "recall" : 1.0,
+    "f1" : 0.9166666666666666,
+    "support" : 11,
+    "predictedCount" : 13,
+    "trainSupport" : 41
+  }, {
+    "classId" : 61,
+    "className" : "T-Intersection",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 2,
+    "predictedCount" : 0,
+    "trainSupport" : 10
+  }, {
+    "classId" : 62,
+    "className" : "Trucks Prohibited",
+    "precision" : 0.3333333333333333,
+    "recall" : 0.6666666666666666,
+    "f1" : 0.4444444444444444,
+    "support" : 3,
+    "predictedCount" : 6,
+    "trainSupport" : 13
+  }, {
+    "classId" : 63,
+    "className" : "Turn Right Ahead",
+    "precision" : 0.7037037037037037,
+    "recall" : 0.9047619047619048,
+    "f1" : 0.7916666666666667,
+    "support" : 21,
+    "predictedCount" : 27,
+    "trainSupport" : 78
+  }, {
+    "classId" : 64,
+    "className" : "U-Turn Prohibited",
+    "precision" : 0.8333333333333334,
+    "recall" : 0.8333333333333334,
+    "f1" : 0.8333333333333334,
+    "support" : 6,
+    "predictedCount" : 6,
+    "trainSupport" : 28
+  }, {
+    "classId" : 65,
+    "className" : "Y-Intersection",
+    "precision" : 0.6666666666666666,
+    "recall" : 0.8,
+    "f1" : 0.7272727272727272,
+    "support" : 5,
+    "predictedCount" : 6,
+    "trainSupport" : 21
+  }, {
+    "classId" : 66,
+    "className" : "Bullock and Handcart Prohibited",
+    "precision" : 1.0,
+    "recall" : 0.5,
+    "f1" : 0.6666666666666666,
+    "support" : 2,
+    "predictedCount" : 1,
+    "trainSupport" : 6
+  }, {
+    "classId" : 67,
+    "className" : "Compulsory Ahead or Turn Left",
+    "precision" : 0.4,
+    "recall" : 1.0,
+    "f1" : 0.5714285714285715,
+    "support" : 2,
+    "predictedCount" : 5,
+    "trainSupport" : 10
+  }, {
+    "classId" : 68,
+    "className" : "Compulsory Turn Left Ahead",
+    "precision" : 0.5714285714285714,
+    "recall" : 1.0,
+    "f1" : 0.7272727272727273,
+    "support" : 4,
+    "predictedCount" : 7,
+    "trainSupport" : 14
+  }, {
+    "classId" : 69,
+    "className" : "Compulsory Turn Right",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 1,
+    "trainSupport" : 5
+  }, {
+    "classId" : 70,
+    "className" : "Cycle Crossing",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 9,
+    "predictedCount" : 1,
+    "trainSupport" : 39
+  }, {
+    "classId" : 71,
+    "className" : "Ferry",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 0,
+    "trainSupport" : 1
+  }, {
+    "classId" : 72,
+    "className" : "Left Hairpin Bend",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 2,
+    "predictedCount" : 7,
+    "trainSupport" : 9
+  }, {
+    "classId" : 73,
+    "className" : "Left Hand Curve",
+    "precision" : 0.4444444444444444,
+    "recall" : 1.0,
+    "f1" : 0.6153846153846153,
+    "support" : 4,
+    "predictedCount" : 9,
+    "trainSupport" : 14
+  }, {
+    "classId" : 74,
+    "className" : "Length Limit",
+    "precision" : 0.6666666666666666,
+    "recall" : 0.6666666666666666,
+    "f1" : 0.6666666666666666,
+    "support" : 3,
+    "predictedCount" : 3,
+    "trainSupport" : 12
+  }, {
+    "classId" : 75,
+    "className" : "Load Limit",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 2,
+    "predictedCount" : 1,
+    "trainSupport" : 7
+  }, {
+    "classId" : 76,
+    "className" : "Narrow Bridge",
+    "precision" : 0.5,
+    "recall" : 0.5,
+    "f1" : 0.5,
+    "support" : 2,
+    "predictedCount" : 2,
+    "trainSupport" : 10
+  }, {
+    "classId" : 77,
+    "className" : "Right Reverse Bend",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 2,
+    "predictedCount" : 0,
+    "trainSupport" : 9
+  }, {
+    "classId" : 78,
+    "className" : "Right Turn Prohibited",
+    "precision" : 0.1875,
+    "recall" : 0.6,
+    "f1" : 0.2857142857142857,
+    "support" : 5,
+    "predictedCount" : 16,
+    "trainSupport" : 22
+  }, {
+    "classId" : 79,
+    "className" : "Road Widens Ahead",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 0,
+    "trainSupport" : 7
+  }, {
+    "classId" : 80,
+    "className" : "Speed Limit (20 km/h)",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 5,
+    "trainSupport" : 6
+  }, {
+    "classId" : 81,
+    "className" : "Tonga Prohibited",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 2,
+    "trainSupport" : 5
+  }, {
+    "classId" : 82,
+    "className" : "Traffic Signal",
+    "precision" : 1.0,
+    "recall" : 0.5,
+    "f1" : 0.6666666666666666,
+    "support" : 2,
+    "predictedCount" : 1,
+    "trainSupport" : 8
+  }, {
+    "classId" : 83,
+    "className" : "Unguarded Level Crossing",
+    "precision" : 0.0,
+    "recall" : 0.0,
+    "f1" : 0.0,
+    "support" : 1,
+    "predictedCount" : 0,
+    "trainSupport" : 4
+  }, {
+    "classId" : 84,
+    "className" : "Width Limit",
+    "precision" : 1.0,
+    "recall" : 0.3333333333333333,
+    "f1" : 0.5,
+    "support" : 3,
+    "predictedCount" : 1,
+    "trainSupport" : 13
+  } ],
+  "correctlyClassifiedExamples" : [ {
+    "imagePath" : "train/ALL_MOTOR_VEHICLE_PROHIBITED/00014.jpg",
+    "trueClassId" : 0,
+    "trueClassName" : "All Motor Vehicles Prohibited",
+    "predictedClassId" : 0,
+    "predictedClassName" : "All Motor Vehicles Prohibited",
+    "correct" : true
+  }, {
+    "imagePath" : "train/ALL_MOTOR_VEHICLE_PROHIBITED/00015.jpg",
+    "trueClassId" : 0,
+    "trueClassName" : "All Motor Vehicles Prohibited",
+    "predictedClassId" : 0,
+    "predictedClassName" : "All Motor Vehicles Prohibited",
+    "correct" : true
+  }, {
+    "imagePath" : "train/AXLE_LOAD_LIMIT/01000.jpg",
+    "trueClassId" : 1,
+    "trueClassName" : "Axle Load Limit",
+    "predictedClassId" : 1,
+    "predictedClassName" : "Axle Load Limit",
+    "correct" : true
+  }, {
+    "imagePath" : "train/AXLE_LOAD_LIMIT/01001.jpg",
+    "trueClassId" : 1,
+    "trueClassName" : "Axle Load Limit",
+    "predictedClassId" : 1,
+    "predictedClassName" : "Axle Load Limit",
+    "correct" : true
+  }, {
+    "imagePath" : "train/AXLE_LOAD_LIMIT/01005.jpg",
+    "trueClassId" : 1,
+    "trueClassName" : "Axle Load Limit",
+    "predictedClassId" : 1,
+    "predictedClassName" : "Axle Load Limit",
+    "correct" : true
+  } ],
+  "misclassifiedExamples" : [ {
+    "imagePath" : "train/ALL_MOTOR_VEHICLE_PROHIBITED/00003.jpg",
+    "trueClassId" : 0,
+    "trueClassName" : "All Motor Vehicles Prohibited",
+    "predictedClassId" : 37,
+    "predictedClassName" : "Pedestrians Prohibited",
+    "correct" : false
+  }, {
+    "imagePath" : "train/BARRIER_AHEAD/02005.jpg",
+    "trueClassId" : 2,
+    "trueClassName" : "Barrier Ahead",
+    "predictedClassId" : 28,
+    "predictedClassName" : "Loose Gravel",
+    "correct" : false
+  }, {
+    "imagePath" : "train/BULLOCK_AND_HANDCART_PROHIBITED/03004.jpg",
+    "trueClassId" : 66,
+    "trueClassName" : "Bullock and Handcart Prohibited",
+    "predictedClassId" : 3,
+    "predictedClassName" : "Bullock Carts Prohibited",
+    "correct" : false
+  }, {
+    "imagePath" : "train/BULLOCK_PROHIBITED/04003.jpg",
+    "trueClassId" : 3,
+    "trueClassName" : "Bullock Carts Prohibited",
+    "predictedClassId" : 62,
+    "predictedClassName" : "Trucks Prohibited",
+    "correct" : false
+  }, {
+    "imagePath" : "train/CATTLE/05000.jpg",
+    "trueClassId" : 4,
+    "trueClassName" : "Cattle Crossing",
+    "predictedClassId" : 16,
+    "predictedClassName" : "Dangerous Dip",
+    "correct" : false
+  }, {
+    "imagePath" : "train/CATTLE/05010.jpg",
+    "trueClassId" : 4,
+    "trueClassName" : "Cattle Crossing",
+    "predictedClassId" : 18,
+    "predictedClassName" : "Falling Rocks",
+    "correct" : false
+  }, {
+    "imagePath" : "train/CATTLE/05018.jpg",
+    "trueClassId" : 4,
+    "trueClassName" : "Cattle Crossing",
+    "predictedClassId" : 46,
+    "predictedClassName" : "Side Road Right",
+    "correct" : false
+  }, {
+    "imagePath" : "train/CATTLE/05024.jpg",
+    "trueClassId" : 4,
+    "trueClassName" : "Cattle Crossing",
+    "predictedClassId" : 16,
+    "predictedClassName" : "Dangerous Dip",
+    "correct" : false
+  }, {
+    "imagePath" : "train/CATTLE/05030.jpg",
+    "trueClassId" : 4,
+    "trueClassName" : "Cattle Crossing",
+    "predictedClassId" : 56,
+    "predictedClassName" : "Staggered Intersection",
+    "correct" : false
+  }, {
+    "imagePath" : "train/COMPULSARY_AHEAD/06002.jpg",
+    "trueClassId" : 5,
+    "trueClassName" : "Compulsory Ahead Only",
+    "predictedClassId" : 63,
+    "predictedClassName" : "Turn Right Ahead",
+    "correct" : false
+  } ]
+}

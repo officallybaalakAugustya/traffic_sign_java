@@ -1,0 +1,3361 @@
+{
+  "timestamp" : "2026-10-21T01:37:00.513152200Z",
+  "valFramesCount" : 174,
+  "valGtCount" : 122,
+  "testFramesCount" : 200,
+  "testGtCount" : 195,
+  "lossAuditT11" : {
+    "batchPosGradSum" : 0.45016587,
+    "batchNegGradSum" : 0.27493596,
+    "batchGradientRatio" : 0.6107437,
+    "emptyBatchNegGradSum" : 0.27490407,
+    "singleBatchEquilibriumP" : 0.39999998,
+    "datasetEquilibriumP" : 0.19999999,
+    "autogradVerified" : true
+  },
+  "lossAuditT13Cal" : {
+    "batchPosGradSum" : 0.45016587,
+    "batchNegGradSum" : 70.23799,
+    "batchGradientRatio" : 156.02692,
+    "emptyBatchNegGradSum" : 1126.0071,
+    "singleBatchEquilibriumP" : 0.79999995,
+    "datasetEquilibriumP" : 0.39999998,
+    "autogradVerified" : true
+  },
+  "lossAuditT14Cal" : {
+    "batchPosGradSum" : 0.45016587,
+    "batchNegGradSum" : 6.5975776,
+    "batchGradientRatio" : 14.655882,
+    "emptyBatchNegGradSum" : 6.5977163,
+    "singleBatchEquilibriumP" : 0.016666666,
+    "datasetEquilibriumP" : 0.008333333,
+    "autogradVerified" : true
+  },
+  "lossAuditExp1W1" : {
+    "batchPosGradSum" : 0.45016587,
+    "batchNegGradSum" : 0.5498719,
+    "batchGradientRatio" : 1.2214874,
+    "emptyBatchNegGradSum" : 0.54980814,
+    "singleBatchEquilibriumP" : 0.19999999,
+    "datasetEquilibriumP" : 0.099999994,
+    "autogradVerified" : true
+  },
+  "lossAuditExp2W3" : {
+    "batchPosGradSum" : 0.45016587,
+    "batchNegGradSum" : 1.6493944,
+    "batchGradientRatio" : 3.6639705,
+    "emptyBatchNegGradSum" : 1.6494291,
+    "singleBatchEquilibriumP" : 0.06666666,
+    "datasetEquilibriumP" : 0.03333333,
+    "autogradVerified" : true
+  },
+  "lossAuditExp3Focal" : {
+    "batchPosGradSum" : 0.05612986,
+    "batchNegGradSum" : 0.57521534,
+    "batchGradientRatio" : 10.247938,
+    "emptyBatchNegGradSum" : 0.5751955,
+    "singleBatchEquilibriumP" : 0.05,
+    "datasetEquilibriumP" : 0.025,
+    "autogradVerified" : true
+  },
+  "task11Baseline" : {
+    "modelId" : "Task 11 Baseline",
+    "name" : "Compact/HighRes Block (BalancedDetectionLoss wBg=0.5, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task11_champion\\sign_detector-0006.params",
+    "sha256" : "B983D59595233878101A4DC37A157F33F81045027A3600FCB46CFAF5081A5AD4",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 42489,
+        "fn" : 98,
+        "totalProposals" : 42513,
+        "posProposals" : 20991,
+        "bgProposals" : 21522,
+        "fpPos" : 20967,
+        "fpBg" : 21522,
+        "precision" : 5.645332016089196E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0011258355810953443
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 42436,
+        "fn" : 45,
+        "totalProposals" : 42513,
+        "posProposals" : 20991,
+        "bgProposals" : 21522,
+        "fpPos" : 20914,
+        "fpBg" : 21522,
+        "precision" : 0.0018112106884952837,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.0036120558226808955
+      },
+      "proposalsPerFrame" : 244.32758620689654,
+      "bgProposalsPerFrame" : 247.3793103448276
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 42115,
+        "fn" : 98,
+        "totalProposals" : 42139,
+        "posProposals" : 20879,
+        "bgProposals" : 21260,
+        "fpPos" : 20855,
+        "fpBg" : 21260,
+        "precision" : 5.695436531479152E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0011357989635834458
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 42062,
+        "fn" : 45,
+        "totalProposals" : 42139,
+        "posProposals" : 20879,
+        "bgProposals" : 21260,
+        "fpPos" : 20802,
+        "fpBg" : 21260,
+        "precision" : 0.0018272858871828947,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.003644021674830221
+      },
+      "proposalsPerFrame" : 242.17816091954023,
+      "bgProposalsPerFrame" : 244.367816091954
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 39889,
+        "fn" : 98,
+        "totalProposals" : 39913,
+        "posProposals" : 19710,
+        "bgProposals" : 20203,
+        "fpPos" : 19686,
+        "fpBg" : 20203,
+        "precision" : 6.013078445619222E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0011989509179467965
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 39836,
+        "fn" : 45,
+        "totalProposals" : 39913,
+        "posProposals" : 19710,
+        "bgProposals" : 20203,
+        "fpPos" : 19633,
+        "fpBg" : 20203,
+        "precision" : 0.0019291960013028337,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.003846634195079306
+      },
+      "proposalsPerFrame" : 229.38505747126436,
+      "bgProposalsPerFrame" : 232.2183908045977
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 37187,
+        "fn" : 98,
+        "totalProposals" : 37211,
+        "posProposals" : 18297,
+        "bgProposals" : 18914,
+        "fpPos" : 18273,
+        "fpBg" : 18914,
+        "precision" : 6.449705732175969E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0012857257654086194
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 37134,
+        "fn" : 45,
+        "totalProposals" : 37211,
+        "posProposals" : 18297,
+        "bgProposals" : 18914,
+        "fpPos" : 18220,
+        "fpBg" : 18914,
+        "precision" : 0.0020692805890731233,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.004125036830685988
+      },
+      "proposalsPerFrame" : 213.85632183908046,
+      "bgProposalsPerFrame" : 217.4022988505747
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 34783,
+        "fn" : 98,
+        "totalProposals" : 34807,
+        "posProposals" : 17207,
+        "bgProposals" : 17600,
+        "fpPos" : 17183,
+        "fpBg" : 17600,
+        "precision" : 6.895164765708047E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0013742162672850638
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 34730,
+        "fn" : 45,
+        "totalProposals" : 34807,
+        "posProposals" : 17207,
+        "bgProposals" : 17600,
+        "fpPos" : 17130,
+        "fpBg" : 17600,
+        "precision" : 0.002212198695664665,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.00440894385753958
+      },
+      "proposalsPerFrame" : 200.04022988505747,
+      "bgProposalsPerFrame" : 202.29885057471265
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 33057,
+        "fn" : 98,
+        "totalProposals" : 33081,
+        "posProposals" : 16440,
+        "bgProposals" : 16641,
+        "fpPos" : 16416,
+        "fpBg" : 16641,
+        "precision" : 7.254919742450349E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0014456525012800047
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 33004,
+        "fn" : 45,
+        "totalProposals" : 33081,
+        "posProposals" : 16440,
+        "bgProposals" : 16641,
+        "fpPos" : 16363,
+        "fpBg" : 16641,
+        "precision" : 0.0023276200840361538,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.0046381351082733484
+      },
+      "proposalsPerFrame" : 190.1206896551724,
+      "bgProposalsPerFrame" : 191.27586206896552
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 29749,
+        "fn" : 98,
+        "totalProposals" : 29773,
+        "posProposals" : 14744,
+        "bgProposals" : 15029,
+        "fpPos" : 14720,
+        "fpBg" : 15029,
+        "precision" : 8.060994861115776E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0016056196688409435
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 29696,
+        "fn" : 45,
+        "totalProposals" : 29773,
+        "posProposals" : 14744,
+        "bgProposals" : 15029,
+        "fpPos" : 14667,
+        "fpBg" : 15029,
+        "precision" : 0.0025862358512746446,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.005151363104198026
+      },
+      "proposalsPerFrame" : 171.10919540229884,
+      "bgProposalsPerFrame" : 172.7471264367816
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 24,
+        "fp" : 26138,
+        "fn" : 98,
+        "totalProposals" : 26162,
+        "posProposals" : 12815,
+        "bgProposals" : 13347,
+        "fpPos" : 12791,
+        "fpBg" : 13347,
+        "precision" : 9.173610580230869E-4,
+        "recall" : 0.19672131147540983,
+        "f1" : 0.0018262060569167553
+      },
+      "counts30" : {
+        "tp" : 74,
+        "fp" : 26088,
+        "fn" : 48,
+        "totalProposals" : 26162,
+        "posProposals" : 12815,
+        "bgProposals" : 13347,
+        "fpPos" : 12741,
+        "fpBg" : 13347,
+        "precision" : 0.002828529928904518,
+        "recall" : 0.6065573770491803,
+        "f1" : 0.005630802008826663
+      },
+      "proposalsPerFrame" : 150.35632183908046,
+      "bgProposalsPerFrame" : 153.41379310344828
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 23,
+        "fp" : 21254,
+        "fn" : 99,
+        "totalProposals" : 21277,
+        "posProposals" : 10420,
+        "bgProposals" : 10857,
+        "fpPos" : 10397,
+        "fpBg" : 10857,
+        "precision" : 0.0010809794613902337,
+        "recall" : 0.1885245901639344,
+        "f1" : 0.0021496331604280573
+      },
+      "counts30" : {
+        "tp" : 71,
+        "fp" : 21206,
+        "fn" : 51,
+        "totalProposals" : 21277,
+        "posProposals" : 10420,
+        "bgProposals" : 10857,
+        "fpPos" : 10349,
+        "fpBg" : 10857,
+        "precision" : 0.0033369365982046342,
+        "recall" : 0.5819672131147541,
+        "f1" : 0.0066358241039300905
+      },
+      "proposalsPerFrame" : 122.2816091954023,
+      "bgProposalsPerFrame" : 124.79310344827586
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 22,
+        "fp" : 18358,
+        "fn" : 100,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9114,
+        "fpBg" : 9244,
+        "precision" : 0.0011969532100108815,
+        "recall" : 0.18032786885245902,
+        "f1" : 0.0023781212841854937
+      },
+      "counts30" : {
+        "tp" : 67,
+        "fp" : 18313,
+        "fn" : 55,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9069,
+        "fpBg" : 9244,
+        "precision" : 0.003645266594124048,
+        "recall" : 0.5491803278688525,
+        "f1" : 0.007242460274564913
+      },
+      "proposalsPerFrame" : 105.63218390804597,
+      "bgProposalsPerFrame" : 106.25287356321839
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 21,
+        "fp" : 15046,
+        "fn" : 101,
+        "totalProposals" : 15067,
+        "posProposals" : 7805,
+        "bgProposals" : 7262,
+        "fpPos" : 7784,
+        "fpBg" : 7262,
+        "precision" : 0.0013937744740160616,
+        "recall" : 0.1721311475409836,
+        "f1" : 0.002765158996642307
+      },
+      "counts30" : {
+        "tp" : 63,
+        "fp" : 15004,
+        "fn" : 59,
+        "totalProposals" : 15067,
+        "posProposals" : 7805,
+        "bgProposals" : 7262,
+        "fpPos" : 7742,
+        "fpBg" : 7262,
+        "precision" : 0.004181323422048184,
+        "recall" : 0.5163934426229508,
+        "f1" : 0.008295476989926921
+      },
+      "proposalsPerFrame" : 86.5919540229885,
+      "bgProposalsPerFrame" : 83.47126436781609
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 16,
+        "fp" : 8156,
+        "fn" : 106,
+        "totalProposals" : 8172,
+        "posProposals" : 4850,
+        "bgProposals" : 3322,
+        "fpPos" : 4834,
+        "fpBg" : 3322,
+        "precision" : 0.0019579050416054823,
+        "recall" : 0.13114754098360656,
+        "f1" : 0.003858210754762479
+      },
+      "counts30" : {
+        "tp" : 43,
+        "fp" : 8129,
+        "fn" : 79,
+        "totalProposals" : 8172,
+        "posProposals" : 4850,
+        "bgProposals" : 3322,
+        "fpPos" : 4807,
+        "fpBg" : 3322,
+        "precision" : 0.005261869799314733,
+        "recall" : 0.3524590163934426,
+        "f1" : 0.010368941403424162
+      },
+      "proposalsPerFrame" : 46.96551724137931,
+      "bgProposalsPerFrame" : 38.18390804597701
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 7,
+        "fp" : 2966,
+        "fn" : 115,
+        "totalProposals" : 2973,
+        "posProposals" : 1821,
+        "bgProposals" : 1152,
+        "fpPos" : 1814,
+        "fpBg" : 1152,
+        "precision" : 0.0023545240497813654,
+        "recall" : 0.05737704918032787,
+        "f1" : 0.004523424878836834
+      },
+      "counts30" : {
+        "tp" : 15,
+        "fp" : 2958,
+        "fn" : 107,
+        "totalProposals" : 2973,
+        "posProposals" : 1821,
+        "bgProposals" : 1152,
+        "fpPos" : 1806,
+        "fpBg" : 1152,
+        "precision" : 0.005045408678102927,
+        "recall" : 0.12295081967213115,
+        "f1" : 0.009693053311793215
+      },
+      "proposalsPerFrame" : 17.086206896551722,
+      "bgProposalsPerFrame" : 13.241379310344827
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 22,
+        "fp" : 18358,
+        "fn" : 100,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9114,
+        "fpBg" : 9244,
+        "precision" : 0.0011969532100108815,
+        "recall" : 0.18032786885245902,
+        "f1" : 0.0023781212841854937
+      },
+      "counts30" : {
+        "tp" : 67,
+        "fp" : 18313,
+        "fn" : 55,
+        "totalProposals" : 18380,
+        "posProposals" : 9136,
+        "bgProposals" : 9244,
+        "fpPos" : 9069,
+        "fpBg" : 9244,
+        "precision" : 0.003645266594124048,
+        "recall" : 0.5491803278688525,
+        "f1" : 0.007242460274564913
+      },
+      "proposalsPerFrame" : 105.63218390804597,
+      "bgProposalsPerFrame" : 106.25287356321839
+    },
+    "histogram" : {
+      "binEdges" : [ "0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0" ],
+      "positiveTargetCells" : [ 0, 1, 0, 6, 6, 15, 31, 36, 18, 9 ],
+      "negativeCells" : [ 5629, 4320, 3503, 3797, 5096, 6459, 7169, 5428, 2389, 632 ],
+      "matchedPredictions" : [ 0, 0, 0, 0, 0, 1, 5, 9, 5, 2 ],
+      "missedSigns" : [ 0, 1, 0, 6, 6, 14, 25, 28, 13, 7 ]
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "confidenceBelowThreshold" : 3,
+      "incorrectGridCell" : 11,
+      "targetEncodingDecoding" : 0,
+      "localizationError" : 86,
+      "nmsSuppression" : 0,
+      "annotationOrPreprocessing" : 0,
+      "detected50" : 22,
+      "detected30" : 67
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 0,
+      "medRecall50" : 0.0,
+      "largeCount" : 103,
+      "largeDetected50" : 22,
+      "largeRecall50" : 0.21359223300970873
+    }
+  },
+  "task13Calibrated" : {
+    "modelId" : "Task 13 Calibrated",
+    "name" : "HighResSignDetectorBlock (CalibratedDetectionLoss Npos-normalized, wBg=0.25, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task13_calibrated_norm\\sign_detector-0005.params",
+    "sha256" : "C64C44F5CC08ACA21DA706427898D6F227C5BB95C4B47845A231E0E57B5D379D",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 5,
+        "fp" : 12497,
+        "fn" : 117,
+        "totalProposals" : 12502,
+        "posProposals" : 7662,
+        "bgProposals" : 4840,
+        "fpPos" : 7657,
+        "fpBg" : 4840,
+        "precision" : 3.9993601023836185E-4,
+        "recall" : 0.040983606557377046,
+        "f1" : 7.921419518377692E-4
+      },
+      "counts30" : {
+        "tp" : 63,
+        "fp" : 12439,
+        "fn" : 59,
+        "totalProposals" : 12502,
+        "posProposals" : 7662,
+        "bgProposals" : 4840,
+        "fpPos" : 7599,
+        "fpBg" : 4840,
+        "precision" : 0.005039193729003359,
+        "recall" : 0.5163934426229508,
+        "f1" : 0.009980988593155892
+      },
+      "proposalsPerFrame" : 71.85057471264368,
+      "bgProposalsPerFrame" : 55.632183908045974
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 3487,
+        "fn" : 119,
+        "totalProposals" : 3490,
+        "posProposals" : 2166,
+        "bgProposals" : 1324,
+        "fpPos" : 2163,
+        "fpBg" : 1324,
+        "precision" : 8.595988538681948E-4,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0016611295681063123
+      },
+      "counts30" : {
+        "tp" : 20,
+        "fp" : 3470,
+        "fn" : 102,
+        "totalProposals" : 3490,
+        "posProposals" : 2166,
+        "bgProposals" : 1324,
+        "fpPos" : 2146,
+        "fpBg" : 1324,
+        "precision" : 0.0057306590257879654,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.01107419712070875
+      },
+      "proposalsPerFrame" : 20.057471264367816,
+      "bgProposalsPerFrame" : 15.218390804597702
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 528,
+        "fn" : 121,
+        "totalProposals" : 529,
+        "posProposals" : 384,
+        "bgProposals" : 145,
+        "fpPos" : 383,
+        "fpBg" : 145,
+        "precision" : 0.001890359168241966,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.003072196620583717
+      },
+      "counts30" : {
+        "tp" : 7,
+        "fp" : 522,
+        "fn" : 115,
+        "totalProposals" : 529,
+        "posProposals" : 384,
+        "bgProposals" : 145,
+        "fpPos" : 377,
+        "fpBg" : 145,
+        "precision" : 0.013232514177693762,
+        "recall" : 0.05737704918032787,
+        "f1" : 0.021505376344086023
+      },
+      "proposalsPerFrame" : 3.0402298850574714,
+      "bgProposalsPerFrame" : 1.6666666666666667
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 84,
+        "fn" : 121,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 71,
+        "fpBg" : 13,
+        "precision" : 0.011764705882352941,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.00966183574879227
+      },
+      "counts30" : {
+        "tp" : 5,
+        "fp" : 80,
+        "fn" : 117,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 67,
+        "fpBg" : 13,
+        "precision" : 0.058823529411764705,
+        "recall" : 0.040983606557377046,
+        "f1" : 0.048309178743961345
+      },
+      "proposalsPerFrame" : 0.4885057471264368,
+      "bgProposalsPerFrame" : 0.14942528735632185
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 22,
+        "fn" : 122,
+        "totalProposals" : 22,
+        "posProposals" : 20,
+        "bgProposals" : 2,
+        "fpPos" : 20,
+        "fpBg" : 2,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 21,
+        "fn" : 121,
+        "totalProposals" : 22,
+        "posProposals" : 20,
+        "bgProposals" : 2,
+        "fpPos" : 19,
+        "fpBg" : 2,
+        "precision" : 0.045454545454545456,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01388888888888889
+      },
+      "proposalsPerFrame" : 0.12643678160919541,
+      "bgProposalsPerFrame" : 0.022988505747126436
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 12,
+        "fn" : 122,
+        "totalProposals" : 12,
+        "posProposals" : 12,
+        "bgProposals" : 0,
+        "fpPos" : 12,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 11,
+        "fn" : 121,
+        "totalProposals" : 12,
+        "posProposals" : 12,
+        "bgProposals" : 0,
+        "fpPos" : 11,
+        "fpBg" : 0,
+        "precision" : 0.08333333333333333,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01492537313432836
+      },
+      "proposalsPerFrame" : 0.06896551724137931,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 1,
+        "fn" : 122,
+        "totalProposals" : 1,
+        "posProposals" : 1,
+        "bgProposals" : 0,
+        "fpPos" : 1,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 1,
+        "fn" : 122,
+        "totalProposals" : 1,
+        "posProposals" : 1,
+        "bgProposals" : 0,
+        "fpPos" : 1,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.005747126436781609,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 84,
+        "fn" : 121,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 71,
+        "fpBg" : 13,
+        "precision" : 0.011764705882352941,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.00966183574879227
+      },
+      "counts30" : {
+        "tp" : 5,
+        "fp" : 80,
+        "fn" : 117,
+        "totalProposals" : 85,
+        "posProposals" : 72,
+        "bgProposals" : 13,
+        "fpPos" : 67,
+        "fpBg" : 13,
+        "precision" : 0.058823529411764705,
+        "recall" : 0.040983606557377046,
+        "f1" : 0.048309178743961345
+      },
+      "proposalsPerFrame" : 0.4885057471264368,
+      "bgProposalsPerFrame" : 0.14942528735632185
+    },
+    "histogram" : {
+      "binEdges" : [ "0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0" ],
+      "positiveTargetCells" : [ 114, 7, 1, 0, 0, 0, 0, 0, 0, 0 ],
+      "negativeCells" : [ 44345, 66, 10, 1, 0, 0, 0, 0, 0, 0 ],
+      "matchedPredictions" : [ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 ],
+      "missedSigns" : [ 114, 6, 1, 0, 0, 0, 0, 0, 0, 0 ]
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "confidenceBelowThreshold" : 109,
+      "incorrectGridCell" : 7,
+      "targetEncodingDecoding" : 0,
+      "localizationError" : 5,
+      "nmsSuppression" : 0,
+      "annotationOrPreprocessing" : 0,
+      "detected50" : 1,
+      "detected30" : 5
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 0,
+      "medRecall50" : 0.0,
+      "largeCount" : 103,
+      "largeDetected50" : 1,
+      "largeRecall50" : 0.009708737864077669
+    }
+  },
+  "task14Champion" : {
+    "modelId" : "Task 14 Champion",
+    "name" : "HighResSignDetectorBlock (BalancedCalibratedLoss wBg=12.0, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task14_champion",
+    "sha256" : "6FA08C36671C221B88DE83830240E61B67ECAA73BD72BA767B248F1836C2EF8D",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 12,
+        "fp" : 40216,
+        "fn" : 110,
+        "totalProposals" : 40228,
+        "posProposals" : 20296,
+        "bgProposals" : 19932,
+        "fpPos" : 20284,
+        "fpBg" : 19932,
+        "precision" : 2.9829969175698516E-4,
+        "recall" : 0.09836065573770492,
+        "f1" : 5.947955390334572E-4
+      },
+      "counts30" : {
+        "tp" : 76,
+        "fp" : 40152,
+        "fn" : 46,
+        "totalProposals" : 40228,
+        "posProposals" : 20296,
+        "bgProposals" : 19932,
+        "fpPos" : 20220,
+        "fpBg" : 19932,
+        "precision" : 0.0018892313811275728,
+        "recall" : 0.6229508196721312,
+        "f1" : 0.003767038413878562
+      },
+      "proposalsPerFrame" : 231.19540229885058,
+      "bgProposalsPerFrame" : 229.10344827586206
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 12,
+        "fp" : 36082,
+        "fn" : 110,
+        "totalProposals" : 36094,
+        "posProposals" : 18094,
+        "bgProposals" : 18000,
+        "fpPos" : 18082,
+        "fpBg" : 18000,
+        "precision" : 3.3246522967806286E-4,
+        "recall" : 0.09836065573770492,
+        "f1" : 6.626905235255137E-4
+      },
+      "counts30" : {
+        "tp" : 75,
+        "fp" : 36019,
+        "fn" : 47,
+        "totalProposals" : 36094,
+        "posProposals" : 18094,
+        "bgProposals" : 18000,
+        "fpPos" : 18019,
+        "fpBg" : 18000,
+        "precision" : 0.0020779076854878925,
+        "recall" : 0.6147540983606558,
+        "f1" : 0.00414181577203446
+      },
+      "proposalsPerFrame" : 207.4367816091954,
+      "bgProposalsPerFrame" : 206.89655172413794
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 10,
+        "fp" : 24839,
+        "fn" : 112,
+        "totalProposals" : 24849,
+        "posProposals" : 12366,
+        "bgProposals" : 12483,
+        "fpPos" : 12356,
+        "fpBg" : 12483,
+        "precision" : 4.0243068131514347E-4,
+        "recall" : 0.08196721311475409,
+        "f1" : 8.009290777301671E-4
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 24780,
+        "fn" : 53,
+        "totalProposals" : 24849,
+        "posProposals" : 12366,
+        "bgProposals" : 12483,
+        "fpPos" : 12297,
+        "fpBg" : 12483,
+        "precision" : 0.00277677170107449,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.005526410636338153
+      },
+      "proposalsPerFrame" : 142.81034482758622,
+      "bgProposalsPerFrame" : 143.48275862068965
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 9676,
+        "fn" : 119,
+        "totalProposals" : 9679,
+        "posProposals" : 4650,
+        "bgProposals" : 5029,
+        "fpPos" : 4647,
+        "fpBg" : 5029,
+        "precision" : 3.099493749354272E-4,
+        "recall" : 0.02459016393442623,
+        "f1" : 6.121824303642485E-4
+      },
+      "counts30" : {
+        "tp" : 25,
+        "fp" : 9654,
+        "fn" : 97,
+        "totalProposals" : 9679,
+        "posProposals" : 4650,
+        "bgProposals" : 5029,
+        "fpPos" : 4625,
+        "fpBg" : 5029,
+        "precision" : 0.002582911457795227,
+        "recall" : 0.20491803278688525,
+        "f1" : 0.005101520253035404
+      },
+      "proposalsPerFrame" : 55.62643678160919,
+      "bgProposalsPerFrame" : 57.804597701149426
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 4715,
+        "fn" : 119,
+        "totalProposals" : 4718,
+        "posProposals" : 2385,
+        "bgProposals" : 2333,
+        "fpPos" : 2382,
+        "fpBg" : 2333,
+        "precision" : 6.35862653666808E-4,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0012396694214876034
+      },
+      "counts30" : {
+        "tp" : 18,
+        "fp" : 4700,
+        "fn" : 104,
+        "totalProposals" : 4718,
+        "posProposals" : 2385,
+        "bgProposals" : 2333,
+        "fpPos" : 2367,
+        "fpBg" : 2333,
+        "precision" : 0.0038151759220008477,
+        "recall" : 0.14754098360655737,
+        "f1" : 0.007438016528925621
+      },
+      "proposalsPerFrame" : 27.114942528735632,
+      "bgProposalsPerFrame" : 26.816091954022987
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 2169,
+        "fn" : 119,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1183,
+        "fpBg" : 986,
+        "precision" : 0.0013812154696132596,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0026155187445510023
+      },
+      "counts30" : {
+        "tp" : 12,
+        "fp" : 2160,
+        "fn" : 110,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1174,
+        "fpBg" : 986,
+        "precision" : 0.0055248618784530384,
+        "recall" : 0.09836065573770492,
+        "f1" : 0.01046207497820401
+      },
+      "proposalsPerFrame" : 12.482758620689655,
+      "bgProposalsPerFrame" : 11.333333333333334
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 325,
+        "fn" : 119,
+        "totalProposals" : 328,
+        "posProposals" : 239,
+        "bgProposals" : 89,
+        "fpPos" : 236,
+        "fpBg" : 89,
+        "precision" : 0.009146341463414634,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.01333333333333333
+      },
+      "counts30" : {
+        "tp" : 6,
+        "fp" : 322,
+        "fn" : 116,
+        "totalProposals" : 328,
+        "posProposals" : 239,
+        "bgProposals" : 89,
+        "fpPos" : 233,
+        "fpBg" : 89,
+        "precision" : 0.018292682926829267,
+        "recall" : 0.04918032786885246,
+        "f1" : 0.02666666666666666
+      },
+      "proposalsPerFrame" : 1.8850574712643677,
+      "bgProposalsPerFrame" : 1.0229885057471264
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 33,
+        "fn" : 121,
+        "totalProposals" : 34,
+        "posProposals" : 27,
+        "bgProposals" : 7,
+        "fpPos" : 26,
+        "fpBg" : 7,
+        "precision" : 0.029411764705882353,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01282051282051282
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 33,
+        "fn" : 121,
+        "totalProposals" : 34,
+        "posProposals" : 27,
+        "bgProposals" : 7,
+        "fpPos" : 26,
+        "fpBg" : 7,
+        "precision" : 0.029411764705882353,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.01282051282051282
+      },
+      "proposalsPerFrame" : 0.19540229885057472,
+      "bgProposalsPerFrame" : 0.08045977011494253
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.011494252873563218,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 3,
+        "fp" : 2169,
+        "fn" : 119,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1183,
+        "fpBg" : 986,
+        "precision" : 0.0013812154696132596,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.0026155187445510023
+      },
+      "counts30" : {
+        "tp" : 12,
+        "fp" : 2160,
+        "fn" : 110,
+        "totalProposals" : 2172,
+        "posProposals" : 1186,
+        "bgProposals" : 986,
+        "fpPos" : 1174,
+        "fpBg" : 986,
+        "precision" : 0.0055248618784530384,
+        "recall" : 0.09836065573770492,
+        "f1" : 0.01046207497820401
+      },
+      "proposalsPerFrame" : 12.482758620689655,
+      "bgProposalsPerFrame" : 11.333333333333334
+    },
+    "histogram" : {
+      "binEdges" : [ "0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0" ],
+      "positiveTargetCells" : [ 74, 23, 14, 10, 1, 0, 0, 0, 0, 0 ],
+      "negativeCells" : [ 34764, 7503, 1837, 285, 31, 2, 0, 0, 0, 0 ],
+      "matchedPredictions" : [ 0, 0, 0, 2, 1, 0, 0, 0, 0, 0 ],
+      "missedSigns" : [ 74, 23, 14, 8, 0, 0, 0, 0, 0, 0 ]
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "confidenceBelowThreshold" : 68,
+      "incorrectGridCell" : 29,
+      "targetEncodingDecoding" : 0,
+      "localizationError" : 22,
+      "nmsSuppression" : 0,
+      "annotationOrPreprocessing" : 0,
+      "detected50" : 3,
+      "detected30" : 12
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 0,
+      "medRecall50" : 0.0,
+      "largeCount" : 103,
+      "largeDetected50" : 3,
+      "largeRecall50" : 0.02912621359223301
+    }
+  },
+  "task15Exp1W1" : {
+    "modelId" : "Task 15 Exp 1",
+    "name" : "BalancedCalibratedLoss (Equal Balancing wBg=1.0, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task15_exp1_w1",
+    "sha256" : "CE2B5392C764AE8AB453E4A0B6E81AC2B3ADCE2C1B3DA8362E41347FE94155E8",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 39664,
+        "fn" : 102,
+        "totalProposals" : 39684,
+        "posProposals" : 19708,
+        "bgProposals" : 19976,
+        "fpPos" : 19688,
+        "fpBg" : 19976,
+        "precision" : 5.039814534825119E-4,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.0010048736371401296
+      },
+      "counts30" : {
+        "tp" : 74,
+        "fp" : 39610,
+        "fn" : 48,
+        "totalProposals" : 39684,
+        "posProposals" : 19708,
+        "bgProposals" : 19976,
+        "fpPos" : 19634,
+        "fpBg" : 19976,
+        "precision" : 0.001864731377885294,
+        "recall" : 0.6065573770491803,
+        "f1" : 0.0037180324574184794
+      },
+      "proposalsPerFrame" : 228.06896551724137,
+      "bgProposalsPerFrame" : 229.60919540229884
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 39074,
+        "fn" : 102,
+        "totalProposals" : 39094,
+        "posProposals" : 19414,
+        "bgProposals" : 19680,
+        "fpPos" : 19394,
+        "fpBg" : 19680,
+        "precision" : 5.11587455875582E-4,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.0010199918400652795
+      },
+      "counts30" : {
+        "tp" : 74,
+        "fp" : 39020,
+        "fn" : 48,
+        "totalProposals" : 39094,
+        "posProposals" : 19414,
+        "bgProposals" : 19680,
+        "fpPos" : 19340,
+        "fpBg" : 19680,
+        "precision" : 0.0018928735867396532,
+        "recall" : 0.6065573770491803,
+        "f1" : 0.0037739698082415343
+      },
+      "proposalsPerFrame" : 224.67816091954023,
+      "bgProposalsPerFrame" : 226.20689655172413
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 37248,
+        "fn" : 102,
+        "totalProposals" : 37268,
+        "posProposals" : 18417,
+        "bgProposals" : 18851,
+        "fpPos" : 18397,
+        "fpBg" : 18851,
+        "precision" : 5.366534292154127E-4,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.0010698047606311847
+      },
+      "counts30" : {
+        "tp" : 74,
+        "fp" : 37194,
+        "fn" : 48,
+        "totalProposals" : 37268,
+        "posProposals" : 18417,
+        "bgProposals" : 18851,
+        "fpPos" : 18343,
+        "fpBg" : 18851,
+        "precision" : 0.001985617688097027,
+        "recall" : 0.6065573770491803,
+        "f1" : 0.003958277614335384
+      },
+      "proposalsPerFrame" : 214.183908045977,
+      "bgProposalsPerFrame" : 216.67816091954023
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 34268,
+        "fn" : 102,
+        "totalProposals" : 34288,
+        "posProposals" : 16810,
+        "bgProposals" : 17478,
+        "fpPos" : 16790,
+        "fpBg" : 17478,
+        "precision" : 5.832944470368642E-4,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.001162452775356001
+      },
+      "counts30" : {
+        "tp" : 74,
+        "fp" : 34214,
+        "fn" : 48,
+        "totalProposals" : 34288,
+        "posProposals" : 16810,
+        "bgProposals" : 17478,
+        "fpPos" : 16736,
+        "fpBg" : 17478,
+        "precision" : 0.0021581894540363975,
+        "recall" : 0.6065573770491803,
+        "f1" : 0.004301075268817203
+      },
+      "proposalsPerFrame" : 197.05747126436782,
+      "bgProposalsPerFrame" : 200.89655172413794
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 32001,
+        "fn" : 103,
+        "totalProposals" : 32020,
+        "posProposals" : 15725,
+        "bgProposals" : 16295,
+        "fpPos" : 15706,
+        "fpBg" : 16295,
+        "precision" : 5.933791380387258E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 0.0011822537489888621
+      },
+      "counts30" : {
+        "tp" : 72,
+        "fp" : 31948,
+        "fn" : 50,
+        "totalProposals" : 32020,
+        "posProposals" : 15725,
+        "bgProposals" : 16295,
+        "fpPos" : 15653,
+        "fpBg" : 16295,
+        "precision" : 0.002248594628357277,
+        "recall" : 0.5901639344262295,
+        "f1" : 0.00448011946985253
+      },
+      "proposalsPerFrame" : 184.02298850574712,
+      "bgProposalsPerFrame" : 187.29885057471265
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 18,
+        "fp" : 29974,
+        "fn" : 104,
+        "totalProposals" : 29992,
+        "posProposals" : 14719,
+        "bgProposals" : 15273,
+        "fpPos" : 14701,
+        "fpBg" : 15273,
+        "precision" : 6.001600426780475E-4,
+        "recall" : 0.14754098360655737,
+        "f1" : 0.001195457262402869
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 29923,
+        "fn" : 53,
+        "totalProposals" : 29992,
+        "posProposals" : 14719,
+        "bgProposals" : 15273,
+        "fpPos" : 14650,
+        "fpBg" : 15273,
+        "precision" : 0.0023006134969325155,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.004582586172544332
+      },
+      "proposalsPerFrame" : 172.367816091954,
+      "bgProposalsPerFrame" : 175.55172413793105
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 17,
+        "fp" : 25207,
+        "fn" : 105,
+        "totalProposals" : 25224,
+        "posProposals" : 12320,
+        "bgProposals" : 12904,
+        "fpPos" : 12303,
+        "fpBg" : 12904,
+        "precision" : 6.739613066920393E-4,
+        "recall" : 0.13934426229508196,
+        "f1" : 0.0013414345458849523
+      },
+      "counts30" : {
+        "tp" : 65,
+        "fp" : 25159,
+        "fn" : 57,
+        "totalProposals" : 25224,
+        "posProposals" : 12320,
+        "bgProposals" : 12904,
+        "fpPos" : 12255,
+        "fpBg" : 12904,
+        "precision" : 0.002576910878528386,
+        "recall" : 0.5327868852459017,
+        "f1" : 0.005129014440148347
+      },
+      "proposalsPerFrame" : 144.9655172413793,
+      "bgProposalsPerFrame" : 148.32183908045977
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 16,
+        "fp" : 19036,
+        "fn" : 106,
+        "totalProposals" : 19052,
+        "posProposals" : 9709,
+        "bgProposals" : 9343,
+        "fpPos" : 9693,
+        "fpBg" : 9343,
+        "precision" : 8.39806844425782E-4,
+        "recall" : 0.13114754098360656,
+        "f1" : 0.0016689266715343696
+      },
+      "counts30" : {
+        "tp" : 57,
+        "fp" : 18995,
+        "fn" : 65,
+        "totalProposals" : 19052,
+        "posProposals" : 9709,
+        "bgProposals" : 9343,
+        "fpPos" : 9652,
+        "fpBg" : 9343,
+        "precision" : 0.0029918118832668486,
+        "recall" : 0.4672131147540984,
+        "f1" : 0.005945551267341191
+      },
+      "proposalsPerFrame" : 109.49425287356321,
+      "bgProposalsPerFrame" : 107.39080459770115
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 16,
+        "fp" : 12785,
+        "fn" : 106,
+        "totalProposals" : 12801,
+        "posProposals" : 6629,
+        "bgProposals" : 6172,
+        "fpPos" : 6613,
+        "fpBg" : 6172,
+        "precision" : 0.0012499023513787985,
+        "recall" : 0.13114754098360656,
+        "f1" : 0.002476205215507235
+      },
+      "counts30" : {
+        "tp" : 44,
+        "fp" : 12757,
+        "fn" : 78,
+        "totalProposals" : 12801,
+        "posProposals" : 6629,
+        "bgProposals" : 6172,
+        "fpPos" : 6585,
+        "fpBg" : 6172,
+        "precision" : 0.003437231466291696,
+        "recall" : 0.36065573770491804,
+        "f1" : 0.0068095643426448966
+      },
+      "proposalsPerFrame" : 73.56896551724138,
+      "bgProposalsPerFrame" : 70.94252873563218
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 12,
+        "fp" : 9070,
+        "fn" : 110,
+        "totalProposals" : 9082,
+        "posProposals" : 4701,
+        "bgProposals" : 4381,
+        "fpPos" : 4689,
+        "fpBg" : 4381,
+        "precision" : 0.0013212948689715921,
+        "recall" : 0.09836065573770492,
+        "f1" : 0.002607561929595828
+      },
+      "counts30" : {
+        "tp" : 29,
+        "fp" : 9053,
+        "fn" : 93,
+        "totalProposals" : 9082,
+        "posProposals" : 4701,
+        "bgProposals" : 4381,
+        "fpPos" : 4672,
+        "fpBg" : 4381,
+        "precision" : 0.003193129266681348,
+        "recall" : 0.23770491803278687,
+        "f1" : 0.006301607996523251
+      },
+      "proposalsPerFrame" : 52.195402298850574,
+      "bgProposalsPerFrame" : 50.35632183908046
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 8,
+        "fp" : 5330,
+        "fn" : 114,
+        "totalProposals" : 5338,
+        "posProposals" : 2862,
+        "bgProposals" : 2476,
+        "fpPos" : 2854,
+        "fpBg" : 2476,
+        "precision" : 0.0014986886474334957,
+        "recall" : 0.06557377049180328,
+        "f1" : 0.0029304029304029304
+      },
+      "counts30" : {
+        "tp" : 18,
+        "fp" : 5320,
+        "fn" : 104,
+        "totalProposals" : 5338,
+        "posProposals" : 2862,
+        "bgProposals" : 2476,
+        "fpPos" : 2844,
+        "fpBg" : 2476,
+        "precision" : 0.0033720494567253652,
+        "recall" : 0.14754098360655737,
+        "f1" : 0.006593406593406593
+      },
+      "proposalsPerFrame" : 30.67816091954023,
+      "bgProposalsPerFrame" : 28.45977011494253
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 1098,
+        "fn" : 121,
+        "totalProposals" : 1099,
+        "posProposals" : 808,
+        "bgProposals" : 291,
+        "fpPos" : 807,
+        "fpBg" : 291,
+        "precision" : 9.099181073703367E-4,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.0016380016380016379
+      },
+      "counts30" : {
+        "tp" : 6,
+        "fp" : 1093,
+        "fn" : 116,
+        "totalProposals" : 1099,
+        "posProposals" : 808,
+        "bgProposals" : 291,
+        "fpPos" : 802,
+        "fpBg" : 291,
+        "precision" : 0.00545950864422202,
+        "recall" : 0.04918032786885246,
+        "f1" : 0.00982800982800983
+      },
+      "proposalsPerFrame" : 6.316091954022989,
+      "bgProposalsPerFrame" : 3.3448275862068964
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 107,
+        "fn" : 122,
+        "totalProposals" : 107,
+        "posProposals" : 98,
+        "bgProposals" : 9,
+        "fpPos" : 98,
+        "fpBg" : 9,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 107,
+        "fn" : 122,
+        "totalProposals" : 107,
+        "posProposals" : 98,
+        "bgProposals" : 9,
+        "fpPos" : 98,
+        "fpBg" : 9,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.6149425287356322,
+      "bgProposalsPerFrame" : 0.10344827586206896
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 18,
+        "fp" : 29974,
+        "fn" : 104,
+        "totalProposals" : 29992,
+        "posProposals" : 14719,
+        "bgProposals" : 15273,
+        "fpPos" : 14701,
+        "fpBg" : 15273,
+        "precision" : 6.001600426780475E-4,
+        "recall" : 0.14754098360655737,
+        "f1" : 0.001195457262402869
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 29923,
+        "fn" : 53,
+        "totalProposals" : 29992,
+        "posProposals" : 14719,
+        "bgProposals" : 15273,
+        "fpPos" : 14650,
+        "fpBg" : 15273,
+        "precision" : 0.0023006134969325155,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.004582586172544332
+      },
+      "proposalsPerFrame" : 172.367816091954,
+      "bgProposalsPerFrame" : 175.55172413793105
+    },
+    "histogram" : {
+      "binEdges" : [ "0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0" ],
+      "positiveTargetCells" : [ 0, 6, 4, 9, 23, 46, 22, 11, 1, 0 ],
+      "negativeCells" : [ 7002, 4873, 5678, 7014, 6598, 7887, 4283, 981, 106, 0 ],
+      "matchedPredictions" : [ 0, 0, 1, 1, 0, 8, 7, 1, 0, 0 ],
+      "missedSigns" : [ 0, 6, 3, 8, 23, 37, 16, 10, 1, 0 ]
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "confidenceBelowThreshold" : 1,
+      "incorrectGridCell" : 14,
+      "targetEncodingDecoding" : 0,
+      "localizationError" : 88,
+      "nmsSuppression" : 1,
+      "annotationOrPreprocessing" : 0,
+      "detected50" : 18,
+      "detected30" : 69
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 1,
+      "medRecall50" : 0.058823529411764705,
+      "largeCount" : 103,
+      "largeDetected50" : 17,
+      "largeRecall50" : 0.1650485436893204
+    }
+  },
+  "task15Exp2W3" : {
+    "modelId" : "Task 15 Exp 2",
+    "name" : "BalancedCalibratedLoss (Moderate Suppression wBg=3.0, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task15_exp2_w3",
+    "sha256" : "3863C1FD20C8B0C3A82F09B37C24A7DC1C722DFBA5B2A742F36085EFE151ED74",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 22,
+        "fp" : 39252,
+        "fn" : 100,
+        "totalProposals" : 39274,
+        "posProposals" : 19434,
+        "bgProposals" : 19840,
+        "fpPos" : 19412,
+        "fpBg" : 19840,
+        "precision" : 5.601670316239751E-4,
+        "recall" : 0.18032786885245902,
+        "f1" : 0.0011168646563102852
+      },
+      "counts30" : {
+        "tp" : 77,
+        "fp" : 39197,
+        "fn" : 45,
+        "totalProposals" : 39274,
+        "posProposals" : 19434,
+        "bgProposals" : 19840,
+        "fpPos" : 19357,
+        "fpBg" : 19840,
+        "precision" : 0.001960584610683913,
+        "recall" : 0.6311475409836066,
+        "f1" : 0.0039090262970859985
+      },
+      "proposalsPerFrame" : 225.71264367816093,
+      "bgProposalsPerFrame" : 228.04597701149424
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 22,
+        "fp" : 37113,
+        "fn" : 100,
+        "totalProposals" : 37135,
+        "posProposals" : 18438,
+        "bgProposals" : 18697,
+        "fpPos" : 18416,
+        "fpBg" : 18697,
+        "precision" : 5.924330146761815E-4,
+        "recall" : 0.18032786885245902,
+        "f1" : 0.0011809861234130497
+      },
+      "counts30" : {
+        "tp" : 76,
+        "fp" : 37059,
+        "fn" : 46,
+        "totalProposals" : 37135,
+        "posProposals" : 18438,
+        "bgProposals" : 18697,
+        "fpPos" : 18362,
+        "fpBg" : 18697,
+        "precision" : 0.0020465867779722634,
+        "recall" : 0.6229508196721312,
+        "f1" : 0.004079770244517809
+      },
+      "proposalsPerFrame" : 213.41954022988506,
+      "bgProposalsPerFrame" : 214.90804597701148
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 21,
+        "fp" : 32102,
+        "fn" : 101,
+        "totalProposals" : 32123,
+        "posProposals" : 16175,
+        "bgProposals" : 15948,
+        "fpPos" : 16154,
+        "fpBg" : 15948,
+        "precision" : 6.537371976465461E-4,
+        "recall" : 0.1721311475409836,
+        "f1" : 0.001302527523647077
+      },
+      "counts30" : {
+        "tp" : 74,
+        "fp" : 32049,
+        "fn" : 48,
+        "totalProposals" : 32123,
+        "posProposals" : 16175,
+        "bgProposals" : 15948,
+        "fpPos" : 16101,
+        "fpBg" : 15948,
+        "precision" : 0.002303645363135448,
+        "recall" : 0.6065573770491803,
+        "f1" : 0.004589858892851605
+      },
+      "proposalsPerFrame" : 184.61494252873564,
+      "bgProposalsPerFrame" : 183.31034482758622
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 27074,
+        "fn" : 102,
+        "totalProposals" : 27094,
+        "posProposals" : 13941,
+        "bgProposals" : 13153,
+        "fpPos" : 13921,
+        "fpBg" : 13153,
+        "precision" : 7.381708127260648E-4,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.0014697236919459142
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 27025,
+        "fn" : 53,
+        "totalProposals" : 27094,
+        "posProposals" : 13941,
+        "bgProposals" : 13153,
+        "fpPos" : 13872,
+        "fpBg" : 13153,
+        "precision" : 0.0025466893039049238,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.0050705467372134045
+      },
+      "proposalsPerFrame" : 155.71264367816093,
+      "bgProposalsPerFrame" : 151.183908045977
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 22123,
+        "fn" : 102,
+        "totalProposals" : 22143,
+        "posProposals" : 11541,
+        "bgProposals" : 10602,
+        "fpPos" : 11521,
+        "fpBg" : 10602,
+        "precision" : 9.032199792259405E-4,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.001796541657309679
+      },
+      "counts30" : {
+        "tp" : 64,
+        "fp" : 22079,
+        "fn" : 58,
+        "totalProposals" : 22143,
+        "posProposals" : 11541,
+        "bgProposals" : 10602,
+        "fpPos" : 11477,
+        "fpBg" : 10602,
+        "precision" : 0.0028903039335230096,
+        "recall" : 0.5245901639344263,
+        "f1" : 0.005748933303390973
+      },
+      "proposalsPerFrame" : 127.25862068965517,
+      "bgProposalsPerFrame" : 121.86206896551724
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 16989,
+        "fn" : 102,
+        "totalProposals" : 17009,
+        "posProposals" : 8800,
+        "bgProposals" : 8209,
+        "fpPos" : 8780,
+        "fpBg" : 8209,
+        "precision" : 0.0011758480804280086,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.002334948339267994
+      },
+      "counts30" : {
+        "tp" : 58,
+        "fp" : 16951,
+        "fn" : 64,
+        "totalProposals" : 17009,
+        "posProposals" : 8800,
+        "bgProposals" : 8209,
+        "fpPos" : 8742,
+        "fpBg" : 8209,
+        "precision" : 0.003409959433241225,
+        "recall" : 0.47540983606557374,
+        "f1" : 0.0067713501838771815
+      },
+      "proposalsPerFrame" : 97.75287356321839,
+      "bgProposalsPerFrame" : 94.35632183908046
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 11,
+        "fp" : 7622,
+        "fn" : 111,
+        "totalProposals" : 7633,
+        "posProposals" : 4021,
+        "bgProposals" : 3612,
+        "fpPos" : 4010,
+        "fpBg" : 3612,
+        "precision" : 0.001441110965544347,
+        "recall" : 0.09016393442622951,
+        "f1" : 0.0028368794326241137
+      },
+      "counts30" : {
+        "tp" : 39,
+        "fp" : 7594,
+        "fn" : 83,
+        "totalProposals" : 7633,
+        "posProposals" : 4021,
+        "bgProposals" : 3612,
+        "fpPos" : 3982,
+        "fpBg" : 3612,
+        "precision" : 0.005109393423293594,
+        "recall" : 0.319672131147541,
+        "f1" : 0.010058027079303677
+      },
+      "proposalsPerFrame" : 43.867816091954026,
+      "bgProposalsPerFrame" : 41.51724137931034
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 5,
+        "fp" : 2438,
+        "fn" : 117,
+        "totalProposals" : 2443,
+        "posProposals" : 1243,
+        "bgProposals" : 1200,
+        "fpPos" : 1238,
+        "fpBg" : 1200,
+        "precision" : 0.002046663937781416,
+        "recall" : 0.040983606557377046,
+        "f1" : 0.0038986354775828454
+      },
+      "counts30" : {
+        "tp" : 14,
+        "fp" : 2429,
+        "fn" : 108,
+        "totalProposals" : 2443,
+        "posProposals" : 1243,
+        "bgProposals" : 1200,
+        "fpPos" : 1229,
+        "fpBg" : 1200,
+        "precision" : 0.0057306590257879654,
+        "recall" : 0.11475409836065574,
+        "f1" : 0.010916179337231968
+      },
+      "proposalsPerFrame" : 14.040229885057471,
+      "bgProposalsPerFrame" : 13.793103448275861
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 4,
+        "fp" : 951,
+        "fn" : 118,
+        "totalProposals" : 955,
+        "posProposals" : 507,
+        "bgProposals" : 448,
+        "fpPos" : 503,
+        "fpBg" : 448,
+        "precision" : 0.004188481675392671,
+        "recall" : 0.03278688524590164,
+        "f1" : 0.007428040854224699
+      },
+      "counts30" : {
+        "tp" : 10,
+        "fp" : 945,
+        "fn" : 112,
+        "totalProposals" : 955,
+        "posProposals" : 507,
+        "bgProposals" : 448,
+        "fpPos" : 497,
+        "fpBg" : 448,
+        "precision" : 0.010471204188481676,
+        "recall" : 0.08196721311475409,
+        "f1" : 0.018570102135561747
+      },
+      "proposalsPerFrame" : 5.488505747126437,
+      "bgProposalsPerFrame" : 5.149425287356322
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 4,
+        "fp" : 561,
+        "fn" : 118,
+        "totalProposals" : 565,
+        "posProposals" : 304,
+        "bgProposals" : 261,
+        "fpPos" : 300,
+        "fpBg" : 261,
+        "precision" : 0.007079646017699115,
+        "recall" : 0.03278688524590164,
+        "f1" : 0.011644832605531296
+      },
+      "counts30" : {
+        "tp" : 8,
+        "fp" : 557,
+        "fn" : 114,
+        "totalProposals" : 565,
+        "posProposals" : 304,
+        "bgProposals" : 261,
+        "fpPos" : 296,
+        "fpBg" : 261,
+        "precision" : 0.01415929203539823,
+        "recall" : 0.06557377049180328,
+        "f1" : 0.023289665211062592
+      },
+      "proposalsPerFrame" : 3.2471264367816093,
+      "bgProposalsPerFrame" : 3.0
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 4,
+        "fp" : 316,
+        "fn" : 118,
+        "totalProposals" : 320,
+        "posProposals" : 170,
+        "bgProposals" : 150,
+        "fpPos" : 166,
+        "fpBg" : 150,
+        "precision" : 0.0125,
+        "recall" : 0.03278688524590164,
+        "f1" : 0.01809954751131222
+      },
+      "counts30" : {
+        "tp" : 7,
+        "fp" : 313,
+        "fn" : 115,
+        "totalProposals" : 320,
+        "posProposals" : 170,
+        "bgProposals" : 150,
+        "fpPos" : 163,
+        "fpBg" : 150,
+        "precision" : 0.021875,
+        "recall" : 0.05737704918032787,
+        "f1" : 0.03167420814479638
+      },
+      "proposalsPerFrame" : 1.839080459770115,
+      "bgProposalsPerFrame" : 1.7241379310344827
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 2,
+        "fp" : 65,
+        "fn" : 120,
+        "totalProposals" : 67,
+        "posProposals" : 47,
+        "bgProposals" : 20,
+        "fpPos" : 45,
+        "fpBg" : 20,
+        "precision" : 0.029850746268656716,
+        "recall" : 0.01639344262295082,
+        "f1" : 0.021164021164021163
+      },
+      "counts30" : {
+        "tp" : 2,
+        "fp" : 65,
+        "fn" : 120,
+        "totalProposals" : 67,
+        "posProposals" : 47,
+        "bgProposals" : 20,
+        "fpPos" : 45,
+        "fpBg" : 20,
+        "precision" : 0.029850746268656716,
+        "recall" : 0.01639344262295082,
+        "f1" : 0.021164021164021163
+      },
+      "proposalsPerFrame" : 0.3850574712643678,
+      "bgProposalsPerFrame" : 0.22988505747126436
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 10,
+        "fn" : 122,
+        "totalProposals" : 10,
+        "posProposals" : 10,
+        "bgProposals" : 0,
+        "fpPos" : 10,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 10,
+        "fn" : 122,
+        "totalProposals" : 10,
+        "posProposals" : 10,
+        "bgProposals" : 0,
+        "fpPos" : 10,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.05747126436781609,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 20,
+        "fp" : 16989,
+        "fn" : 102,
+        "totalProposals" : 17009,
+        "posProposals" : 8800,
+        "bgProposals" : 8209,
+        "fpPos" : 8780,
+        "fpBg" : 8209,
+        "precision" : 0.0011758480804280086,
+        "recall" : 0.16393442622950818,
+        "f1" : 0.002334948339267994
+      },
+      "counts30" : {
+        "tp" : 58,
+        "fp" : 16951,
+        "fn" : 64,
+        "totalProposals" : 17009,
+        "posProposals" : 8800,
+        "bgProposals" : 8209,
+        "fpPos" : 8742,
+        "fpBg" : 8209,
+        "precision" : 0.003409959433241225,
+        "recall" : 0.47540983606557374,
+        "f1" : 0.0067713501838771815
+      },
+      "proposalsPerFrame" : 97.75287356321839,
+      "bgProposalsPerFrame" : 94.35632183908046
+    },
+    "histogram" : {
+      "binEdges" : [ "0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0" ],
+      "positiveTargetCells" : [ 11, 18, 34, 34, 8, 9, 6, 2, 0, 0 ],
+      "negativeCells" : [ 16030, 10588, 9864, 5510, 1491, 627, 247, 55, 10, 0 ],
+      "matchedPredictions" : [ 0, 0, 9, 6, 1, 0, 2, 2, 0, 0 ],
+      "missedSigns" : [ 11, 18, 24, 29, 7, 9, 4, 0, 0, 0 ]
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "confidenceBelowThreshold" : 2,
+      "incorrectGridCell" : 14,
+      "targetEncodingDecoding" : 0,
+      "localizationError" : 86,
+      "nmsSuppression" : 0,
+      "annotationOrPreprocessing" : 0,
+      "detected50" : 20,
+      "detected30" : 58
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 1,
+      "medRecall50" : 0.058823529411764705,
+      "largeCount" : 103,
+      "largeDetected50" : 19,
+      "largeRecall50" : 0.18446601941747573
+    }
+  },
+  "task15Exp3Focal" : {
+    "modelId" : "Task 15 Exp 3",
+    "name" : "NormalizedFocalDetectionLoss (Dual Normalized alpha=0.25, gamma=2.0, wBg=2.0, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task15_exp3_focal",
+    "sha256" : "BBF93047525E290198C10E541714CCFF31BCACB2B84818AFAF468C9D3F1FAB74",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38740,
+        "fn" : 103,
+        "totalProposals" : 38759,
+        "posProposals" : 18505,
+        "bgProposals" : 20254,
+        "fpPos" : 18486,
+        "fpBg" : 20254,
+        "precision" : 4.902087257153177E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.773411177696047E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38689,
+        "fn" : 52,
+        "totalProposals" : 38759,
+        "posProposals" : 18505,
+        "bgProposals" : 20254,
+        "fpPos" : 18435,
+        "fpBg" : 20254,
+        "precision" : 0.0018060321473722233,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.003600730433888018
+      },
+      "proposalsPerFrame" : 222.7528735632184,
+      "bgProposalsPerFrame" : 232.80459770114942
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 37420,
+        "fn" : 103,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17844,
+        "fpBg" : 19576,
+        "precision" : 5.074921872913272E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 0.0010116876547482763
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 37370,
+        "fn" : 53,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17794,
+        "fpBg" : 19576,
+        "precision" : 0.0018429979433211357,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.003674023588296371
+      },
+      "proposalsPerFrame" : 215.16666666666666,
+      "bgProposalsPerFrame" : 225.01149425287358
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 17,
+        "fp" : 21244,
+        "fn" : 105,
+        "totalProposals" : 21261,
+        "posProposals" : 10795,
+        "bgProposals" : 10466,
+        "fpPos" : 10778,
+        "fpBg" : 10466,
+        "precision" : 7.995860966088143E-4,
+        "recall" : 0.13934426229508196,
+        "f1" : 0.0015900481691062994
+      },
+      "counts30" : {
+        "tp" : 61,
+        "fp" : 21200,
+        "fn" : 61,
+        "totalProposals" : 21261,
+        "posProposals" : 10795,
+        "bgProposals" : 10466,
+        "fpPos" : 10734,
+        "fpBg" : 10466,
+        "precision" : 0.00286910305253751,
+        "recall" : 0.5,
+        "f1" : 0.0057054669597343685
+      },
+      "proposalsPerFrame" : 122.1896551724138,
+      "bgProposalsPerFrame" : 120.29885057471265
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 8,
+        "fp" : 3949,
+        "fn" : 114,
+        "totalProposals" : 3957,
+        "posProposals" : 1872,
+        "bgProposals" : 2085,
+        "fpPos" : 1864,
+        "fpBg" : 2085,
+        "precision" : 0.0020217336365933787,
+        "recall" : 0.06557377049180328,
+        "f1" : 0.003922530031870556
+      },
+      "counts30" : {
+        "tp" : 19,
+        "fp" : 3938,
+        "fn" : 103,
+        "totalProposals" : 3957,
+        "posProposals" : 1872,
+        "bgProposals" : 2085,
+        "fpPos" : 1853,
+        "fpBg" : 2085,
+        "precision" : 0.004801617386909275,
+        "recall" : 0.1557377049180328,
+        "f1" : 0.009316008825692572
+      },
+      "proposalsPerFrame" : 22.74137931034483,
+      "bgProposalsPerFrame" : 23.96551724137931
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 196,
+        "fn" : 121,
+        "totalProposals" : 197,
+        "posProposals" : 143,
+        "bgProposals" : 54,
+        "fpPos" : 142,
+        "fpBg" : 54,
+        "precision" : 0.005076142131979695,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.006269592476489028
+      },
+      "counts30" : {
+        "tp" : 3,
+        "fp" : 194,
+        "fn" : 119,
+        "totalProposals" : 197,
+        "posProposals" : 143,
+        "bgProposals" : 54,
+        "fpPos" : 140,
+        "fpBg" : 54,
+        "precision" : 0.015228426395939087,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.018808777429467082
+      },
+      "proposalsPerFrame" : 1.132183908045977,
+      "bgProposalsPerFrame" : 0.6206896551724138
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 19,
+        "fn" : 121,
+        "totalProposals" : 20,
+        "posProposals" : 16,
+        "bgProposals" : 4,
+        "fpPos" : 15,
+        "fpBg" : 4,
+        "precision" : 0.05,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.014084507042253521
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 19,
+        "fn" : 121,
+        "totalProposals" : 20,
+        "posProposals" : 16,
+        "bgProposals" : 4,
+        "fpPos" : 15,
+        "fpBg" : 4,
+        "precision" : 0.05,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.014084507042253521
+      },
+      "proposalsPerFrame" : 0.11494252873563218,
+      "bgProposalsPerFrame" : 0.04597701149425287
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.011494252873563218,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 37420,
+        "fn" : 103,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17844,
+        "fpBg" : 19576,
+        "precision" : 5.074921872913272E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 0.0010116876547482763
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 37370,
+        "fn" : 53,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17794,
+        "fpBg" : 19576,
+        "precision" : 0.0018429979433211357,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.003674023588296371
+      },
+      "proposalsPerFrame" : 215.16666666666666,
+      "bgProposalsPerFrame" : 225.01149425287358
+    },
+    "histogram" : {
+      "binEdges" : [ "0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0" ],
+      "positiveTargetCells" : [ 0, 2, 18, 72, 24, 6, 0, 0, 0, 0 ],
+      "negativeCells" : [ 0, 1503, 18878, 20102, 3748, 189, 2, 0, 0, 0 ],
+      "matchedPredictions" : [ 0, 0, 2, 9, 7, 1, 0, 0, 0, 0 ],
+      "missedSigns" : [ 0, 2, 15, 62, 19, 5, 0, 0, 0, 0 ]
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "confidenceBelowThreshold" : 0,
+      "incorrectGridCell" : 10,
+      "targetEncodingDecoding" : 0,
+      "localizationError" : 93,
+      "nmsSuppression" : 0,
+      "annotationOrPreprocessing" : 0,
+      "detected50" : 19,
+      "detected30" : 69
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 2,
+      "medRecall50" : 0.11764705882352941,
+      "largeCount" : 103,
+      "largeDetected50" : 17,
+      "largeRecall50" : 0.1650485436893204
+    }
+  },
+  "chosenChampion" : {
+    "modelId" : "Task 15 Exp 3",
+    "name" : "NormalizedFocalDetectionLoss (Dual Normalized alpha=0.25, gamma=2.0, wBg=2.0, wBox=8.0)",
+    "checkpointPath" : "models\\checkpoints\\detector_task15_exp3_focal",
+    "sha256" : "BBF93047525E290198C10E541714CCFF31BCACB2B84818AFAF468C9D3F1FAB74",
+    "sweep" : [ {
+      "threshold" : 0.01,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.02,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.05,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.1,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38824,
+        "fn" : 103,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18527,
+        "fpBg" : 20297,
+        "precision" : 4.891486239476868E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.752341845245733E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38773,
+        "fn" : 52,
+        "totalProposals" : 38843,
+        "posProposals" : 18546,
+        "bgProposals" : 20297,
+        "fpPos" : 18476,
+        "fpBg" : 20297,
+        "precision" : 0.0018021265092809514,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.0035929680482484276
+      },
+      "proposalsPerFrame" : 223.23563218390805,
+      "bgProposalsPerFrame" : 233.29885057471265
+    }, {
+      "threshold" : 0.15,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 38740,
+        "fn" : 103,
+        "totalProposals" : 38759,
+        "posProposals" : 18505,
+        "bgProposals" : 20254,
+        "fpPos" : 18486,
+        "fpBg" : 20254,
+        "precision" : 4.902087257153177E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 9.773411177696047E-4
+      },
+      "counts30" : {
+        "tp" : 70,
+        "fp" : 38689,
+        "fn" : 52,
+        "totalProposals" : 38759,
+        "posProposals" : 18505,
+        "bgProposals" : 20254,
+        "fpPos" : 18435,
+        "fpBg" : 20254,
+        "precision" : 0.0018060321473722233,
+        "recall" : 0.5737704918032787,
+        "f1" : 0.003600730433888018
+      },
+      "proposalsPerFrame" : 222.7528735632184,
+      "bgProposalsPerFrame" : 232.80459770114942
+    }, {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 37420,
+        "fn" : 103,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17844,
+        "fpBg" : 19576,
+        "precision" : 5.074921872913272E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 0.0010116876547482763
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 37370,
+        "fn" : 53,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17794,
+        "fpBg" : 19576,
+        "precision" : 0.0018429979433211357,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.003674023588296371
+      },
+      "proposalsPerFrame" : 215.16666666666666,
+      "bgProposalsPerFrame" : 225.01149425287358
+    }, {
+      "threshold" : 0.3,
+      "counts50" : {
+        "tp" : 17,
+        "fp" : 21244,
+        "fn" : 105,
+        "totalProposals" : 21261,
+        "posProposals" : 10795,
+        "bgProposals" : 10466,
+        "fpPos" : 10778,
+        "fpBg" : 10466,
+        "precision" : 7.995860966088143E-4,
+        "recall" : 0.13934426229508196,
+        "f1" : 0.0015900481691062994
+      },
+      "counts30" : {
+        "tp" : 61,
+        "fp" : 21200,
+        "fn" : 61,
+        "totalProposals" : 21261,
+        "posProposals" : 10795,
+        "bgProposals" : 10466,
+        "fpPos" : 10734,
+        "fpBg" : 10466,
+        "precision" : 0.00286910305253751,
+        "recall" : 0.5,
+        "f1" : 0.0057054669597343685
+      },
+      "proposalsPerFrame" : 122.1896551724138,
+      "bgProposalsPerFrame" : 120.29885057471265
+    }, {
+      "threshold" : 0.4,
+      "counts50" : {
+        "tp" : 8,
+        "fp" : 3949,
+        "fn" : 114,
+        "totalProposals" : 3957,
+        "posProposals" : 1872,
+        "bgProposals" : 2085,
+        "fpPos" : 1864,
+        "fpBg" : 2085,
+        "precision" : 0.0020217336365933787,
+        "recall" : 0.06557377049180328,
+        "f1" : 0.003922530031870556
+      },
+      "counts30" : {
+        "tp" : 19,
+        "fp" : 3938,
+        "fn" : 103,
+        "totalProposals" : 3957,
+        "posProposals" : 1872,
+        "bgProposals" : 2085,
+        "fpPos" : 1853,
+        "fpBg" : 2085,
+        "precision" : 0.004801617386909275,
+        "recall" : 0.1557377049180328,
+        "f1" : 0.009316008825692572
+      },
+      "proposalsPerFrame" : 22.74137931034483,
+      "bgProposalsPerFrame" : 23.96551724137931
+    }, {
+      "threshold" : 0.5,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 196,
+        "fn" : 121,
+        "totalProposals" : 197,
+        "posProposals" : 143,
+        "bgProposals" : 54,
+        "fpPos" : 142,
+        "fpBg" : 54,
+        "precision" : 0.005076142131979695,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.006269592476489028
+      },
+      "counts30" : {
+        "tp" : 3,
+        "fp" : 194,
+        "fn" : 119,
+        "totalProposals" : 197,
+        "posProposals" : 143,
+        "bgProposals" : 54,
+        "fpPos" : 140,
+        "fpBg" : 54,
+        "precision" : 0.015228426395939087,
+        "recall" : 0.02459016393442623,
+        "f1" : 0.018808777429467082
+      },
+      "proposalsPerFrame" : 1.132183908045977,
+      "bgProposalsPerFrame" : 0.6206896551724138
+    }, {
+      "threshold" : 0.55,
+      "counts50" : {
+        "tp" : 1,
+        "fp" : 19,
+        "fn" : 121,
+        "totalProposals" : 20,
+        "posProposals" : 16,
+        "bgProposals" : 4,
+        "fpPos" : 15,
+        "fpBg" : 4,
+        "precision" : 0.05,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.014084507042253521
+      },
+      "counts30" : {
+        "tp" : 1,
+        "fp" : 19,
+        "fn" : 121,
+        "totalProposals" : 20,
+        "posProposals" : 16,
+        "bgProposals" : 4,
+        "fpPos" : 15,
+        "fpBg" : 4,
+        "precision" : 0.05,
+        "recall" : 0.00819672131147541,
+        "f1" : 0.014084507042253521
+      },
+      "proposalsPerFrame" : 0.11494252873563218,
+      "bgProposalsPerFrame" : 0.04597701149425287
+    }, {
+      "threshold" : 0.6,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 2,
+        "fn" : 122,
+        "totalProposals" : 2,
+        "posProposals" : 2,
+        "bgProposals" : 0,
+        "fpPos" : 2,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.011494252873563218,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.7,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    }, {
+      "threshold" : 0.8,
+      "counts50" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "counts30" : {
+        "tp" : 0,
+        "fp" : 0,
+        "fn" : 122,
+        "totalProposals" : 0,
+        "posProposals" : 0,
+        "bgProposals" : 0,
+        "fpPos" : 0,
+        "fpBg" : 0,
+        "precision" : 0.0,
+        "recall" : 0.0,
+        "f1" : 0.0
+      },
+      "proposalsPerFrame" : 0.0,
+      "bgProposalsPerFrame" : 0.0
+    } ],
+    "operatingPoint" : {
+      "threshold" : 0.2,
+      "counts50" : {
+        "tp" : 19,
+        "fp" : 37420,
+        "fn" : 103,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17844,
+        "fpBg" : 19576,
+        "precision" : 5.074921872913272E-4,
+        "recall" : 0.1557377049180328,
+        "f1" : 0.0010116876547482763
+      },
+      "counts30" : {
+        "tp" : 69,
+        "fp" : 37370,
+        "fn" : 53,
+        "totalProposals" : 37439,
+        "posProposals" : 17863,
+        "bgProposals" : 19576,
+        "fpPos" : 17794,
+        "fpBg" : 19576,
+        "precision" : 0.0018429979433211357,
+        "recall" : 0.5655737704918032,
+        "f1" : 0.003674023588296371
+      },
+      "proposalsPerFrame" : 215.16666666666666,
+      "bgProposalsPerFrame" : 225.01149425287358
+    },
+    "histogram" : {
+      "binEdges" : [ "0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5", "0.5-0.6", "0.6-0.7", "0.7-0.8", "0.8-0.9", "0.9-1.0" ],
+      "positiveTargetCells" : [ 0, 2, 18, 72, 24, 6, 0, 0, 0, 0 ],
+      "negativeCells" : [ 0, 1503, 18878, 20102, 3748, 189, 2, 0, 0, 0 ],
+      "matchedPredictions" : [ 0, 0, 2, 9, 7, 1, 0, 0, 0, 0 ],
+      "missedSigns" : [ 0, 2, 15, 62, 19, 5, 0, 0, 0, 0 ]
+    },
+    "failureModes" : {
+      "totalGt" : 122,
+      "confidenceBelowThreshold" : 0,
+      "incorrectGridCell" : 10,
+      "targetEncodingDecoding" : 0,
+      "localizationError" : 93,
+      "nmsSuppression" : 0,
+      "annotationOrPreprocessing" : 0,
+      "detected50" : 19,
+      "detected30" : 69
+    },
+    "sizeStats" : {
+      "smallCount" : 2,
+      "smallDetected50" : 0,
+      "smallRecall50" : 0.0,
+      "medCount" : 17,
+      "medDetected50" : 2,
+      "medRecall50" : 0.11764705882352941,
+      "largeCount" : 103,
+      "largeDetected50" : 17,
+      "largeRecall50" : 0.1650485436893204
+    }
+  },
+  "chosenTestEvaluation" : {
+    "threshold" : 0.2,
+    "counts50" : {
+      "tp" : 25,
+      "fp" : 44846,
+      "fn" : 170,
+      "totalProposals" : 44871,
+      "posProposals" : 21515,
+      "bgProposals" : 23356,
+      "fpPos" : 21490,
+      "fpBg" : 23356,
+      "precision" : 5.571527267054445E-4,
+      "recall" : 0.1282051282051282,
+      "f1" : 0.0011094838681045577
+    },
+    "counts30" : {
+      "tp" : 122,
+      "fp" : 44749,
+      "fn" : 73,
+      "totalProposals" : 44871,
+      "posProposals" : 21515,
+      "bgProposals" : 23356,
+      "fpPos" : 21393,
+      "fpBg" : 23356,
+      "precision" : 0.002718905306322569,
+      "recall" : 0.6256410256410256,
+      "f1" : 0.005414281276350241
+    },
+    "proposalsPerFrame" : 224.355,
+    "bgProposalsPerFrame" : 233.56
+  },
+  "task14TestEvaluation" : {
+    "threshold" : 0.2,
+    "counts50" : {
+      "tp" : 2,
+      "fp" : 4408,
+      "fn" : 193,
+      "totalProposals" : 4410,
+      "posProposals" : 1796,
+      "bgProposals" : 2614,
+      "fpPos" : 1794,
+      "fpBg" : 2614,
+      "precision" : 4.5351473922902497E-4,
+      "recall" : 0.010256410256410256,
+      "f1" : 8.686210640608035E-4
+    },
+    "counts30" : {
+      "tp" : 15,
+      "fp" : 4395,
+      "fn" : 180,
+      "totalProposals" : 4410,
+      "posProposals" : 1796,
+      "bgProposals" : 2614,
+      "fpPos" : 1781,
+      "fpBg" : 2614,
+      "precision" : 0.003401360544217687,
+      "recall" : 0.07692307692307693,
+      "f1" : 0.0065146579804560255
+    },
+    "proposalsPerFrame" : 22.05,
+    "bgProposalsPerFrame" : 26.14
+  },
+  "task11TestEvaluation" : {
+    "threshold" : 0.55,
+    "counts50" : {
+      "tp" : 60,
+      "fp" : 21280,
+      "fn" : 135,
+      "totalProposals" : 21340,
+      "posProposals" : 11140,
+      "bgProposals" : 10200,
+      "fpPos" : 11080,
+      "fpBg" : 10200,
+      "precision" : 0.0028116213683223993,
+      "recall" : 0.3076923076923077,
+      "f1" : 0.0055723241235198515
+    },
+    "counts30" : {
+      "tp" : 137,
+      "fp" : 21203,
+      "fn" : 58,
+      "totalProposals" : 21340,
+      "posProposals" : 11140,
+      "bgProposals" : 10200,
+      "fpPos" : 11003,
+      "fpBg" : 10200,
+      "precision" : 0.0064198687910028114,
+      "recall" : 0.7025641025641025,
+      "f1" : 0.012723473415370327
+    },
+    "proposalsPerFrame" : 106.7,
+    "bgProposalsPerFrame" : 102.0
+  },
+  "latencyMetrics" : {
+    "detectorMs" : 53.48,
+    "cropMs" : 9.88,
+    "classifierMs" : 44.84,
+    "renderingMs" : 48.14271999999999,
+    "totalLatencyMs" : 156.30636800000002,
+    "throughputFps" : 6.3976919993432375
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "timestamp" : "2026-10-20T05:48:24.879316500Z",
+  "totalShardsScanned" : 21,
+  "totalBytesScanned" : 6767441920,
+  "totalJpgFiles" : 21000,
+  "totalJsonFiles" : 21000,
+  "totalPngFiles" : 21000,
+  "totalMatchedPairs" : 21000,
+  "totalSignBoundingBoxes" : 1885,
+  "totalFramesWithSigns" : 1504,
+  "totalEmptyFrames" : 19496,
+  "distinctNewSequences" : 267,
+  "rejectionReasons" : { },
+  "pngRoleAnalysis" : {
+    "samplePngName" : "0447234e-a7db-4638-8ea7-3af8238c4116_0059.png",
+    "samplePngSize" : 16611,
+    "detectedRole" : "Semantic segmentation / instance mask",
+    "reason" : "PNG files in Indian Road Driving tar archives contain pixel-level class ID masks (e.g. for drivable area and road scene segmentation) rather than camera RGB road frames. Object detection and bounding box classification operate on the RGB JPEG frames paired with JSON annotations."
+  },
+  "sequenceLeakageCheck" : {
+    "totalNewSequences" : 267,
+    "validationSequencesCount" : 27,
+    "overlappingSequencesCount" : 0,
+    "overlappingSequences" : [ ],
+    "passed" : true
+  },
+  "shardAudits" : [ {
+    "archiveName" : "train-00010-of-00646.tar",
+    "fileSize" : 326318080,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 66,
+    "framesWithSigns" : 55,
+    "emptyFrames" : 945
+  }, {
+    "archiveName" : "train-00011-of-00646.tar",
+    "fileSize" : 362506240,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 30,
+    "framesWithSigns" : 28,
+    "emptyFrames" : 972
+  }, {
+    "archiveName" : "train-00012-of-00646.tar",
+    "fileSize" : 314613760,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 93,
+    "framesWithSigns" : 77,
+    "emptyFrames" : 923
+  }, {
+    "archiveName" : "train-00013-of-00646.tar",
+    "fileSize" : 345733120,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 48,
+    "framesWithSigns" : 40,
+    "emptyFrames" : 960
+  }, {
+    "archiveName" : "train-00014-of-00646.tar",
+    "fileSize" : 334243840,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 99,
+    "framesWithSigns" : 88,
+    "emptyFrames" : 912
+  }, {
+    "archiveName" : "train-00015-of-00646.tar",
+    "fileSize" : 311767040,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 81,
+    "framesWithSigns" : 66,
+    "emptyFrames" : 934
+  }, {
+    "archiveName" : "train-00016-of-00646.tar",
+    "fileSize" : 238172160,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 165,
+    "framesWithSigns" : 129,
+    "emptyFrames" : 871
+  }, {
+    "archiveName" : "train-00017-of-00646.tar",
+    "fileSize" : 299048960,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 64,
+    "framesWithSigns" : 51,
+    "emptyFrames" : 949
+  }, {
+    "archiveName" : "train-00018-of-00646.tar",
+    "fileSize" : 408545280,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 111,
+    "framesWithSigns" : 80,
+    "emptyFrames" : 920
+  }, {
+    "archiveName" : "train-00019-of-00646.tar",
+    "fileSize" : 328007680,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 37,
+    "framesWithSigns" : 33,
+    "emptyFrames" : 967
+  }, {
+    "archiveName" : "train-00020-of-00646.tar",
+    "fileSize" : 361687040,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 85,
+    "framesWithSigns" : 63,
+    "emptyFrames" : 937
+  }, {
+    "archiveName" : "train-00021-of-00646.tar",
+    "fileSize" : 340776960,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 76,
+    "framesWithSigns" : 67,
+    "emptyFrames" : 933
+  }, {
+    "archiveName" : "train-00022-of-00646.tar",
+    "fileSize" : 333250560,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 156,
+    "framesWithSigns" : 131,
+    "emptyFrames" : 869
+  }, {
+    "archiveName" : "train-00023-of-00646.tar",
+    "fileSize" : 375449600,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 37,
+    "framesWithSigns" : 31,
+    "emptyFrames" : 969
+  }, {
+    "archiveName" : "train-00024-of-00646.tar",
+    "fileSize" : 304138240,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 81,
+    "framesWithSigns" : 66,
+    "emptyFrames" : 934
+  }, {
+    "archiveName" : "train-00025-of-00646.tar",
+    "fileSize" : 327546880,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 93,
+    "framesWithSigns" : 70,
+    "emptyFrames" : 930
+  }, {
+    "archiveName" : "train-00026-of-00646.tar",
+    "fileSize" : 286771200,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 215,
+    "framesWithSigns" : 134,
+    "emptyFrames" : 866
+  }, {
+    "archiveName" : "train-00027-of-00646.tar",
+    "fileSize" : 289679360,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 62,
+    "framesWithSigns" : 42,
+    "emptyFrames" : 958
+  }, {
+    "archiveName" : "train-00028-of-00646.tar",
+    "fileSize" : 316672000,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 60,
+    "framesWithSigns" : 49,
+    "emptyFrames" : 951
+  }, {
+    "archiveName" : "train-00029-of-00646.tar",
+    "fileSize" : 269762560,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 184,
+    "framesWithSigns" : 168,
+    "emptyFrames" : 832
+  }, {
+    "archiveName" : "train-00030-of-00646.tar",
+    "fileSize" : 292751360,
+    "jpgCount" : 1000,
+    "jsonCount" : 1000,
+    "pngCount" : 1000,
+    "matchedPairs" : 1000,
+    "totalSignBoxes" : 42,
+    "framesWithSigns" : 36,
+    "emptyFrames" : 964
+  } ],
+  "positiveOverlayPath" : "reports/task11_visualizations/ground_truth_positive_overlay.png",
+  "backgroundOverlayPath" : "reports/task11_visualizations/ground_truth_background_overlay.png"
+}

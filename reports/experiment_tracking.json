@@ -1,0 +1,70 @@
+{
+  "timestamp" : "2026-10-19T21:02:57.514661500Z",
+  "totalClasses" : 85,
+  "trainSamples" : 3538,
+  "valSamples" : 900,
+  "cleanTestSamples" : 714,
+  "excludedOverlapSamples" : 574,
+  "models" : {
+    "Majority-Class Baseline" : {
+      "modelName" : "Majority-Class Baseline",
+      "parameterCount" : 0,
+      "valAccuracy" : 0.04666666666666667,
+      "valMacroF1" : 0.001049082053203447,
+      "valMacroPrecision" : 5.490196078431372E-4,
+      "valMacroRecall" : 0.011764705882352941,
+      "testAccuracy" : 0.06722689075630252,
+      "testMacroF1" : 0.0014821676702176934,
+      "testMacroPrecision" : 7.909045971329708E-4,
+      "testMacroRecall" : 0.011764705882352941,
+      "averageInferenceLatencyMs" : 0.001,
+      "trainingDurationMs" : 5,
+      "checkpointPath" : "none"
+    },
+    "Pure-Java MLP" : {
+      "modelName" : "Pure-Java MLP (3072-256-128-85)",
+      "parameterCount" : 830549,
+      "valAccuracy" : 0.5277777777777778,
+      "valMacroF1" : 0.3123685176390466,
+      "valMacroPrecision" : 0.3763134017124796,
+      "valMacroRecall" : 0.3148754156904559,
+      "testAccuracy" : 0.45098039215686275,
+      "testMacroF1" : 0.25713405982324694,
+      "testMacroPrecision" : 0.3222241254603164,
+      "testMacroRecall" : 0.2879941140730614,
+      "averageInferenceLatencyMs" : 13.750725,
+      "trainingDurationMs" : 109433,
+      "checkpointPath" : "models/checkpoints/mlp_best.json"
+    },
+    "Compact CNN (Unweighted)" : {
+      "modelName" : "Compact CNN (Unweighted)",
+      "parameterCount" : 640533,
+      "valAccuracy" : 0.6677777777777778,
+      "valMacroF1" : 0.3839749201632022,
+      "valMacroPrecision" : 0.0,
+      "valMacroRecall" : 0.0,
+      "testAccuracy" : 0.5266106442577031,
+      "testMacroF1" : 0.29457986583810114,
+      "testMacroPrecision" : 0.31158216073178674,
+      "testMacroRecall" : 0.3250496618104977,
+      "averageInferenceLatencyMs" : 5.557773,
+      "trainingDurationMs" : 55095,
+      "checkpointPath" : "models/checkpoints/unweighted/indian_cnn_best"
+    },
+    "Compact CNN (Class-Weighted)" : {
+      "modelName" : "Compact CNN (Class-Weighted)",
+      "parameterCount" : 640533,
+      "valAccuracy" : 0.4266666666666667,
+      "valMacroF1" : 0.2920066182149142,
+      "valMacroPrecision" : 0.32635344504927194,
+      "valMacroRecall" : 0.327307814508887,
+      "testAccuracy" : 0.35714285714285715,
+      "testMacroF1" : 0.2539920584337463,
+      "testMacroPrecision" : 0.276212230452244,
+      "testMacroRecall" : 0.300753174156425,
+      "averageInferenceLatencyMs" : 5.557773,
+      "trainingDurationMs" : 39206,
+      "checkpointPath" : "models/checkpoints/weighted/indian_cnn_best"
+    }
+  }
+}

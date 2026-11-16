@@ -1,0 +1,144 @@
+{
+  "timestamp" : "2026-10-20T04:38:14.470052Z",
+  "winningResolution" : "48x48",
+  "historicalTask6TestAcc" : 0.5868,
+  "historicalTask6TestMacroF1" : 0.5006,
+  "experiments" : {
+    "32x32" : {
+      "resolution" : 32,
+      "parameterCount" : 640533,
+      "checkpointSizeBytes" : 20518992,
+      "valAccuracy" : 0.6055555555555555,
+      "valMacroF1" : 0.503374434530973,
+      "valWeightedF1" : 0.5967658298903293,
+      "valMacroRecall" : 0.5281140736321882,
+      "valZeroRecallClasses" : 14,
+      "inferenceLatencyMsPerImage" : 3.7492184444444443,
+      "trainingDurationMs" : 66306,
+      "checkpointPath" : "models/checkpoints/task7/exp_a_32x32/exp_a_32x32_best"
+    },
+    "48x48" : {
+      "resolution" : 48,
+      "parameterCount" : 1295893,
+      "checkpointSizeBytes" : 36304211,
+      "valAccuracy" : 0.6288888888888889,
+      "valMacroF1" : 0.5272698983944215,
+      "valWeightedF1" : 0.6188290566669236,
+      "valMacroRecall" : 0.5493517429028852,
+      "valZeroRecallClasses" : 12,
+      "inferenceLatencyMsPerImage" : 6.293355888888889,
+      "trainingDurationMs" : 145695,
+      "checkpointPath" : "models/checkpoints/task7/exp_b_48x48/exp_b_48x48_best"
+    },
+    "64x64" : {
+      "resolution" : 64,
+      "parameterCount" : 2213397,
+      "checkpointSizeBytes" : 70850660,
+      "valAccuracy" : 0.49333333333333335,
+      "valMacroF1" : 0.4093261500942354,
+      "valWeightedF1" : 0.4758651871681645,
+      "valMacroRecall" : 0.44234993806743683,
+      "valZeroRecallClasses" : 18,
+      "inferenceLatencyMsPerImage" : 5.353539666666666,
+      "trainingDurationMs" : 204436,
+      "checkpointPath" : "models/checkpoints/task7/exp_c_64x64/exp_c_64x64_best"
+    }
+  },
+  "targetedConfusions" : [ {
+    "trueId" : 50,
+    "trueName" : "Speed Limit (30 km/h)",
+    "predId" : 52,
+    "predName" : "Speed Limit (50 km/h)",
+    "count32" : 6,
+    "count48" : 2,
+    "count64" : 3
+  }, {
+    "trueId" : 52,
+    "trueName" : "Speed Limit (50 km/h)",
+    "predId" : 50,
+    "predName" : "Speed Limit (30 km/h)",
+    "count32" : 5,
+    "count48" : 21,
+    "count64" : 5
+  }, {
+    "trueId" : 51,
+    "trueName" : "Speed Limit (40 km/h)",
+    "predId" : 53,
+    "predName" : "Speed Limit (60 km/h)",
+    "count32" : 6,
+    "count48" : 2,
+    "count64" : 8
+  }, {
+    "trueId" : 53,
+    "trueName" : "Speed Limit (60 km/h)",
+    "predId" : 51,
+    "predName" : "Speed Limit (40 km/h)",
+    "count32" : 3,
+    "count48" : 8,
+    "count64" : 3
+  }, {
+    "trueId" : 48,
+    "trueName" : "Speed Limit (5 km/h)",
+    "predId" : 49,
+    "predName" : "Speed Limit (15 km/h)",
+    "count32" : 2,
+    "count48" : 0,
+    "count64" : 0
+  }, {
+    "trueId" : 49,
+    "trueName" : "Speed Limit (15 km/h)",
+    "predId" : 48,
+    "predName" : "Speed Limit (5 km/h)",
+    "count32" : 0,
+    "count48" : 4,
+    "count64" : 5
+  }, {
+    "trueId" : 9,
+    "trueName" : "Compulsory Keep Right",
+    "predId" : 12,
+    "predName" : "Compulsory Turn Left",
+    "count32" : 1,
+    "count48" : 1,
+    "count64" : 4
+  }, {
+    "trueId" : 8,
+    "trueName" : "Compulsory Keep Left",
+    "predId" : 9,
+    "predName" : "Compulsory Keep Right",
+    "count32" : 0,
+    "count48" : 0,
+    "count64" : 0
+  }, {
+    "trueId" : 14,
+    "trueName" : "Cross Road",
+    "predId" : 19,
+    "predName" : "Gap in Median",
+    "count32" : 0,
+    "count48" : 2,
+    "count64" : 2
+  }, {
+    "trueId" : 24,
+    "trueName" : "Horn Prohibited",
+    "predId" : 19,
+    "predName" : "Gap in Median",
+    "count32" : 0,
+    "count48" : 0,
+    "count64" : 0
+  }, {
+    "trueId" : 36,
+    "trueName" : "Pedestrian Crossing",
+    "predId" : 45,
+    "predName" : "Side Road Left",
+    "count32" : 2,
+    "count48" : 9,
+    "count64" : 0
+  }, {
+    "trueId" : 4,
+    "trueName" : "Cattle Crossing",
+    "predId" : 16,
+    "predName" : "Dangerous Dip",
+    "count32" : 0,
+    "count48" : 0,
+    "count64" : 1
+  } ]
+}
