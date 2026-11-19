@@ -1,0 +1,66 @@
+[
+  {
+    "event_id": "EVT-0-1001-e382f105",
+    "frame_index": 0,
+    "timestamp_ms": 1795120427641,
+    "track_id": 1001,
+    "event_type": "EventType.RESTRICTION_ALERT",
+    "severity": "SeverityLevel.WARNING",
+    "class_id": 1,
+    "canonical_label": "AXLE_LOAD_LIMIT",
+    "display_name": "Axle Load Limit",
+    "category": "RuleCategory.REGULATORY",
+    "detection_confidence": 0.9990786734744513,
+    "classification_confidence": 1.0,
+    "absolute_box": {
+      "x1": 632.2061154109125,
+      "y1": 466.7340999912151,
+      "x2": 640.0,
+      "y2": 480.0
+    },
+    "normalized_box": {
+      "x1": 0.9878220553295508,
+      "y1": 0.9723627083150315,
+      "x2": 1.0,
+      "y2": 1.0
+    },
+    "driver_advisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding.",
+    "numerical_value": null,
+    "unit": "tonnes",
+    "evidence_image_path": "reports\\evidence\\evidence_frame0000_track1001_axle_load_limit.png",
+    "operator_status": "OperatorStatus.UNREVIEWED",
+    "operator_note": ""
+  },
+  {
+    "event_id": "EVT-0-1002-8b93b05c",
+    "frame_index": 0,
+    "timestamp_ms": 1795120427641,
+    "track_id": 1002,
+    "event_type": "EventType.RESTRICTION_ALERT",
+    "severity": "SeverityLevel.WARNING",
+    "class_id": 1,
+    "canonical_label": "AXLE_LOAD_LIMIT",
+    "display_name": "Axle Load Limit",
+    "category": "RuleCategory.REGULATORY",
+    "detection_confidence": 0.9303386162590639,
+    "classification_confidence": 1.0,
+    "absolute_box": {
+      "x1": 634.4225760285954,
+      "y1": 0.0,
+      "x2": 640.0,
+      "y2": 480.0
+    },
+    "normalized_box": {
+      "x1": 0.9912852750446803,
+      "y1": 0.0,
+      "x2": 1.0,
+      "y2": 1.0
+    },
+    "driver_advisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding.",
+    "numerical_value": null,
+    "unit": "tonnes",
+    "evidence_image_path": "reports\\evidence\\evidence_frame0000_track1002_axle_load_limit.png",
+    "operator_status": "OperatorStatus.UNREVIEWED",
+    "operator_note": ""
+  }
+]

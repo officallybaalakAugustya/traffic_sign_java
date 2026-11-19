@@ -1,0 +1,3 @@
+eventId,frameIndex,timestampMs,trackId,eventType,severity,classId,displayName,detectionConfidence,classificationConfidence,driverAdvisory,operatorStatus
+EVT-0-1001-e382f105,0,1795120427641,1001,EventType.RESTRICTION_ALERT,SeverityLevel.WARNING,1,Axle Load Limit,0.9991,1.0000,Ensure vehicle axle load does not exceed posted statutory limit before proceeding.,OperatorStatus.UNREVIEWED
+EVT-0-1002-8b93b05c,0,1795120427641,1002,EventType.RESTRICTION_ALERT,SeverityLevel.WARNING,1,Axle Load Limit,0.9303,1.0000,Ensure vehicle axle load does not exceed posted statutory limit before proceeding.,OperatorStatus.UNREVIEWED

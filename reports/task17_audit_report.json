@@ -1,0 +1,584 @@
+{
+  "title": "Task 17 False-Positive and Safety-State Integrity Audit Report",
+  "timestamp": "2026-11-20T02:03:31.747667",
+  "checkpoints": [
+    {
+      "modelType": "HighResSignDetector",
+      "checkpointPath": "models\\checkpoints\\detector_task11_champion\\sign_detector-0005.params",
+      "sha256Hex": "73b3ee7794ad39344ec0aed0fc4c1a3a6662aa83e4b2daa5446f100402a9259f",
+      "fileSizeBytes": 974631
+    },
+    {
+      "modelType": "IndianTrafficSignCNN",
+      "checkpointPath": "models\\checkpoints\\task7_champion\\exp_b_48x48-0008.params",
+      "sha256Hex": "e747125b9b54609edd944018a49c5086b3f4e2d264bf9a691a4510e1d3ccd18f",
+      "fileSizeBytes": 5186315
+    }
+  ],
+  "evaluationCases": [
+    {
+      "caseName": "SPEED_LIMIT_40",
+      "inputPath": "reports\\evidence\\speed_limit_40_test.png",
+      "imageWidth": 640,
+      "imageHeight": 480,
+      "configResults": {
+        "Default Operating Config": {
+          "detConfidenceThreshold": 0.5,
+          "clsConfidenceThreshold": 0.25,
+          "nmsIouThreshold": 0.4,
+          "maxProposalsPerFrame": 25,
+          "rawProposalsCount": 5,
+          "confidentDetectionsCount": 0,
+          "uncertainDetectionsCount": 4,
+          "detections": [
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9997929317422967,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.991256241261965,
+                0.9703024460665719,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.8195442603857968,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9880517034004676,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.6714120525547838,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.6732432331352696,
+                0.0,
+                0.7017567668647304,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.5928945141816925,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.11450019518627208,
+                0.9793701194646423,
+                0.13549980461509828,
+                0.9981670405099896
+              ]
+            }
+          ],
+          "emittedEvents": [
+            {
+              "eventId": "EVT-1-1001-de07aae4",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1002-d6805259",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1003-da3f8dc4",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1004-b0efcd01",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            }
+          ],
+          "hudState": {
+            "currentPostedSpeedLimit": null,
+            "activeRestrictions": [
+              "Axle Load Limit"
+            ],
+            "activeHazards": []
+          }
+        },
+        "Relaxed Diagnostic Config": {
+          "detConfidenceThreshold": 0.2,
+          "clsConfidenceThreshold": 0.2,
+          "nmsIouThreshold": 0.25,
+          "maxProposalsPerFrame": 50,
+          "rawProposalsCount": 6,
+          "confidentDetectionsCount": 0,
+          "uncertainDetectionsCount": 4,
+          "detections": [
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9997929317422967,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.991256241261965,
+                0.9703024460665719,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.8195442603857968,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9880517034004676,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.6714120525547838,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.6732432331352696,
+                0.0,
+                0.7017567668647304,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.5928945141816925,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.11450019518627208,
+                0.9793701194646423,
+                0.13549980461509828,
+                0.9981670405099896
+              ]
+            }
+          ],
+          "emittedEvents": [
+            {
+              "eventId": "EVT-1-1001-cb879783",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1002-05e462d4",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1003-b9af56b3",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1004-f95b44d6",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            }
+          ],
+          "hudState": {
+            "currentPostedSpeedLimit": null,
+            "activeRestrictions": [
+              "Axle Load Limit"
+            ],
+            "activeHazards": []
+          }
+        }
+      }
+    },
+    {
+      "caseName": "BACKGROUND_EMPTY",
+      "inputPath": "reports\\evidence\\empty_background_test.png",
+      "imageWidth": 640,
+      "imageHeight": 480,
+      "configResults": {
+        "Default Operating Config": {
+          "detConfidenceThreshold": 0.5,
+          "clsConfidenceThreshold": 0.25,
+          "nmsIouThreshold": 0.4,
+          "maxProposalsPerFrame": 25,
+          "rawProposalsCount": 2,
+          "confidentDetectionsCount": 0,
+          "uncertainDetectionsCount": 2,
+          "detections": [
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9990786734744513,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9878220553295508,
+                0.9723627083150315,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9303386162590639,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9912852750446803,
+                0.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "emittedEvents": [
+            {
+              "eventId": "EVT-1-1001-0a71523f",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1002-b9812404",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            }
+          ],
+          "hudState": {
+            "currentPostedSpeedLimit": null,
+            "activeRestrictions": [
+              "Axle Load Limit"
+            ],
+            "activeHazards": []
+          }
+        },
+        "Relaxed Diagnostic Config": {
+          "detConfidenceThreshold": 0.2,
+          "clsConfidenceThreshold": 0.2,
+          "nmsIouThreshold": 0.25,
+          "maxProposalsPerFrame": 50,
+          "rawProposalsCount": 4,
+          "confidentDetectionsCount": 0,
+          "uncertainDetectionsCount": 4,
+          "detections": [
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9990786734744513,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9878220553295508,
+                0.9723627083150315,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9303386162590639,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9912852750446803,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.3778114893490236,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.11054817743942853,
+                0.9878277885128037,
+                0.1394518200304069,
+                0.9951996505393619
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.2515850731378737,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9639215080357041,
+                0.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "emittedEvents": [
+            {
+              "eventId": "EVT-1-1001-d7c9f110",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1002-104ee09f",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1003-8cc112de",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1004-0bd43d66",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            }
+          ],
+          "hudState": {
+            "currentPostedSpeedLimit": null,
+            "activeRestrictions": [
+              "Axle Load Limit"
+            ],
+            "activeHazards": []
+          }
+        }
+      }
+    },
+    {
+      "caseName": "GENUINE_MULTI_SIGN",
+      "inputPath": "reports\\evidence\\multi_sign_test.png",
+      "imageWidth": 640,
+      "imageHeight": 480,
+      "configResults": {
+        "Default Operating Config": {
+          "detConfidenceThreshold": 0.5,
+          "clsConfidenceThreshold": 0.25,
+          "nmsIouThreshold": 0.4,
+          "maxProposalsPerFrame": 25,
+          "rawProposalsCount": 2,
+          "confidentDetectionsCount": 0,
+          "uncertainDetectionsCount": 2,
+          "detections": [
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9990786734744513,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9878220553295508,
+                0.9723627083150315,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9303386162590639,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9912852750446803,
+                0.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "emittedEvents": [
+            {
+              "eventId": "EVT-1-1001-46543276",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1002-bbf809bc",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            }
+          ],
+          "hudState": {
+            "currentPostedSpeedLimit": null,
+            "activeRestrictions": [
+              "Axle Load Limit"
+            ],
+            "activeHazards": []
+          }
+        },
+        "Relaxed Diagnostic Config": {
+          "detConfidenceThreshold": 0.2,
+          "clsConfidenceThreshold": 0.2,
+          "nmsIouThreshold": 0.25,
+          "maxProposalsPerFrame": 50,
+          "rawProposalsCount": 4,
+          "confidentDetectionsCount": 0,
+          "uncertainDetectionsCount": 4,
+          "detections": [
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9990786734744513,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9878220553295508,
+                0.9723627083150315,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.9303386162590639,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9912852750446803,
+                0.0,
+                1.0,
+                1.0
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.3778114893490236,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.11054817743942853,
+                0.9878277885128037,
+                0.1394518200304069,
+                0.9951996505393619
+              ]
+            },
+            {
+              "classId": 1,
+              "className": "Axle Load Limit",
+              "detConfidence": 0.2515850731378737,
+              "clsConfidence": 1.0,
+              "uncertaintyState": "UncertaintyState.CONFIDENT",
+              "normalizedBox": [
+                0.9639215080357041,
+                0.0,
+                1.0,
+                1.0
+              ]
+            }
+          ],
+          "emittedEvents": [
+            {
+              "eventId": "EVT-1-1001-a32f2747",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1002-cf445d14",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1003-c2da04d8",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            },
+            {
+              "eventId": "EVT-1-1004-22629dce",
+              "eventType": "EventType.RESTRICTION_ALERT",
+              "severity": "SeverityLevel.WARNING",
+              "displayName": "Axle Load Limit",
+              "numericalValue": null,
+              "driverAdvisory": "Ensure vehicle axle load does not exceed posted statutory limit before proceeding."
+            }
+          ],
+          "hudState": {
+            "currentPostedSpeedLimit": null,
+            "activeRestrictions": [
+              "Axle Load Limit"
+            ],
+            "activeHazards": []
+          }
+        }
+      }
+    }
+  ]
+}
