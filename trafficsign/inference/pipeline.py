@@ -79,7 +79,7 @@ class RoadSceneInferencePipeline:
         device: Optional[torch.device] = None,
         classifier_resolution: int = 48
     ):
-        self.device = device or torch.device("cpu")
+        self.device = device or (torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu"))
         self.taxonomy = IndianTrafficSignTaxonomy()
         self.classifier_resolution = classifier_resolution
         self.detector_preprocessor = ImagePreprocessor(128, 128, False)
@@ -93,16 +93,29 @@ class RoadSceneInferencePipeline:
 
         # Resolve detector checkpoint
         det_path = self._resolve_detector_path(detector_checkpoint)
-        is_high_res = "16x16" in str(det_path).lower() or "highres" in str(det_path).lower() or "task" in str(det_path).lower() or "box16" in str(det_path).lower()
+        self.detector_path = det_path
+        self.is_yolo: bool = False
+        self.yolo_detector = None
+        self.detector_model = None
 
-        if is_high_res:
-            self.detector_model = HighResSignDetector().to(self.device)
-        else:
-            self.detector_model = CompactSignDetector().to(self.device)
+        if det_path is not None and str(det_path).endswith(".pt"):
+            try:
+                from ultralytics import YOLO
+                self.yolo_detector = YOLO(str(det_path))
+                self.is_yolo = True
+            except Exception as e:
+                print(f"Warning: Failed to load YOLO checkpoint {det_path}: {e}")
 
-        if det_path and det_path.exists():
-            self.detector_model.load_djl_checkpoint(det_path)
-        self.detector_model.eval()
+        if not self.is_yolo:
+            is_high_res = det_path and ("16x16" in str(det_path).lower() or "highres" in str(det_path).lower() or "task" in str(det_path).lower() or "box16" in str(det_path).lower())
+            if is_high_res:
+                self.detector_model = HighResSignDetector().to(self.device)
+            else:
+                self.detector_model = CompactSignDetector().to(self.device)
+
+            if det_path and det_path.exists():
+                self.detector_model.load_djl_checkpoint(det_path)
+            self.detector_model.eval()
 
         # Resolve classifier checkpoint
         cls_path = self._resolve_classifier_path(classifier_checkpoint)
@@ -117,13 +130,21 @@ class RoadSceneInferencePipeline:
             if p.is_file():
                 return p
             if p.is_dir():
+                for pt in p.glob("*.pt"):
+                    return pt
                 for f in p.glob("*.params"):
                     return f
 
+        repo_root = Path(__file__).resolve().parent.parent.parent
         candidates = [
+            repo_root / "models/checkpoints/retrained_yolo26n/weights/best.pt",
+            Path("models/checkpoints/retrained_yolo26n/weights/best.pt"),
+            repo_root / "models/checkpoints/retrained_yolo11n/weights/best.pt",
+            Path("models/checkpoints/retrained_yolo11n/weights/best.pt"),
             Path("models/checkpoints/detector_task11_champion/sign_detector-0005.params"),
-            Path("S:/TrafficSignRecognitionRoadSafetyMonitor/models/checkpoints/detector_task11_champion/sign_detector-0005.params"),
+            repo_root / "models/checkpoints/detector_task11_champion/sign_detector-0005.params",
             Path("models/checkpoints/detector_task15_champion/sign_detector-0004.params"),
+            repo_root / "models/checkpoints/detector_task15_champion/sign_detector-0004.params",
             Path("models/checkpoints/detector_task14_champion/sign_detector-0002.params"),
             Path("models/checkpoints/detector_task13_calibrated_norm/sign_detector-0004.params"),
             Path("models/checkpoints/detector/detector_best/sign_detector-0004.params"),
@@ -142,9 +163,10 @@ class RoadSceneInferencePipeline:
                 for f in p.glob("*.params"):
                     return f
 
+        repo_root = Path(__file__).resolve().parent.parent.parent
         candidates = [
             Path("models/checkpoints/task7_champion/exp_b_48x48-0008.params"),
-            Path("S:/TrafficSignRecognitionRoadSafetyMonitor/models/checkpoints/task7_champion/exp_b_48x48-0008.params"),
+            repo_root / "models/checkpoints/task7_champion/exp_b_48x48-0008.params",
             Path("models/checkpoints/classifier_exp_b_48x48/exp_b_48x48-0020.params"),
             Path("models/checkpoints/weighted/indian_cnn_best/indian_cnn-0008.params"),
         ]
@@ -166,25 +188,52 @@ class RoadSceneInferencePipeline:
 
         # Stage 1: Detection
         det_t0 = time.time()
-        det_chw = self.detector_preprocessor.to_tensor_chw(full_frame)
-        det_tensor = torch.from_numpy(det_chw).unsqueeze(0).to(self.device)
+        if self.is_yolo:
+            yolo_device = 0 if self.device.type == "cuda" else "cpu"
+            yolo_res = self.yolo_detector(
+                full_frame,
+                conf=self.detection_confidence_threshold,
+                iou=self.nms_iou_threshold,
+                verbose=False,
+                device=yolo_device
+            )[0]
+            det_duration = int((time.time() - det_t0) * 1000)
 
-        with torch.no_grad():
-            out = self.detector_model(det_tensor)  # [1, 5, grid_rows, grid_cols]
-            out_arr = out.squeeze(0).cpu().numpy()
+            filtered_dets = []
+            for b in yolo_res.boxes:
+                xyxy = b.xyxy[0].cpu().numpy()
+                conf = float(b.conf[0].cpu().numpy())
+                norm_box = BoundingBox(
+                    x1=float(xyxy[0]) / w,
+                    y1=float(xyxy[1]) / h,
+                    x2=float(xyxy[2]) / w,
+                    y2=float(xyxy[3]) / h
+                )
+                filtered_dets.append(DetectionPrediction(box=norm_box, confidence=conf))
 
-        grid_rows = out_arr.shape[1]
-        grid_cols = out_arr.shape[2]
+            raw_candidate_count = len(filtered_dets)
+            if len(filtered_dets) > self.max_proposals_per_frame:
+                filtered_dets = sorted(filtered_dets, key=lambda d: d.confidence, reverse=True)[:self.max_proposals_per_frame]
+        else:
+            det_chw = self.detector_preprocessor.to_tensor_chw(full_frame)
+            det_tensor = torch.from_numpy(det_chw).unsqueeze(0).to(self.device)
 
-        raw_dets = DetectionUtils.decode_grid_predictions(
-            out_arr, self.detection_confidence_threshold, grid_cols, grid_rows
-        )
-        filtered_dets = DetectionUtils.non_maximum_suppression(raw_dets, self.nms_iou_threshold)
-        det_duration = int((time.time() - det_t0) * 1000)
+            with torch.no_grad():
+                out = self.detector_model(det_tensor)  # [1, 5, grid_rows, grid_cols]
+                out_arr = out.squeeze(0).cpu().numpy()
 
-        raw_candidate_count = len(filtered_dets)
-        if len(filtered_dets) > self.max_proposals_per_frame:
-            filtered_dets = sorted(filtered_dets, key=lambda d: d.confidence, reverse=True)[:self.max_proposals_per_frame]
+            grid_rows = out_arr.shape[1]
+            grid_cols = out_arr.shape[2]
+
+            raw_dets = DetectionUtils.decode_grid_predictions(
+                out_arr, self.detection_confidence_threshold, grid_cols, grid_rows
+            )
+            filtered_dets = DetectionUtils.non_maximum_suppression(raw_dets, self.nms_iou_threshold)
+            det_duration = int((time.time() - det_t0) * 1000)
+
+            raw_candidate_count = len(filtered_dets)
+            if len(filtered_dets) > self.max_proposals_per_frame:
+                filtered_dets = sorted(filtered_dets, key=lambda d: d.confidence, reverse=True)[:self.max_proposals_per_frame]
 
         # Stage 2: Classification on crops
         cls_t0 = time.time()
@@ -279,13 +328,17 @@ class RoadSceneInferencePipeline:
 
     def draw_detections(
         self,
-        input_frame: Union[Image.Image, np.ndarray],
+        input_frame: Union[Image.Image, np.ndarray, str, Path],
         result: PipelineResult
     ) -> Image.Image:
-        if isinstance(input_frame, np.ndarray):
+        if isinstance(input_frame, (str, Path)):
+            annotated = Image.open(input_frame).convert("RGB")
+        elif isinstance(input_frame, np.ndarray):
             annotated = Image.fromarray(input_frame).convert("RGB")
-        else:
+        elif isinstance(input_frame, Image.Image):
             annotated = input_frame.copy().convert("RGB")
+        else:
+            raise TypeError(f"Unsupported frame type: {type(input_frame)}")
 
         draw = ImageDraw.Draw(annotated)
         w, h = annotated.size

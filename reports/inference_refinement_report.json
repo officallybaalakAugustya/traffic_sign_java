@@ -1,0 +1,241 @@
+{
+  "yolo26n": {
+    "model_name": "best.pt",
+    "avg_latency_ms": 54.4,
+    "throughput_fps": 18.4,
+    "operating_points": {
+      "conf_0.15": {
+        "confidence_threshold": 0.15,
+        "iou_threshold": 0.5,
+        "tp": 30,
+        "fp_total": 16,
+        "fp_positive_frames": 9,
+        "fp_background_frames": 7,
+        "fn": 165,
+        "precision": 0.6522,
+        "recall": 0.1538,
+        "f1": 0.249,
+        "proposals_per_frame": 0.23,
+        "background_fp_per_frame": 0.07,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1538
+      },
+      "conf_0.25": {
+        "confidence_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "tp": 29,
+        "fp_total": 9,
+        "fp_positive_frames": 6,
+        "fp_background_frames": 3,
+        "fn": 166,
+        "precision": 0.7632,
+        "recall": 0.1487,
+        "f1": 0.2489,
+        "proposals_per_frame": 0.19,
+        "background_fp_per_frame": 0.03,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1487
+      },
+      "conf_0.35": {
+        "confidence_threshold": 0.35,
+        "iou_threshold": 0.5,
+        "tp": 27,
+        "fp_total": 5,
+        "fp_positive_frames": 2,
+        "fp_background_frames": 3,
+        "fn": 168,
+        "precision": 0.8438,
+        "recall": 0.1385,
+        "f1": 0.2379,
+        "proposals_per_frame": 0.16,
+        "background_fp_per_frame": 0.03,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1385
+      },
+      "conf_0.50": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "tp": 25,
+        "fp_total": 4,
+        "fp_positive_frames": 1,
+        "fp_background_frames": 3,
+        "fn": 170,
+        "precision": 0.8621,
+        "recall": 0.1282,
+        "f1": 0.2232,
+        "proposals_per_frame": 0.14,
+        "background_fp_per_frame": 0.03,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1282
+      },
+      "conf_0.60": {
+        "confidence_threshold": 0.6,
+        "iou_threshold": 0.5,
+        "tp": 22,
+        "fp_total": 4,
+        "fp_positive_frames": 1,
+        "fp_background_frames": 3,
+        "fn": 173,
+        "precision": 0.8462,
+        "recall": 0.1128,
+        "f1": 0.1991,
+        "proposals_per_frame": 0.13,
+        "background_fp_per_frame": 0.03,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1128
+      }
+    }
+  },
+  "yolo11n": {
+    "model_name": "best.pt",
+    "avg_latency_ms": 45.7,
+    "throughput_fps": 21.9,
+    "operating_points": {
+      "conf_0.15": {
+        "confidence_threshold": 0.15,
+        "iou_threshold": 0.5,
+        "tp": 32,
+        "fp_total": 28,
+        "fp_positive_frames": 14,
+        "fp_background_frames": 14,
+        "fn": 163,
+        "precision": 0.5333,
+        "recall": 0.1641,
+        "f1": 0.251,
+        "proposals_per_frame": 0.3,
+        "background_fp_per_frame": 0.14,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1641
+      },
+      "conf_0.25": {
+        "confidence_threshold": 0.25,
+        "iou_threshold": 0.5,
+        "tp": 31,
+        "fp_total": 15,
+        "fp_positive_frames": 7,
+        "fp_background_frames": 8,
+        "fn": 164,
+        "precision": 0.6739,
+        "recall": 0.159,
+        "f1": 0.2573,
+        "proposals_per_frame": 0.23,
+        "background_fp_per_frame": 0.08,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.159
+      },
+      "conf_0.35": {
+        "confidence_threshold": 0.35,
+        "iou_threshold": 0.5,
+        "tp": 27,
+        "fp_total": 10,
+        "fp_positive_frames": 5,
+        "fp_background_frames": 5,
+        "fn": 168,
+        "precision": 0.7297,
+        "recall": 0.1385,
+        "f1": 0.2328,
+        "proposals_per_frame": 0.18,
+        "background_fp_per_frame": 0.05,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1385
+      },
+      "conf_0.50": {
+        "confidence_threshold": 0.5,
+        "iou_threshold": 0.5,
+        "tp": 25,
+        "fp_total": 2,
+        "fp_positive_frames": 0,
+        "fp_background_frames": 2,
+        "fn": 170,
+        "precision": 0.9259,
+        "recall": 0.1282,
+        "f1": 0.2252,
+        "proposals_per_frame": 0.14,
+        "background_fp_per_frame": 0.02,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1282
+      },
+      "conf_0.60": {
+        "confidence_threshold": 0.6,
+        "iou_threshold": 0.5,
+        "tp": 21,
+        "fp_total": 1,
+        "fp_positive_frames": 0,
+        "fp_background_frames": 1,
+        "fn": 174,
+        "precision": 0.9545,
+        "recall": 0.1077,
+        "f1": 0.1935,
+        "proposals_per_frame": 0.11,
+        "background_fp_per_frame": 0.01,
+        "small_sign_recall": 0.0,
+        "large_sign_recall": 0.1077
+      }
+    }
+  },
+  "pipeline_demonstration": [
+    {
+      "image": "000db725-8180-4770-8b6a-4eb74aeda9f9_0015.jpg",
+      "is_background": false,
+      "detections_count": 0,
+      "detection_latency_ms": 314,
+      "classification_latency_ms": 0,
+      "total_latency_ms": 314,
+      "detected_signs": []
+    },
+    {
+      "image": "000db725-8180-4770-8b6a-4eb74aeda9f9_0016.jpg",
+      "is_background": false,
+      "detections_count": 0,
+      "detection_latency_ms": 59,
+      "classification_latency_ms": 0,
+      "total_latency_ms": 59,
+      "detected_signs": []
+    },
+    {
+      "image": "000db725-8180-4770-8b6a-4eb74aeda9f9_0017.jpg",
+      "is_background": false,
+      "detections_count": 0,
+      "detection_latency_ms": 37,
+      "classification_latency_ms": 0,
+      "total_latency_ms": 37,
+      "detected_signs": []
+    },
+    {
+      "image": "000db725-8180-4770-8b6a-4eb74aeda9f9_0018.jpg",
+      "is_background": false,
+      "detections_count": 0,
+      "detection_latency_ms": 42,
+      "classification_latency_ms": 0,
+      "total_latency_ms": 42,
+      "detected_signs": []
+    },
+    {
+      "image": "000db725-8180-4770-8b6a-4eb74aeda9f9_0019.jpg",
+      "is_background": false,
+      "detections_count": 0,
+      "detection_latency_ms": 57,
+      "classification_latency_ms": 0,
+      "total_latency_ms": 57,
+      "detected_signs": []
+    },
+    {
+      "image": "000db725-8180-4770-8b6a-4eb74aeda9f9_0000.jpg",
+      "is_background": true,
+      "detections_count": 0,
+      "detection_latency_ms": 25,
+      "classification_latency_ms": 0,
+      "total_latency_ms": 25,
+      "detected_signs": []
+    },
+    {
+      "image": "000db725-8180-4770-8b6a-4eb74aeda9f9_0001.jpg",
+      "is_background": true,
+      "detections_count": 0,
+      "detection_latency_ms": 41,
+      "classification_latency_ms": 0,
+      "total_latency_ms": 41,
+      "detected_signs": []
+    }
+  ]
+}

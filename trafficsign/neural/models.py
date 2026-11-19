@@ -55,15 +55,22 @@ def parse_djl_params(file_path: Union[str, Path]) -> Dict[str, np.ndarray]:
         layout_len = struct.unpack(">I", content[p : p + 4])[0]
         p += 4 + layout_len * 2
 
-        num_elements = int(np.prod(shape)) if len(shape) > 0 else 1
-        byte_len = num_elements * 4
-        raw = content[p : p + byte_len]
-        arr = np.frombuffer(raw, dtype=">f4").astype(np.float32)
+        # Byte order marker: '<' (0x3c) or '>' (0x3e)
+        byte_order = chr(content[p])
+        p += 1
+
+        # 4-byte data length
+        data_len = struct.unpack(">I", content[p : p + 4])[0]
+        p += 4
+
+        dtype = "<f4" if byte_order == "<" else ">f4"
+        raw = content[p : p + data_len]
+        arr = np.frombuffer(raw, dtype=dtype).astype(np.float32)
         if len(shape) > 0:
             arr = arr.reshape(shape)
         key = f"{name}_{len(arrays)}"
         arrays[key] = arr
-        idx = p + byte_len
+        idx = p + data_len
 
     return arrays
 

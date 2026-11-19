@@ -1,0 +1,44 @@
+{
+  "yolo26n": {
+    "candidate": "yolo26n",
+    "checkpoint_path": "models\\checkpoints\\retrained_yolo26n\\weights\\best.pt",
+    "checkpoint_size_mb": 5.1,
+    "training_duration_s": 334.3,
+    "epochs_completed": 10,
+    "validation_metrics": {
+      "precision": 0.5987,
+      "recall": 0.2541,
+      "f1": 0.3568,
+      "map50": 0.2347,
+      "map50_95": 0.1702
+    },
+    "test_metrics": {
+      "precision": 0.6608,
+      "recall": 0.1692,
+      "f1": 0.2695,
+      "map50": 0.1593,
+      "map50_95": 0.109
+    }
+  },
+  "yolo11n": {
+    "candidate": "yolo11n",
+    "checkpoint_path": "models\\checkpoints\\retrained_yolo11n\\weights\\best.pt",
+    "checkpoint_size_mb": 5.18,
+    "training_duration_s": 267.1,
+    "epochs_completed": 10,
+    "validation_metrics": {
+      "precision": 0.6364,
+      "recall": 0.2213,
+      "f1": 0.3284,
+      "map50": 0.2368,
+      "map50_95": 0.1378
+    },
+    "test_metrics": {
+      "precision": 0.75,
+      "recall": 0.1487,
+      "f1": 0.2482,
+      "map50": 0.1496,
+      "map50_95": 0.0862
+    }
+  }
+}

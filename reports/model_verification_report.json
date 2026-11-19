@@ -1,0 +1,434 @@
+{
+  "pipeline_architecture": "Two-Stage Pipeline (Custom CNN Grid Detector + Custom CNN 85-Class Classifier)",
+  "framework": "PyTorch (native implementation migrated from Deep Java Library PyTorch engine)",
+  "detector": {
+    "name": "HighResSignDetector",
+    "type": "Single-Shot Grid Feature Detector (Custom CNN)",
+    "input_resolution": [
+      128,
+      128,
+      3
+    ],
+    "grid_size": [
+      16,
+      16
+    ],
+    "channels_per_cell": 5,
+    "output_shape": [
+      1,
+      5,
+      16,
+      16
+    ],
+    "total_parameters": 242181,
+    "trainable_parameters": 242181,
+    "checkpoint_path": "models\\checkpoints\\detector_task11_champion\\sign_detector-0005.params",
+    "sha256": "73b3ee7794ad39344ec0aed0fc4c1a3a6662aa83e4b2daa5446f100402a9259f",
+    "loaded_successfully": true,
+    "error": null,
+    "weight_statistics": {
+      "conv1.weight": {
+        "shape": [
+          32,
+          3,
+          3,
+          3
+        ],
+        "mean": 0.0035992455668747425,
+        "std": 0.35211098194122314,
+        "min": -1.7202730178833008,
+        "max": 1.9585496187210083,
+        "nonzero_pct": 100.0
+      },
+      "conv1.bias": {
+        "shape": [
+          32
+        ],
+        "mean": 0.0032306048087775707,
+        "std": 0.015558057464659214,
+        "min": -0.028214190155267715,
+        "max": 0.04861733689904213,
+        "nonzero_pct": 100.0
+      },
+      "bn1.weight": {
+        "shape": [
+          32
+        ],
+        "mean": 1.0386793613433838,
+        "std": 0.5246376991271973,
+        "min": -3.126535094647602e-39,
+        "max": 1.9537509679794312,
+        "nonzero_pct": 100.0
+      },
+      "bn1.bias": {
+        "shape": [
+          32
+        ],
+        "mean": -0.0027423975989222527,
+        "std": 0.013042869046330452,
+        "min": -0.04702514410018921,
+        "max": 0.025282451882958412,
+        "nonzero_pct": 100.0
+      },
+      "conv2.weight": {
+        "shape": [
+          64,
+          32,
+          3,
+          3
+        ],
+        "mean": 0.0005335756577551365,
+        "std": 0.12634512782096863,
+        "min": -0.4996071457862854,
+        "max": 0.4994649589061737,
+        "nonzero_pct": 100.0
+      },
+      "conv2.bias": {
+        "shape": [
+          64
+        ],
+        "mean": -0.003916885703802109,
+        "std": 0.016791289672255516,
+        "min": -0.0613953173160553,
+        "max": 0.029768938198685646,
+        "nonzero_pct": 100.0
+      },
+      "bn2.weight": {
+        "shape": [
+          64
+        ],
+        "mean": 1.1031670570373535,
+        "std": 0.4904212951660156,
+        "min": 7.002274413246468e-39,
+        "max": 1.9947052001953125,
+        "nonzero_pct": 100.0
+      },
+      "bn2.bias": {
+        "shape": [
+          64
+        ],
+        "mean": -0.0038260878063738346,
+        "std": 0.01555468700826168,
+        "min": -0.03117414563894272,
+        "max": 0.030508123338222504,
+        "nonzero_pct": 100.0
+      },
+      "conv3.weight": {
+        "shape": [
+          128,
+          64,
+          3,
+          3
+        ],
+        "mean": -8.007799624465406e-05,
+        "std": 0.08083636313676834,
+        "min": -0.49961504340171814,
+        "max": 0.49974435567855835,
+        "nonzero_pct": 100.0
+      },
+      "conv3.bias": {
+        "shape": [
+          128
+        ],
+        "mean": 0.0007894776063039899,
+        "std": 0.016124462708830833,
+        "min": -0.028433427214622498,
+        "max": 0.1195504441857338,
+        "nonzero_pct": 100.0
+      },
+      "bn3.weight": {
+        "shape": [
+          128
+        ],
+        "mean": 1.1071196794509888,
+        "std": 0.4580064117908478,
+        "min": 2.1133458581960437e-38,
+        "max": 1.9897918701171875,
+        "nonzero_pct": 100.0
+      },
+      "bn3.bias": {
+        "shape": [
+          128
+        ],
+        "mean": -0.0018257120391353965,
+        "std": 0.016845693811774254,
+        "min": -0.10349085181951523,
+        "max": 0.030929001048207283,
+        "nonzero_pct": 100.0
+      },
+      "conv4.weight": {
+        "shape": [
+          128,
+          128,
+          3,
+          3
+        ],
+        "mean": -0.0008975811651907861,
+        "std": 0.05614204704761505,
+        "min": -0.49988675117492676,
+        "max": 0.4986654818058014,
+        "nonzero_pct": 100.0
+      },
+      "conv4.bias": {
+        "shape": [
+          128
+        ],
+        "mean": -0.0010262877913191915,
+        "std": 0.015175692737102509,
+        "min": -0.08249714225530624,
+        "max": 0.030261052772402763,
+        "nonzero_pct": 100.0
+      },
+      "bn4.weight": {
+        "shape": [
+          128
+        ],
+        "mean": 1.1628408432006836,
+        "std": 0.47049689292907715,
+        "min": 7.754534869148424e-39,
+        "max": 1.9671168327331543,
+        "nonzero_pct": 100.0
+      },
+      "bn4.bias": {
+        "shape": [
+          128
+        ],
+        "mean": -0.004959864541888237,
+        "std": 0.04391368851065636,
+        "min": -0.12168994545936584,
+        "max": 0.3559507131576538,
+        "nonzero_pct": 100.0
+      },
+      "head.weight": {
+        "shape": [
+          5,
+          128,
+          1,
+          1
+        ],
+        "mean": 0.0030086650513112545,
+        "std": 0.19354942440986633,
+        "min": -0.49527132511138916,
+        "max": 1.8759193420410156,
+        "nonzero_pct": 100.0
+      },
+      "head.bias": {
+        "shape": [
+          5
+        ],
+        "mean": 0.02370135858654976,
+        "std": 0.02004925161600113,
+        "min": 1.667810804339032e-26,
+        "max": 0.05800214782357216,
+        "nonzero_pct": 100.0
+      }
+    }
+  },
+  "classifier": {
+    "name": "IndianTrafficSignCNN",
+    "type": "Deep Convolutional Neural Network Classifier",
+    "num_classes": 85,
+    "input_resolution": [
+      48,
+      48,
+      3
+    ],
+    "output_shape": [
+      1,
+      85
+    ],
+    "total_parameters": 1295445,
+    "trainable_parameters": 1295445,
+    "checkpoint_path": "models\\checkpoints\\task7_champion\\exp_b_48x48-0008.params",
+    "sha256": "e747125b9b54609edd944018a49c5086b3f4e2d264bf9a691a4510e1d3ccd18f",
+    "loaded_successfully": true,
+    "error": null,
+    "weight_statistics": {
+      "conv1.weight": {
+        "shape": [
+          32,
+          3,
+          3,
+          3
+        ],
+        "mean": 0.0036418659146875143,
+        "std": 0.34897181391716003,
+        "min": -1.9270451068878174,
+        "max": 1.997348666191101,
+        "nonzero_pct": 100.0
+      },
+      "conv1.bias": {
+        "shape": [
+          32
+        ],
+        "mean": 0.0015578451566398144,
+        "std": 0.023305732756853104,
+        "min": -0.0431947335600853,
+        "max": 0.08029787987470627,
+        "nonzero_pct": 100.0
+      },
+      "bn1.weight": {
+        "shape": [
+          32
+        ],
+        "mean": 1.0874660015106201,
+        "std": 0.4940163493156433,
+        "min": -5.321974622077651e-39,
+        "max": 1.9789279699325562,
+        "nonzero_pct": 100.0
+      },
+      "bn1.bias": {
+        "shape": [
+          32
+        ],
+        "mean": -0.005001603160053492,
+        "std": 0.04309902712702751,
+        "min": -0.09076498448848724,
+        "max": 0.10922510921955109,
+        "nonzero_pct": 100.0
+      },
+      "conv2.weight": {
+        "shape": [
+          64,
+          32,
+          3,
+          3
+        ],
+        "mean": -0.0032949477899819613,
+        "std": 0.1289443075656891,
+        "min": -0.4997216761112213,
+        "max": 0.49973446130752563,
+        "nonzero_pct": 100.0
+      },
+      "conv2.bias": {
+        "shape": [
+          64
+        ],
+        "mean": 0.0022901766933500767,
+        "std": 0.024294178932905197,
+        "min": -0.0998011901974678,
+        "max": 0.10727765411138535,
+        "nonzero_pct": 100.0
+      },
+      "bn2.weight": {
+        "shape": [
+          64
+        ],
+        "mean": 1.1453430652618408,
+        "std": 0.49164730310440063,
+        "min": 6.269749844916063e-39,
+        "max": 1.9748386144638062,
+        "nonzero_pct": 100.0
+      },
+      "bn2.bias": {
+        "shape": [
+          64
+        ],
+        "mean": -0.059889696538448334,
+        "std": 0.03856566548347473,
+        "min": -0.12470540404319763,
+        "max": 0.007812500931322575,
+        "nonzero_pct": 100.0
+      },
+      "conv3.weight": {
+        "shape": [
+          128,
+          64,
+          3,
+          3
+        ],
+        "mean": 0.0009923946345224977,
+        "std": 0.08602280914783478,
+        "min": -0.49976858496665955,
+        "max": 0.49853676557540894,
+        "nonzero_pct": 100.0
+      },
+      "conv3.bias": {
+        "shape": [
+          128
+        ],
+        "mean": 0.0005589415086433291,
+        "std": 0.006937697064131498,
+        "min": -0.02681869827210903,
+        "max": 0.030791284516453743,
+        "nonzero_pct": 100.0
+      },
+      "bn3.weight": {
+        "shape": [
+          128
+        ],
+        "mean": 1.1017425060272217,
+        "std": 0.46874698996543884,
+        "min": 1.399470050088566e-38,
+        "max": 1.9796301126480103,
+        "nonzero_pct": 100.0
+      },
+      "bn3.bias": {
+        "shape": [
+          128
+        ],
+        "mean": -0.06649360805749893,
+        "std": 0.028298011049628258,
+        "min": -0.12472209334373474,
+        "max": 0.00781250186264515,
+        "nonzero_pct": 100.0
+      },
+      "fc1.weight": {
+        "shape": [
+          256,
+          4608
+        ],
+        "mean": -0.004861502908170223,
+        "std": 0.03379043564200401,
+        "min": -0.4741296172142029,
+        "max": 0.4225529730319977,
+        "nonzero_pct": 100.0
+      },
+      "fc1.bias": {
+        "shape": [
+          256
+        ],
+        "mean": -0.005352920386940241,
+        "std": 0.007575970608741045,
+        "min": -0.0306639913469553,
+        "max": 0.029929498210549355,
+        "nonzero_pct": 100.0
+      },
+      "fc2.weight": {
+        "shape": [
+          85,
+          256
+        ],
+        "mean": -0.012207471765577793,
+        "std": 0.13966846466064453,
+        "min": -0.49995943903923035,
+        "max": 0.49962446093559265,
+        "nonzero_pct": 100.0
+      },
+      "fc2.bias": {
+        "shape": [
+          85
+        ],
+        "mean": 48962859008.0,
+        "std": 448751960064.0,
+        "min": -0.1127508282661438,
+        "max": 4161842970624.0,
+        "nonzero_pct": 100.0
+      }
+    }
+  },
+  "ultralytics_audit": {
+    "package_available_in_environment": true,
+    "installed_version": "8.4.165",
+    "imported_in_original_codebase": false,
+    "candidate_architectures_supported": [
+      "yolo11n",
+      "yolov8n"
+    ]
+  },
+  "integrity_audit": {
+    "mock_or_dummy_predictions_found": false,
+    "training_inference_architecture_aligned": true,
+    "uses_actual_weights": true
+  }
+}

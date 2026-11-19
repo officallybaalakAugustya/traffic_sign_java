@@ -48,10 +48,11 @@ class IndianTrafficSignTaxonomy:
             candidates.append(Path(json_path))
 
         # Check standard locations
-        curr_dir = Path(__file__).parent
+        curr_dir = Path(__file__).resolve().parent
+        repo_root = curr_dir.parent.parent
         candidates.append(curr_dir.parent / "resources" / "indian_traffic_signs_irc67.json")
+        candidates.append(repo_root / "src" / "main" / "resources" / "taxonomies" / "indian_traffic_signs_irc67.json")
         candidates.append(Path("src/main/resources/taxonomies/indian_traffic_signs_irc67.json"))
-        candidates.append(Path("S:/TrafficSignRecognitionRoadSafetyMonitor/src/main/resources/taxonomies/indian_traffic_signs_irc67.json"))
 
         for p in candidates:
             if p.exists():
